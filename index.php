@@ -3,7 +3,7 @@
 	error_reporting(E_ALL);
 	// affiche les erreurs a enlever en prod!!!! 
 	ini_set('display_errors', 1);
-	// kécécé ? 
+	// kï¿½cï¿½cï¿½ ? 
 	//ob_start();
 	//session_start();
 	date_default_timezone_set('Europe/Paris');
@@ -14,21 +14,41 @@
 	include("Modele/m_modifications.php");
 	include("Modele/m_insertions.php");
 	include("Util/fonctions.php");
-	include("Vue/structure/v_header.php") ;
+	include("Vue/structure/v_header.php");
+	include("Vue/structure/v_bandeau.php");
 	
-	if((!isset($_REQUEST['c']))||(!isset($_REQUEST['a']))) // controleur -- action
-     $uc = 'accueil';
-	else
-	 $uc = $_REQUEST['c'];
+	if((!isset($_REQUEST['c']))||(!isset($_REQUEST['a']))) { // controleur -- action
+        $uc = 'accueil';
+    }else {
+        $uc = $_REQUEST['c'];
+    }
+
 	switch($uc)
 	{
 	case 'accueil':
 	   include("Controleur/c_accueil.php");
 	   break;
+        case 'bateau':
+            include("Controleur/c_bateau.php");
+            break;
+        case 'electronique':
+            include ("Controleur/c_electronique.php");
+            break;
+        case 'moteur':
+            include ("Controleur/c_moteur.php");
+            break;
+        case 'motomarine':
+            include ("Controleur/c_motomarine.php");
+            break;
+        case 'permis':
+            include ("Controleur/c_permis.php");
+            break;
+        case 'connexion':
+            include ("Controleur/c_connexion.php");
+            break;
 	default:
 	   include("Vue/Structure/v_nopage.php");
 	   break;
-	 }
+    }
 	//ob_end_flush();
-include("Vue/Structure/v_footer.php") ;
-?>
+    include("Vue/Structure/v_footer.php") ;
