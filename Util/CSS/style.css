@@ -1,0 +1,38 @@
+.carousel .carousel-item {
+    height:400px !important;
+}
+/*#photoPermis {*/
+    /*background-image: url("../Util/img/Homer_Simpson_Wallpapers.jpg");*/
+/*}*/
+/*#btnPermis{*/
+    /*position: absolute;*/
+/*}*/
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+    position: relative;
+    width: 50%;
+}
+
+/* Make the image responsive */
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container #btnPermis {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.container .btn:hover {
+    background-color: black;
+}
