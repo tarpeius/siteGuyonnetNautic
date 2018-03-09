@@ -8,10 +8,11 @@
             <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Categories</h5>
                 <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Bateau</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Motomarine</a></li>
+                    <li><a class="grey-text text-lighten-3" href="index.php?c=bateau&a=afficher">Bateau</a></li>
+                    <li><a class="grey-text text-lighten-3" href="index.php?c=motomarine&a=afficher">Motomarine</a></li>
                     <li><a class="grey-text text-lighten-3" href="#!">Moteur</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Permis</a></li>
+                    <li><a class="grey-text text-lighten-3" href="index.php?c=permis&a=afficher">Permis</a></li>
+                    <li><a class="grey-text text-lighten-3" href="http://atworkandbored.com/jokes-inc/fun-pics/crazy-dog-8299.jpeg">Le chien</a></li>
                 </ul>
             </div>
         </div>

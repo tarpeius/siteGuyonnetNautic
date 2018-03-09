@@ -1,7 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Quentin
- * Date: 05/03/2018
- * Time: 10:42
- */
+$action = "";
+if(!empty($_REQUEST['a'])){
+    $action = $_REQUEST['a'];
+}
+
+switch($action)
+{
+    case "afficher": // a changer selon besoin
+        include('Vue/v_moteur.php');
+        break;
+    default:
+        include("Vue/v_accueil.php");
+        break;
+}

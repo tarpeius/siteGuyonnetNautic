@@ -12,8 +12,9 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="Util/JS_AJAX/materialize.min.js"></script>
+    <script type="text/javascript" src="Util/JS_AJAX/jquery.js"></script>
 
-    <link rel="stylesheet" href="Util/CSS/styles.css" >
+    <link rel="stylesheet" href="Util/CSS/style.css" >
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
