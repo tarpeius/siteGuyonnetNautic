@@ -6,9 +6,69 @@
             Cras eu efficitur felis. Integer dignissim vulputate convallis.</p>
     </div>
 <!--    <div class="divider"></div>-->
-
+    <nav>
+        <div class="nav-wrapper">
+           <div class="container">
+               <div class="col s12">
+                   <a href="#!" class="breadcrumb">Marque</a>
+                   <a href="#!" class="breadcrumb">sous categorie</a>
+                   <a href="#!" class="breadcrumb">sous sous categorie</a>
+               </div>
+           </div>
+        </div>
+    </nav>
+    <div class="divider"></div>
     <div class="container">
-
+        <div class="row ">
+            <div class="col s12 m4">
+                <a href="">
+                    <div class="card-panel grey lighten-5 z-depth-1">
+                        <div class="row valign-wrapper">
+                            <div class="col s2">
+                                <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Licorice _  Mango_3-4 front.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                            </div>
+                            <div class="col s10">
+                          <span class="black-text">
+                            Rigide
+                          </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col s12 m4">
+                <a href="">
+                    <div class="card-panel grey lighten-5 z-depth-1">
+                        <div class="row valign-wrapper">
+                            <div class="col s2">
+                                <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Licorice _  Mango_3-4 front.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                            </div>
+                            <div class="col s10">
+                      <span class="black-text">
+                        Pneumatique
+                      </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col s12 m4">
+                <a href="">
+                    <div class="card-panel grey lighten-5 z-depth-1">
+                        <div class="row valign-wrapper">
+                            <div class="col s2">
+                                <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Licorice _  Mango_3-4 front.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                            </div>
+                            <div class="col s10">
+                      <span class="black-text">
+                        Barques
+                      </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
         <div class="row">
             <form class="col m12">
                 <div class="input-field col m4">
@@ -37,166 +97,113 @@
                     </select>
                     <label>Nom</label>
                 </div>
-<!--                <select class="browser-default" disabled>-->
-<!--                    <option value="" disabled selected>Choose your option</option>-->
-<!--                    <option value="1">Option 1</option>-->
-<!--                    <option value="2">Option 2</option>-->
-<!--                    <option value="3">Option 3</option>-->
-<!--                </select>-->
+                <!--                <select class="browser-default" disabled>-->
+                <!--                    <option value="" disabled selected>Choose your option</option>-->
+                <!--                    <option value="1">Option 1</option>-->
+                <!--                    <option value="2">Option 2</option>-->
+                <!--                    <option value="3">Option 3</option>-->
+                <!--                </select>-->
             </form>
         </div>
-
-
         <div class="row">
-            <div class="col s12 m7">
+            <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="Util/img/PWC family_2J8A7808_MY18.jpg">
+                        <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Licorice _  Mango_3-4 front.jpg">
                         <span class="card-title">Card Title</span>
                     </div>
-
+                    <div class="card-content">
+                        <p class="center-align">Yamaha R1</p>
+                        <p class="center-align">15.000€</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Fiche Produit</a>
+                    </div>
                 </div>
             </div>
-            <div class="col m5 ">
-                <div class="card-panel">
-                    <H3> Nom bateau</H3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam volutpat tellus vitae rutrum. Pellentesque ut quam molestie,
-                        tempor lacus mattis, vehicula dolor. Nulla laciniaipsum in dapibus eleifend, elit ex tincidunt tortor,</p>
-                    <p>ref : 445223</p>
-                    <p>puissance : 40000cv</p>
-                    <p>poids : 2kg</p>
-                    <p>taille : 1/5/6</p>
-                    <H5 class="right-align">PRIX</H5>
-                    <a href="" class="waves-effect waves-light btn">Fiche produit</a>
+
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Pinneaple _  Candy blue_3-4 front.jpg">
+                        <span class="card-title">Card Title</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="center-align">Yamaha R2</p>
+                        <p class="center-align">15.000€</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Fiche Produit</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Vanilla _  Blueberry_3-4 front.jpg">
+                        <span class="card-title">Card Title</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="center-align">Yamaha R3</p>
+                        <p class="center-align">15.000€</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Fiche Produit</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="divider"></div>
+
         <div class="row">
-            <div class="col s12 m7">
+            <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="Util/img/PWC family_2J8A7808_MY18.jpg">
+                        <img src="Util/img/yamaha-logo-wallpaper-4.png">
                         <span class="card-title">Card Title</span>
                     </div>
-
+                    <div class="card-content">
+                        <p class="center-align">Yamaha R1</p>
+                        <p class="center-align">15.000€</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Fiche Produit</a>
+                    </div>
                 </div>
             </div>
-            <div class="col m5 ">
-                <div class="card-panel">
-                    <H3> Nom bateau</H3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam volutpat tellus vitae rutrum. Pellentesque ut quam molestie,
-                        tempor lacus mattis, vehicula dolor. Nulla laciniaipsum in dapibus eleifend, elit ex tincidunt tortor,</p>
-                    <p>ref : 445223</p>
-                    <p>puissance : 40000cv</p>
-                    <p>poids : 2kg</p>
-                    <p>taille : 1/5/6</p>
-                    <H5 class="right-align">PRIX</H5>
-                    <a href="" class="waves-effect waves-light btn">Fiche produit</a>
+
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="Util/img/yamaha-logo-wallpaper-4.png">
+                        <span class="card-title">Card Title</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="center-align">Yamaha R2</p>
+                        <p class="center-align">15.000€</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Fiche Produit</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="Util/img/yamaha-logo-wallpaper-4.png">
+                        <span class="card-title">Card Title</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="center-align">Yamaha R3</p>
+                        <p class="center-align">15.000€</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Fiche Produit</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="divider"></div>
-        <div class="row">
-            <div class="col s12 m7">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="Util/img/pic-16-610x428.jpg">
-                        <span class="card-title">Card Title</span>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col m5 ">
-                <div class="card-panel">
-                    <H3> Nom bateau</H3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam volutpat tellus vitae rutrum. Pellentesque ut quam molestie,
-                        tempor lacus mattis, vehicula dolor. Nulla laciniaipsum in dapibus eleifend, elit ex tincidunt tortor,</p>
-                    <p>ref : 445223</p>
-                    <p>puissance : 40000cv</p>
-                    <p>poids : 2kg</p>
-                    <p>taille : 1/5/6</p>
-                    <H5 class="right-align">PRIX</H5>
-                    <a href="" class="waves-effect waves-light btn">Fiche produit</a>
-                </div>
-            </div>
-        </div>
-        <div class="divider"></div>
-        <div class="row">
-            <div class="col s12 m7">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="Util/img/PWC family_2J8A7808_MY18.jpg">
-                        <span class="card-title">Card Title</span>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col m5 ">
-                <div class="card-panel">
-                    <H3> Nom bateau</H3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam volutpat tellus vitae rutrum. Pellentesque ut quam molestie,
-                        tempor lacus mattis, vehicula dolor. Nulla laciniaipsum in dapibus eleifend, elit ex tincidunt tortor,</p>
-                    <p>ref : 445223</p>
-                    <p>puissance : 40000cv</p>
-                    <p>poids : 2kg</p>
-                    <p>taille : 1/5/6</p>
-                    <H5 class="right-align">PRIX</H5>
-                    <a href="" class="waves-effect waves-light btn">Fiche produit</a>
-                </div>
-            </div>
-        </div>
-        <div class="divider"></div>
-        <div class="row">
-            <div class="col s12 m7">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="Util/img/PWC family_2J8A7808_MY18.jpg">
-                        <span class="card-title">Card Title</span>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col m5 ">
-                <div class="card-panel">
-                    <H3> Nom bateau</H3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam volutpat tellus vitae rutrum. Pellentesque ut quam molestie,
-                        tempor lacus mattis, vehicula dolor. Nulla laciniaipsum in dapibus eleifend, elit ex tincidunt tortor,</p>
-                    <p>ref : 445223</p>
-                    <p>puissance : 40000cv</p>
-                    <p>poids : 2kg</p>
-                    <p>taille : 1/5/6</p>
-                    <H5 class="right-align">PRIX</H5>
-                    <a href="" class="waves-effect waves-light btn">Fiche produit</a>
-                </div>
-            </div>
-        </div>
-        <div class="divider"></div>
-        <div class="row">
-            <div class="col s12 m7">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="Util/img/PWC family_2J8A7808_MY18.jpg">
-                        <span class="card-title">Card Title</span>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col m5 ">
-                <div class="card-panel">
-                    <H3> Nom bateau</H3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam volutpat tellus vitae rutrum. Pellentesque ut quam molestie,
-                        tempor lacus mattis, vehicula dolor. Nulla laciniaipsum in dapibus eleifend, elit ex tincidunt tortor,</p>
-                    <p>ref : 445223</p>
-                    <p>puissance : 40000cv</p>
-                    <p>poids : 2kg</p>
-                    <p>taille : 1/5/6</p>
-                    <H5 class="right-align">PRIX</H5>
-                    <a href="" class="waves-effect waves-light btn">Fiche produit</a>
-                </div>
-            </div>
-        </div>
-        <div class="divider"></div>
 
 
         <ul class="pagination">
