@@ -7,9 +7,9 @@
     </div>
     <!--    <div class="divider"></div>-->
     <nav>
-        <div class="nav-wrapper">
+        <div class="nav-wrapper blue darken-4">
             <div class="container">
-                <div class="col s12">
+                <div class="col s12 ">
                     <a href="#!" class="breadcrumb">Marque</a>
                     <a href="#!" class="breadcrumb">sous categorie</a>
                     <a href="#!" class="breadcrumb">sous sous categorie</a>

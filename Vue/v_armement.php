@@ -7,7 +7,7 @@
     </div>
     <!--    <div class="divider"></div>-->
     <nav>
-        <div class="nav-wrapper">
+        <div class="nav-wrapper blue darken-4">
             <div class="container">
                 <div class="col s12">
                     <a href="#!" class="breadcrumb">Marque</a>
@@ -18,6 +18,36 @@
         </div>
     </nav>
     <div class="divider"></div>
+    <div id="sidebar">
+        <form class="col m2">
+            <div class="input-field col m12">
+                <select>
+                    <option value="" disabled selected>Trier par Marque</option>
+                    <option value="1">See Doo</option>
+                    <option value="2">Yamaaha</option>
+                    <option value="3">Pacific craft</option>
+                </select>
+                <label>Marque</label>
+            </div>
+            <div class="input-field col m12">
+                <select>
+                    <option value="" disabled selected>Trier par Prix</option>
+                    <option value="1">Croissant</option>
+                    <option value="2">Decroissant</option>
+                    <option value="3">Promotions</option>
+                </select>
+                <label>Prix</label>
+            </div>
+            <div class="input-field col m12">
+                <select>
+                    <option value="" disabled selected>Trier par Nom</option>
+                    <option value="1">Croissant</option>
+                    <option value="2">Decroissant</option>
+                </select>
+                <label>Nom</label>
+            </div>
+        </form>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col s12 m4">
@@ -52,42 +82,6 @@
                     </div>
                 </a>
             </div>
-        </div>
-        <div class="row">
-            <form class="col m12">
-                <div class="input-field col m4">
-                    <select>
-                        <option value="" disabled selected>Trier par Marque</option>
-                        <option value="1">See Doo</option>
-                        <option value="2">Yamaaha</option>
-                        <option value="3">Pacific craft</option>
-                    </select>
-                    <label>Marque</label>
-                </div>
-                <div class="input-field col m4">
-                    <select>
-                        <option value="" disabled selected>Trier par Prix</option>
-                        <option value="1">Croissant</option>
-                        <option value="2">Decroissant</option>
-                        <option value="3">Promotions</option>
-                    </select>
-                    <label>Prix</label>
-                </div>
-                <div class="input-field col m4">
-                    <select>
-                        <option value="" disabled selected>Trier par Type</option>
-                        <option value="1">Gillet</option>
-                        <option value="2">Bouée</option>
-                    </select>
-                    <label>Type</label>
-                </div>
-                <!--                <select class="browser-default" disabled>-->
-                <!--                    <option value="" disabled selected>Choose your option</option>-->
-                <!--                    <option value="1">Option 1</option>-->
-                <!--                    <option value="2">Option 2</option>-->
-                <!--                    <option value="3">Option 3</option>-->
-                <!--                </select>-->
-            </form>
         </div>
         <div class="row">
             <div class="col s12 m4">
@@ -201,7 +195,7 @@
         </ul>
     </div><!-- container -->
 </div>
-<i class="material-icons" onclick="topFunction()" id="myBtn" title="Go to top">navigation</i>
+<i class="material-icons orange" onclick="topFunction()" id="myBtn" title="Go to top">navigation</i>
 <script>
     $(document).ready(function() {
         $('select').material_select();

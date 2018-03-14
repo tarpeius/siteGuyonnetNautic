@@ -1,5 +1,5 @@
 <div>
-    <H1 class="header center light-blue-text text-darken-4">Moteurs</H1>
+    <H1 class="header center light-blue-text text-darken-4">Remorques</H1>
     <div class="container">
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam volutpat tellus vitae rutrum. Pellentesque ut quam molestie, tempor lacus mattis, vehicula dolor. Nulla lacinia,
             ipsum in dapibus eleifend, elit ex tincidunt tortor, sit amet tristique mauris massa non lacus.  Fusce placerat vitae turpis ut aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -53,7 +53,7 @@
                     <p class="center-align">15.000€</p>
                 </div>
                 <div class="card-action">
-                    <a href="index.php?c=moteur&a=ficheProduit">Fiche Produit</a>
+                    <a href="#">Fiche Produit</a>
                 </div>
             </div>
         </div>

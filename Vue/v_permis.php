@@ -5,7 +5,8 @@
             Nous proposons des permis bateau<br /><br />
             Tout types de permis de bateau <br /><br />
             Cotier, fluvial ou hauturier nous avons ce que vous voulez ! </p>
-        <p><a data-activates="slide-out" class="waves-effect btn orange button-collapse" id="button-collapse">Tous les permis</a>  </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque lacus vitae urna suscipit, tincidunt ullamcorper urna ultrices. Suspendisse ultricies,
+            velit at semper ultricies, ligula massa molestie mi, non laoreet enim felis vitae leo. </p>
     </div>
     <div class="col m5 offset-m1">
         <div class="photoPermis">
@@ -14,11 +15,39 @@
     </div>
 </div>
 <div class="divider"></div>
+<div class="toutPermis">
+    <div class="container">
+        <div class="divider"></div>
+        <div class="row">
+            <div class="barreBouton">
+                <div class="col m4">
+                    <div class="center-align">
+                        <h4>PERMIS COTIER</h4>
+                        <a href="#cotier" class="btn-large blue darken-4 btnPermis">Acceder</a>
+                    </div>
 
+                </div>
+                <div class="col m4">
+                    <div class="center-align">
+                        <h4>PERMIS FLUVIAL</h4>
+                        <a href="#fluvial" class="btn-large blue darken-4 btnPermis">Acceder</a>
+                    </div>
+                </div>
+                <div class="col m4 pouet">
+                    <div class="center-align">
+                        <h4>PERMIS HAUTURIER</h4>
+                        <a href="#hauturier" class="btn-large blue darken-4 btnPermis">Acceder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+    </div>
+</div>
 <div class="cotier" id="cotier">
     <div class="infoCotier">
         <div class="container valign-wrapper">
-            <h3 class="">Permis Cotier</h3>
+            <h3>Permis Cotier</h3>
         </div>
     </div>
     <div class="container">
@@ -81,11 +110,10 @@
     </div>
 </div>
 <div class="divider"></div>
-
 <div class="fluvial" id="fluvial">
     <div class="infoCotier">
         <div class="container valign-wrapper">
-            <h3 class="">Permis Fluvial</h3>
+            <h3>Permis Fluvial</h3>
         </div>
     </div>
     <div class="container">
@@ -147,16 +175,14 @@
         </div>
     </div>
 </div>
-
 <div class="hauturier" id="hauturier">
     <div class="infoCotier">
         <div class="container valign-wrapper">
-            <h3 class="">Permis Hauturier</h3>
+            <h3>Permis Hauturier</h3>
         </div>
     </div>
     <div class="container">
         <div class="row">
-
             <div class="col m4 offset-m1">
                 <h4>Dates de préparation</h4>
                 <p> Cours Théoriques AUTOMNE 2018</p>
@@ -201,44 +227,9 @@
     </div>
 </div>
 <div class="divider"></div>
-<ul id="slide-out" class="side-nav">
-    <li><div class="user-view">
-            <div class="background">
-                <img src="">
-            </div>
-            <a href="#!user"><img class="circle" src="Util/img/RXT-X 300_332_MY18.jpg"></a>
-        </div></li>
-    <li><a href="#cotier" onclick="hideNav()">Permis Cotier</a></li>
-    <li><a href="#fluvial"  onclick="hideNav()">Permis Fluvial</a></li>
-    <li><a href="#hauturier"  onclick="hideNav()">Permis Hauturier</a></li>
-    <li><div class="divider"></div></li>
-    <li><a>Prochaines dates d'examen</a></li>
-    <li><a>Permis Cotier</a></li>
-    <li><a>&nbsp;&nbsp;&nbsp;Vendredi 13 Avril</a></li>
-    <li><a>Permis Fluvial</a></li>
-    <li><a>&nbsp;&nbsp;&nbsp;Vendredi 13 Avril</a></li>
-    <li><a>Permis Hauturier</a></li>
-    <li><a>&nbsp;&nbsp;&nbsp;Vendredi 13 Avril</a></li>
-</ul>
 <i class="material-icons orange" onclick="topFunction()" id="myBtn" title="Go to top">navigation</i>
-
 <script>
     $(document).ready(function() {
         $('select').material_select();
     });
-    // Initialize collapse button
-    $(".button-collapse").sideNav();
-    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-    //$('.collapsible').collapsible();
-    // Show sideNav
-//    $('.button-collapse').sideNav('show');
-/*
-    // Hide sideNav
-    $('.button-collapse').sideNav('hide');
-    // Destroy sideNav
-    $('.button-collapse').sideNav('destroy');
-    */
-function hideNav() {
-    $('.button-collapse').sideNav('hide');
-}
 </script>

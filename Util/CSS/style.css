@@ -31,6 +31,11 @@ body {
     height: 100px;
     background-color: #bfb7b7;
 }
+
+.hauturier{
+    margin-bottom: 115px;
+}
+
 .photoPermis{
     margin-top: 105px;
 }
@@ -43,7 +48,30 @@ body {
 #sidebar {
     width: 190px;
     position: fixed;
-    margin-left: 10px;
-    margin-bottom: 50px;
+    margin: 10px 0 810px 10px;
 }
 
+.barreBouton{
+    margin-top: 100px ;
+}
+
+.pouet{
+    margin-bottom: 100px;
+}
+
+.btnPermis{
+    width :275px;
+}
+
+.margin{
+    margin: 10px 10px 10px 10px;
+}
+
+.logoFicheProd{
+    max-width: 150px;
+}
+
+.imgCarouProd{
+    max-width: 100%!important;
+    max-height: 100%!important;
+}
