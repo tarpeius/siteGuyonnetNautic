@@ -9,9 +9,13 @@
                 <h5 class="white-text">Categories</h5>
                 <ul>
                     <li><a class="grey-text text-lighten-3" href="#!">Bateau</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Motomarine</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Jet</a></li>
                     <li><a class="grey-text text-lighten-3" href="#!">Moteur</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Remorque</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Armement</a></li>
                     <li><a class="grey-text text-lighten-3" href="#!">Permis</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Nos services</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
                 </ul>
             </div>
         </div>
