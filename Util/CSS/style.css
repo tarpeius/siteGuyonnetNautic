@@ -137,3 +137,7 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
     padding: 0 50px 0 50px;
     font-size: 20px;
 }
+.carouselItem{
+    height : 100%;
+    width: 100%;
+}
