@@ -57,7 +57,6 @@
                 </div>
             </div>
         </div>
-
         <div class="col s12 m4">
             <div class="card">
                 <div class="card-image">
@@ -73,7 +72,6 @@
                 </div>
             </div>
         </div>
-
         <div class="col s12 m4">
             <div class="card">
                 <div class="card-image">
@@ -90,7 +88,6 @@
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class="col s12 m4">
             <div class="card">
@@ -107,7 +104,6 @@
                 </div>
             </div>
         </div>
-
         <div class="col s12 m4">
             <div class="card">
                 <div class="card-image">
@@ -123,7 +119,6 @@
                 </div>
             </div>
         </div>
-
         <div class="col s12 m4">
             <div class="card">
                 <div class="card-image">
@@ -140,8 +135,6 @@
             </div>
         </div>
     </div>
-
-
     <ul class="pagination">
         <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
         <li class="active"><a href="#!">1</a></li>
@@ -153,7 +146,7 @@
     </ul>
 </div><!-- container -->
 </div>
-<i class="material-icons" onclick="topFunction()" id="myBtn" title="Go to top">navigation</i>
+<i class="material-icons orange" onclick="topFunction()" id="myBtn" title="Go to top">navigation</i>
 <script>
     $(document).ready(function() {
         $('select').material_select();

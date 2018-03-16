@@ -55,10 +55,6 @@ body {
     margin-top: 100px ;
 }
 
-.pouet{
-    margin-bottom: 100px;
-}
-
 .btnPermis{
     width :275px;
 }
@@ -74,4 +70,11 @@ body {
 .imgCarouProd{
     max-width: 100%!important;
     max-height: 100%!important;
+}
+.boxInscri{
+    margin-left: 160px!important;
+}
+.border{
+    border: solid 1px black;
+    border-radius: 11px;
 }

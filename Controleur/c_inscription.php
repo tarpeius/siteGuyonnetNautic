@@ -6,8 +6,8 @@ if(!empty($_REQUEST['a'])){
 
 switch($action)
 {
-    case "authentification": // a changer selon besoin
-        include('Vue/v_connexion.php');
+    case "afficher": // a changer selon besoin
+        include('Vue/v_inscription.php');
         break;
     default:
         include("Vue/v_accueil.php");

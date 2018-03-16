@@ -49,6 +49,9 @@
         case 'connexion':
             include ("Controleur/c_connexion.php");
             break;
+        case 'inscription':
+            include ("Controleur/c_inscription.php");
+            break;
 	default:
 	   include("Vue/Structure/v_nopage.php");
 	   break;

@@ -11,6 +11,7 @@
                 <li><a href="index.php?c=moteur&a=afficher"><span class="black-text"> Moteurs </span></a></li>
                 <li><a href="index.php?c=armement&a=afficher"><span class="black-text"> Armement </span></a></li>
                 <li><a href="index.php?c=remorques&a=afficher"><span class="black-text"> Remorques </span></a></li>
+                <li><a href="index.php?c=connexion&a=authentification"><span class="black-text"> Connexion </span></a></li>
         </div>
     </nav>
 </div>
