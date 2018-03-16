@@ -31,8 +31,11 @@
         case 'bateau':
             include("Controleur/c_bateau.php");
             break;
-        case 'electronique':
-            include ("Controleur/c_electronique.php");
+        case 'remorques':
+            include ("Controleur/c_remorque.php");
+            break;
+        case 'armement':
+            include ("Controleur/c_armement.php");
             break;
         case 'moteur':
             include ("Controleur/c_moteur.php");
@@ -45,6 +48,9 @@
             break;
         case 'connexion':
             include ("Controleur/c_connexion.php");
+            break;
+        case 'inscription':
+            include ("Controleur/c_inscription.php");
             break;
 	default:
 	   include("Vue/Structure/v_nopage.php");

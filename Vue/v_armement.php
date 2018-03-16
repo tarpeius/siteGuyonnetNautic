@@ -1,20 +1,20 @@
 <div>
-    <H1 class="header center light-blue-text text-darken-4">Bateaux</H1>
+    <H1 class="header center light-blue-text text-darken-4">Armement</H1>
     <div class="container">
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam volutpat tellus vitae rutrum. Pellentesque ut quam molestie, tempor lacus mattis, vehicula dolor. Nulla lacinia,
             ipsum in dapibus eleifend, elit ex tincidunt tortor, sit amet tristique mauris massa non lacus.  Fusce placerat vitae turpis ut aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Cras eu efficitur felis. Integer dignissim vulputate convallis.</p>
     </div>
-<!--    <div class="divider"></div>-->
+    <!--    <div class="divider"></div>-->
     <nav>
         <div class="nav-wrapper blue darken-4">
-           <div class="container">
-               <div class="col s12">
-                   <a href="#!" class="breadcrumb">Marque</a>
-                   <a href="#!" class="breadcrumb">sous categorie</a>
-                   <a href="#!" class="breadcrumb">sous sous categorie</a>
-               </div>
-           </div>
+            <div class="container">
+                <div class="col s12">
+                    <a href="#!" class="breadcrumb">Marque</a>
+                    <a href="#!" class="breadcrumb">sous categorie</a>
+                    <a href="#!" class="breadcrumb">sous sous categorie</a>
+                </div>
+            </div>
         </div>
     </nav>
     <div class="divider"></div>
@@ -48,9 +48,8 @@
             </div>
         </form>
     </div>
-    </div>
     <div class="container">
-        <div class="row ">
+        <div class="row">
             <div class="col s12 m4">
                 <a href="">
                     <div class="card-panel grey lighten-5 z-depth-1">
@@ -60,7 +59,7 @@
                             </div>
                             <div class="col s10">
                           <span class="black-text">
-                            Rigide
+                            Electronique
                           </span>
                             </div>
                         </div>
@@ -76,23 +75,7 @@
                             </div>
                             <div class="col s10">
                       <span class="black-text">
-                        Pneumatique
-                      </span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col s12 m4">
-                <a href="">
-                    <div class="card-panel grey lighten-5 z-depth-1">
-                        <div class="row valign-wrapper">
-                            <div class="col s2">
-                                <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Licorice _  Mango_3-4 front.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                            </div>
-                            <div class="col s10">
-                      <span class="black-text">
-                        Barques
+                        Accastillage
                       </span>
                             </div>
                         </div>

@@ -7,10 +7,7 @@ if(!empty($_REQUEST['a'])){
 switch($action)
 {
     case "afficher": // a changer selon besoin
-        include('Vue/v_moteur.php');
-        break;
-    case "ficheProduit": // a changer selon besoin
-        include('Vue/v_ficheProduit.php');
+        include('Vue/v_armement.php');
         break;
     default:
         include("Vue/v_accueil.php");
