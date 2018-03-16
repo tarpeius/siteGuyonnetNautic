@@ -83,14 +83,14 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
     width: 500px;
     height: 175px;
     position: relative;
-    bottom: 27px;
+    bottom: 15px;
 }
 .divPhoto {
     position: relative;
 }
 .imgCateg {
-    height: 240px;
-    width: 267px;
+    height: 100%;
+    width: 100%;
 }
 .blocTitle {
     position: absolute;

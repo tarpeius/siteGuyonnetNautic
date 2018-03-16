@@ -31,7 +31,7 @@
         case 'bateau':
             include("Controleur/c_bateau.php");
             break;
-        case 'remorques':
+        case 'remorque':
             include ("Controleur/c_remorque.php");
             break;
         case 'armement':
