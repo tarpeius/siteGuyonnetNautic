@@ -1,3 +1,4 @@
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -12,8 +13,7 @@ function scrollFunction() {
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-}
-//
+ }
 // $(function() {
 //
 //     var $sidebar   = $("#sidebar"),
@@ -28,7 +28,7 @@ function topFunction() {
 //             });
 //         } else {
 //             $sidebar.stop().animate({
-//                 marginTop: 5
+//                 marginTop: 0
 //             });
 //         }
 //     });

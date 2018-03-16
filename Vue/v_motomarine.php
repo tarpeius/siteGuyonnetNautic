@@ -153,7 +153,9 @@
                 </ul>
             <!-- container -->
         </div>
-        <i class="material-icons orange" onclick="topFunction()" id="myBtn" title="Go to top">navigation</i>
+
+</div>
+<i class="material-icons orange" onclick="topFunction()" id="myBtn" title="Go to top">navigation</i>
         <script>
             $(document).ready(function() {
                 $('select').material_select();
