@@ -16,19 +16,14 @@
             <div class="col m3">
                 <h5 class="white-text">Categories</h5>
                 <ul>
-                    <li><i class="material-icons tiny">send</i><a class="grey-text text-lighten-3" href="index.php?c=bateau&a=afficher">Bateau</a></li>
-                    <li><i class="material-icons tiny">send</i><a class="grey-text text-lighten-3" href="index.php?c=motomarine&a=afficher">Motomarine</a></li>
-                    <li><i class="material-icons tiny">send</i><a class="grey-text text-lighten-3" href="#!">Moteur</a></li>
-                    <li><i class="material-icons tiny">send</i><a class="grey-text text-lighten-3" href="index.php?c=permis&a=afficher">Permis</a></li>
-                    <li><i class="material-icons tiny">send</i><a class="grey-text text-lighten-3" href="http://atworkandbored.com/jokes-inc/fun-pics/crazy-dog-8299.jpeg">Le chien</a></li>
-                </ul>
-            </div>
-            <div class="col m3">
-                <h5 class="white-text">Contact</h5>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" >Telephone</a></li>
-                    <li><a class="grey-text text-lighten-3" >Adresse</a></li>
-                    <li><a class="grey-text text-lighten-3" >Mail</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Bateau</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Jet</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Moteur</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Remorque</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Armement</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Permis</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Nos services</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
                 </ul>
             </div>
         </div>
