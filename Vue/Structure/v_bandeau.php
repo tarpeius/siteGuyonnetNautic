@@ -1,7 +1,7 @@
 <header>
 <!-- MENU -->
     <nav>
-        <div class="nav-wrapper grey darken-3">
+        <div class="nav-wrapper light-blue darken-4">
 <!--            <div>-->
 <!--                <a href="#!" class="brand-logo"><img id="logoMenu" src="Util/img/Copie de GUYONNET-logo.png"></a>-->
 <!--            </div>-->
@@ -23,7 +23,7 @@
     </nav>
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
-        <li class="SousCategNav grey darken-3"><a href="index.php?c=bateau&a=afficher"><span class="white-text">BATEAU</span></a></li>
+        <li class="SousCategNav light-blue darken-4"><a href="index.php?c=bateau&a=afficher"><span class="white-text">BATEAU</span></a></li>
         <li class="divider"></li>
         <li class="SousCategNav"><a href="#!">Pacific Craft</a></li>
         <li class="divider"></li>
@@ -36,29 +36,29 @@
         <li class="SousCategNav"><a href="#!">Fun-Yack</a></li>
     </ul>
     <ul id="dropdown2" class="dropdown-content">
-        <li class="SousCategNav grey darken-3"><a href="index.php?c=motomarine&a=afficher"><span class="white-text">JET</span></a></li>
+        <li class="SousCategNav light-blue darken-4"><a href="index.php?c=motomarine&a=afficher"><span class="white-text">JET</span></a></li>
         <li class="divider"></li>
         <li class="SousCategNav"><a href="#!">Seadoo</a></li>
     </ul>
     <ul id="dropdown3" class="dropdown-content">
-        <li class="SousCategNav grey darken-3"><a href="index.php?c=moteur&a=afficher"><span class="white-text">MOTEUR</span></a></li>
+        <li class="SousCategNav light-blue darken-4"><a href="index.php?c=moteur&a=afficher"><span class="white-text">MOTEUR</span></a></li>
         <li class="divider"></li>
         <li class="SousCategNav"><a href="#!">Yamaha</a></li>
     </ul>
     <ul id="dropdown4" class="dropdown-content">
-        <li class="SousCategNav grey darken-3"><a href="index.php?c=remorque&a=afficher"><span class="white-text">REMORQUE</span></a></li>
+        <li class="SousCategNav light-blue darken-4"><a href="index.php?c=remorque&a=afficher"><span class="white-text">REMORQUE</span></a></li>
         <li class="divider"></li>
         <li class="SousCategNav"><a href="#!">Rocca</a></li>
     </ul>
     <ul id="dropdown5" class="dropdown-content">
-        <li class="SousCategNav grey darken-3"><a href="index.php?c=armement&a=afficher"><span class="white-text">ARMEMENT</span></a></li>
+        <li class="SousCategNav light-blue darken-4"><a href="index.php?c=armement&a=afficher"><span class="white-text">ARMEMENT</span></a></li>
         <li class="divider"></li>
         <li class="SousCategNav"><a href="#!">Plastimo</a></li>
         <li class="divider"></li>
         <li class="SousCategNav"><a href="#!">Navicom</a></li>
     </ul>
     <ul id="dropdown6" class="dropdown-content">
-        <li class="SousCategNav grey darken-3"><a href="index.php?c=permis&a=afficher"><span class="white-text">PERMIS</span></a></li>
+        <li class="SousCategNav light-blue darken-4"><a href="index.php?c=permis&a=afficher"><span class="white-text">PERMIS</span></a></li>
         <li class="divider"></li>
         <li class="SousCategNav"><a href="#!">Cotier</a></li>
         <li class="divider"></li>
@@ -73,7 +73,7 @@
                 <div class="blocTitle">
                     <div class="title">Bateau</div>
                     <div class="button">
-                        <span class="btn waves-effect waves-light grey darken-3">Voir</span>
+                        <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
                     </div>
                 </div>
             </a>
@@ -85,7 +85,7 @@
                 <div class="blocTitle">
                     <div class="title">Jet</div>
                     <div class="button">
-                        <span class="btn waves-effect waves-light grey darken-3">Voir</span>
+                        <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
                     </div>
                 </div>
             </a>
@@ -96,7 +96,7 @@
                 <div class="blocTitle">
                     <div class="title">Moteur</div>
                     <div class="button">
-                        <span class="btn waves-effect waves-light grey darken-3">Voir</span>
+                        <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
                     </div>
                 </div>
             </a>
@@ -106,7 +106,7 @@
                 <div class="blocTitle">
                     <div class="title">Remorque</div>
                     <div class="button">
-                        <span class="btn waves-effect waves-light grey darken-3">Voir</span>
+                        <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
                     </div>
                 </div>
             </a>
@@ -116,7 +116,7 @@
                 <div class="blocTitle">
                     <div class="title">Armement</div>
                     <div class="button">
-                        <span class="btn waves-effect waves-light grey darken-3">Voir</span>
+                        <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
                     </div>
                 </div>
             </a>
@@ -126,7 +126,7 @@
                 <div class="blocTitle">
                     <div class="title">Permis</div>
                     <div class="button">
-                        <span class="btn waves-effect waves-light grey darken-3">Voir</span>
+                        <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
                     </div>
                 </div>
             </a>
