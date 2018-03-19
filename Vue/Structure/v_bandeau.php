@@ -16,8 +16,8 @@
                 <li class="CategNav"><a class="dropdown-button" href="#!" data-activates="dropdown7">Nos Services</a></li>
             </ul>
             <ul class="right hide-on-med-and-down">
-                <li class=""><a class="dropdown-button" href="#!" data-activates="dropdown8">Contact</a>
-                <li id="homeNav"><a class="dropdown-button" href="#!" data-activates="dropdown8"> <i class="large material-icons">account_circle</i> </a>
+                <li class=""><a class="dropdown-button" href="index.php?c=contact&a=afficher" data-activates="dropdown8">Contact</a>
+                <li id="homeNav"><a class="dropdown-button" href="index.php?c=connexion&a=authentification" data-activates="dropdown8"> <i class="large material-icons">account_circle</i> </a>
             </ul>
         </div>
     </nav>
