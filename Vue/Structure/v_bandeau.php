@@ -45,7 +45,7 @@
         <li class="divider"></li>
         <li class="SousCategNav"><a href="#!">Rigiflex</a></li>
         <li class="divider"></li>
-        <li class="SousCategNav"><a href="#!">Fun-Yack</a></li>
+        <li class="SousCategNav"><a href="#!">Fun-Yak</a></li>
     </ul>
     <ul id="dropdown2" class="dropdown-content">
         <li class="SousCategNav light-blue darken-4"><a href="index.php?c=motomarine&a=afficher"><span class="white-text">JET</span></a></li>
@@ -78,72 +78,6 @@
         <li class="divider"></li>
         <li class="SousCategNav"><a href="#!">Hauturier</a></li>
     </ul>
-<!-- PHOTO CATEGORIE BATEAU -->
-    <div id="rowCateg" class="row">
-        <div class="col m2 s12 divPhoto">
-            <a href="index.php?c=bateau&a=afficher"> <img class="imgCateg" src="Util/img/autre nom - GTR 230_1738_MY17.jpg">
-                <div class="blocTitle">
-                    <div class="title">Bateau</div>
-                    <div class="button">
-                        <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-<!-- PHOTO CATEGORIE BATEAU -->
-<!-- PHOTO CATEGORIE JET -->
-        <div class="col m2 divPhoto">
-            <a href="index.php?c=motomarine&a=afficher"> <img class="imgCateg" src="Util/img/RXT-X 300_332_MY18.jpg">
-                <div class="blocTitle">
-                    <div class="title">Jet</div>
-                    <div class="button">
-                        <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-<!-- PHOTO CATEGORIE JET -->
-        <div class="col m2 divPhoto">
-            <a href="index.php?c=moteur&a=afficher"> <img class="imgCateg" src="Util/img/Spark Trixx_2 riders 0309_MY17.jpg">
-                <div class="blocTitle">
-                    <div class="title">Moteur</div>
-                    <div class="button">
-                        <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col m2 divPhoto">
-            <a href="index.php?c=remorque&a=afficher"> <img class="imgCateg" src="Util/img/GTR 230_191_MY17.jpg">
-                <div class="blocTitle">
-                    <div class="title">Remorque</div>
-                    <div class="button">
-                        <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col m2 divPhoto">
-            <a href="index.php?c=armement&a=afficher"> <img class="imgCateg" src="Util/img/autre nom - GTR 230_1738_MY17.jpg">
-                <div class="blocTitle">
-                    <div class="title">Armement</div>
-                    <div class="button">
-                        <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col m2 divPhoto">
-            <a href="index.php?c=permis&a=afficher"> <img class="imgCateg" src="Util/img/GTX LTD - RXT-X large_2J8A6789_MY18.jpg">
-                <div class="blocTitle">
-                    <div class="title">Permis</div>
-                    <div class="button">
-                        <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
 </header>
 <script>
 
