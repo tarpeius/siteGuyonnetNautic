@@ -96,13 +96,13 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     border-radius: 11px;
 }
 #logoAccueil {
-    width: 505px;
-    height: 200px;
-    /*position: relative;*/
-    /*bottom: 47px;*/
+    height: 130px;
+    width: 300px;
 }
 .divPhoto {
     position: relative;
+    border: solid black 1px;
+    height: 177px;
 }
 .imgCateg {
     height: 100%;
@@ -143,6 +143,18 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 }
 
 #listeLogo {
-    /*position: relative;*/
-    /*bottom:30px;*/
+    position: relative;
+    top: 35px;
+}
+#carouselAccueil{
+    position: relative;
+    bottom: 33px;
+}
+#blocLogos{
+    position: relative;
+    bottom:10px;
+}
+#blocCategories{
+    position: relative;
+    bottom: 15px;
 }
