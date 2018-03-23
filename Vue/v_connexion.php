@@ -15,7 +15,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col m6 boxInscri">
-                        <input id="password" type="password" class="validate">
+                        <input id="password" type="password" class="validate" required>
                         <label for="password">Password</label>
                     </div>
                 </div>

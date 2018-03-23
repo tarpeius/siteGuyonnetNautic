@@ -8,9 +8,8 @@
         <div class="nav-wrapper blue darken-4">
            <div class="container">
                <div class="col s12">
-                   <a href="#!" class="breadcrumb">Marque</a>
-                   <a href="#!" class="breadcrumb">sous categorie</a>
-                   <a href="#!" class="breadcrumb">sous sous categorie</a>
+                   <a href="index.php?c=bateau&a=afficher" class="breadcrumb"><?php echo $categorie['nom_categorie']?></a>
+
                </div>
            </div>
         </div>
@@ -64,6 +63,8 @@
                         </div>
                     </div>
                 </a>
+
+
             </div>
             <div class="col s12 m4">
                 <a href="">
@@ -99,104 +100,109 @@
             </div>
         </div>
         <div class="row">
-            <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Licorice _  Mango_3-4 front.jpg">
-                        <span class="card-title">Card Title</span>
-                    </div>
-                    <div class="card-content">
-                        <p class="center-align">Yamaha R1</p>
-                        <p class="center-align">15.000€</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">Fiche Produit</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Pinneaple _  Candy blue_3-4 front.jpg">
-                        <span class="card-title">Card Title</span>
-                    </div>
-                    <div class="card-content">
-                        <p class="center-align">Yamaha R2</p>
-                        <p class="center-align">15.000€</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">Fiche Produit</a>
+            <?php
+            foreach ($toutProduit as $unProduit){
+                ?>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="Util/img/<?php echo $unProduit['photo_article'] ?>">
+                        </div>
+                        <div class="card-content">
+                            <p class="center-align"><?php echo $unProduit['nom_article']?></p>
+                            <p class="center-align"><?php echo $unProduit['prix_article']?></p>
+                        </div>
+                        <div class="card-action">
+                            <a href="index.php?c=bateau&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Vanilla _  Blueberry_3-4 front.jpg">
-                        <span class="card-title">Card Title</span>
-                    </div>
-                    <div class="card-content">
-                        <p class="center-align">Yamaha R3</p>
-                        <p class="center-align">15.000€</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">Fiche Produit</a>
-                    </div>
-                </div>
-            </div>
+                <?php
+            }
+            ?>
         </div>
-
-        <div class="row">
-            <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="Util/img/yamaha-logo-wallpaper-4.png">
-                        <span class="card-title">Card Title</span>
-                    </div>
-                    <div class="card-content">
-                        <p class="center-align">Yamaha R1</p>
-                        <p class="center-align">15.000€</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">Fiche Produit</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="Util/img/yamaha-logo-wallpaper-4.png">
-                        <span class="card-title">Card Title</span>
-                    </div>
-                    <div class="card-content">
-                        <p class="center-align">Yamaha R2</p>
-                        <p class="center-align">15.000€</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">Fiche Produit</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="Util/img/yamaha-logo-wallpaper-4.png">
-                        <span class="card-title">Card Title</span>
-                    </div>
-                    <div class="card-content">
-                        <p class="center-align">Yamaha R3</p>
-                        <p class="center-align">15.000€</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">Fiche Produit</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--            <div class="col s12 m4">-->
+<!--                <div class="card">-->
+<!--                    <div class="card-image">-->
+<!--                        <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Pinneaple _  Candy blue_3-4 front.jpg">-->
+<!--                        <span class="card-title">Card Title</span>-->
+<!--                    </div>-->
+<!--                    <div class="card-content">-->
+<!--                        <p class="center-align">Yamaha R2</p>-->
+<!--                        <p class="center-align">15.000€</p>-->
+<!--                    </div>-->
+<!--                    <div class="card-action">-->
+<!--                        <a href="#">Fiche Produit</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="col s12 m4">-->
+<!--                <div class="card">-->
+<!--                    <div class="card-image">-->
+<!--                        <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Vanilla _  Blueberry_3-4 front.jpg">-->
+<!--                        <span class="card-title">Card Title</span>-->
+<!--                    </div>-->
+<!--                    <div class="card-content">-->
+<!--                        <p class="center-align">Yamaha R3</p>-->
+<!--                        <p class="center-align">15.000€</p>-->
+<!--                    </div>-->
+<!--                    <div class="card-action">-->
+<!--                        <a href="#">Fiche Produit</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="row">-->
+<!--            <div class="col s12 m4">-->
+<!--                <div class="card">-->
+<!--                    <div class="card-image">-->
+<!--                        <img src="Util/img/yamaha-logo-wallpaper-4.png">-->
+<!--                        <span class="card-title">Card Title</span>-->
+<!--                    </div>-->
+<!--                    <div class="card-content">-->
+<!--                        <p class="center-align">Yamaha R1</p>-->
+<!--                        <p class="center-align">15.000€</p>-->
+<!--                    </div>-->
+<!--                    <div class="card-action">-->
+<!--                        <a href="#">Fiche Produit</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="col s12 m4">-->
+<!--                <div class="card">-->
+<!--                    <div class="card-image">-->
+<!--                        <img src="Util/img/yamaha-logo-wallpaper-4.png">-->
+<!--                        <span class="card-title">Card Title</span>-->
+<!--                    </div>-->
+<!--                    <div class="card-content">-->
+<!--                        <p class="center-align">Yamaha R2</p>-->
+<!--                        <p class="center-align">15.000€</p>-->
+<!--                    </div>-->
+<!--                    <div class="card-action">-->
+<!--                        <a href="#">Fiche Produit</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="col s12 m4">-->
+<!--                <div class="card">-->
+<!--                    <div class="card-image">-->
+<!--                        <img src="Util/img/yamaha-logo-wallpaper-4.png">-->
+<!--                        <span class="card-title">Card Title</span>-->
+<!--                    </div>-->
+<!--                    <div class="card-content">-->
+<!--                        <p class="center-align">Yamaha R3</p>-->
+<!--                        <p class="center-align">15.000€</p>-->
+<!--                    </div>-->
+<!--                    <div class="card-action">-->
+<!--                        <a href="#">Fiche Produit</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
 
         <ul class="pagination">
