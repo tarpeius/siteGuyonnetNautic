@@ -28,30 +28,34 @@
 	case 'accueil':
 	   include("Controleur/c_accueil.php");
 	   break;
-        case 'bateau':
-            include("Controleur/c_bateau.php");
-            break;
-        case 'remorque':
-            include ("Controleur/c_remorque.php");
-            break;
-        case 'armement':
-            include ("Controleur/c_armement.php");
-            break;
-        case 'moteur':
-            include ("Controleur/c_moteur.php");
-            break;
-        case 'motomarine':
-            include ("Controleur/c_motomarine.php");
-            break;
-        case 'permis':
-            include ("Controleur/c_permis.php");
-            break;
-        case 'connexion':
-            include ("Controleur/c_connexion.php");
-            break;
-        case 'inscription':
-            include ("Controleur/c_inscription.php");
-            break;
+    case 'bateau':
+        include("Controleur/c_bateau.php");
+        break;
+    case 'remorque':
+        include ("Controleur/c_remorque.php");
+        break;
+    case 'armement':
+        include ("Controleur/c_armement.php");
+        break;
+    case 'moteur':
+        include ("Controleur/c_moteur.php");
+        break;
+    case 'motomarine':
+        include ("Controleur/c_motomarine.php");
+        break;
+    case 'permis':
+        include ("Controleur/c_permis.php");
+        break;
+    case 'connexion':
+        include ("Controleur/c_connexion.php");
+        break;
+    case 'inscription':
+        include ("Controleur/c_inscription.php");
+        break;
+    case 'contact':
+        include ("Controleur/c_contact.php");
+        break;
+
 	default:
 	   include("Vue/Structure/v_nopage.php");
 	   break;

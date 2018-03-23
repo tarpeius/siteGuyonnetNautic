@@ -3,7 +3,7 @@
 </div>
 <div class="divider margin"></div>
 <div class="container">
-    <div class="row">
+    <div class="row padding">
         <div class="col m6 center">
             <form method="POST" action="">
                 <h3>Connectez-vous!</h3>

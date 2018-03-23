@@ -1,9 +1,7 @@
 <div>
     <H1 class="header center light-blue-text text-darken-4">Bateaux</H1>
     <div class="container">
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam volutpat tellus vitae rutrum. Pellentesque ut quam molestie, tempor lacus mattis, vehicula dolor. Nulla lacinia,
-            ipsum in dapibus eleifend, elit ex tincidunt tortor, sit amet tristique mauris massa non lacus.  Fusce placerat vitae turpis ut aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Cras eu efficitur felis. Integer dignissim vulputate convallis.</p>
+        <p> <?php echo $categorie['desc_categorie'];?></p>
     </div>
 <!--    <div class="divider"></div>-->
     <nav>
@@ -21,7 +19,7 @@
     <div id="sidebar">
         <form class="col m2">
             <div class="input-field col m12">
-                <select>
+                <select name="triMarque">
                     <option value="" disabled selected>Trier par Marque</option>
                     <option value="1">See Doo</option>
                     <option value="2">Yamaaha</option>
@@ -30,7 +28,7 @@
                 <label>Marque</label>
             </div>
             <div class="input-field col m12">
-                <select>
+                <select name="triPrix">
                     <option value="" disabled selected>Trier par Prix</option>
                     <option value="1">Croissant</option>
                     <option value="2">Decroissant</option>
@@ -39,7 +37,7 @@
                 <label>Prix</label>
             </div>
             <div class="input-field col m12">
-                <select>
+                <select name="triNom">
                     <option value="" disabled selected>Trier par Nom</option>
                     <option value="1">Croissant</option>
                     <option value="2">Decroissant</option>

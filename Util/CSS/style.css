@@ -141,7 +141,12 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     height : 100%;
     width: 100%;
 }
-
+.hauteurTextArea{
+    height: 15rem!important;
+}
+.padding{
+    padding-bottom: 200px;
+}
 #listeLogo {
     position: relative;
     top: 35px;
