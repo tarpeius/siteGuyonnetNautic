@@ -1,8 +1,8 @@
-nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     height: 55px !important;
     line-height: 55px !important;
 }
-.dropdown-content li>a, .dropdown-content li>span{
+.dropdown-content li>a, .dropdown-content li>span {
     color: #424242 !important;
 }
 .row .col.m2 {
@@ -96,13 +96,13 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
     border-radius: 11px;
 }
 #logoAccueil {
-    width: 500px;
-    height: 175px;
-    position: relative;
-    bottom: 15px;
+    height: 130px;
+    width: 300px;
 }
 .divPhoto {
     position: relative;
+    border: solid black 1px;
+    height: 177px;
 }
 .imgCateg {
     height: 100%;
@@ -132,12 +132,12 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
     opacity: 0.7;
 }
 #descriptifAccueil {
-    position: relative;
-    bottom: 30px;
-    padding: 0 50px 0 50px;
-    font-size: 20px;
+    /*position: relative;*/
+    /*bottom: 43px;*/
+    padding: 10px 50px 10px 50px;
+    font-size: 22px;
 }
-.carouselItem{
+.carouselItem {
     height : 100%;
     width: 100%;
 }
@@ -146,4 +146,20 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
 }
 .padding{
     padding-bottom: 200px;
+}
+#listeLogo {
+    position: relative;
+    top: 35px;
+}
+#carouselAccueil{
+    position: relative;
+    bottom: 33px;
+}
+#blocLogos{
+    position: relative;
+    bottom:10px;
+}
+#blocCategories{
+    position: relative;
+    bottom: 15px;
 }
