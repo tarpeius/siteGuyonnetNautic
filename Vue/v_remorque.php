@@ -36,7 +36,7 @@
 <div class="container">
      <div class="row">
             <?php
-            foreach ($toutProduit as $unProduit){
+            foreach ($pageProduit as $unProduit){
                 ?>
                 <div class="col s12 m4">
                     <div class="card">
@@ -57,15 +57,23 @@
             ?>
     </div>
 
-    <ul class="pagination">
-        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-        <li class="active"><a href="#!">1</a></li>
-        <li class="waves-effect"><a href="#!">2</a></li>
-        <li class="waves-effect"><a href="#!">3</a></li>
-        <li class="waves-effect"><a href="#!">4</a></li>
-        <li class="waves-effect"><a href="#!">5</a></li>
-        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-    </ul>
+   <!-- pagination -->
+           <ul class="pagination">
+               <li class=" <?php if($pageActuelle==1){echo "btn-flat disabled";}?>"><a href="index.php?c=motomarine&a=afficher&page=<?php echo ($pageActuelle-1) ;?>"><i class="material-icons">chevron_left</i></a></li>
+               <?php
+               for($i=1;$i<=$nbpage;$i++){
+                   $current="";
+                   $disabled = "";
+                   if($pageActuelle==($i)){
+                       $current = "active";
+                   }?>
+                   <li class="<?php echo $current." ".$disabled;?>"><a href="index.php?c=motomarine&a=afficher&page=<?php echo ($i) ;?>"><?php echo ($i) ;?></a></li>
+                   <?php
+               }
+               ?>
+               <li class="waves-effect <?php if($pageActuelle>=($nbpage)){echo "btn-flat  disabled";}?>"><a href="index.php?c=motomarine&a=afficher&page=<?php echo ($pageActuelle+1) ;?>"><i class="material-icons">chevron_right</i></a></li>
+           </ul>
+           <!-- fin pagination -->
 </div><!-- container -->
 </div>
 <i class="material-icons orange" onclick="topFunction()" id="myBtn" title="Go to top">navigation</i>
