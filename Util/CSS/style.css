@@ -163,3 +163,10 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     position: relative;
     bottom: 15px;
 }
+.card{
+    height: 425px!important;
+}
+
+.tailleImage{
+    height: 270px!important;
+}

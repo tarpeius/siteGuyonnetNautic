@@ -49,7 +49,7 @@
     <div class="container">
         <div class="row ">
             <div class="col s12 m4">
-                <a href="">
+                <a href="index.php?c=bateau&a=afficher&sousCateg=rigide">
                     <div class="card-panel grey lighten-5 z-depth-1">
                         <div class="row valign-wrapper">
                             <div class="col s2">
@@ -63,11 +63,9 @@
                         </div>
                     </div>
                 </a>
-
-
             </div>
             <div class="col s12 m4">
-                <a href="">
+                <a href="index.php?c=bateau&a=afficher&sousCateg=pneumatique">
                     <div class="card-panel grey lighten-5 z-depth-1">
                         <div class="row valign-wrapper">
                             <div class="col s2">
@@ -83,7 +81,7 @@
                 </a>
             </div>
             <div class="col s12 m4">
-                <a href="">
+                <a href="index.php?c=bateau&a=afficher&sousCateg=barque">
                     <div class="card-panel grey lighten-5 z-depth-1">
                         <div class="row valign-wrapper">
                             <div class="col s2">
@@ -106,11 +104,11 @@
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="Util/img/<?php echo $unProduit['photo_article'] ?>">
+                            <img class="responsive-img tailleImage" src="Util/img/<?php echo $unProduit['photo_article'] ?>">
                         </div>
                         <div class="card-content">
                             <p class="center-align"><?php echo $unProduit['nom_article']?></p>
-                            <p class="center-align"><?php echo $unProduit['prix_article']?></p>
+                            <p class="center-align"><strong><?php echo $unProduit['prix_article']?>€</strong></p>
                         </div>
                         <div class="card-action">
                             <a href="index.php?c=bateau&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>

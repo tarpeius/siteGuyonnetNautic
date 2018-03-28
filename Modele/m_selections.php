@@ -39,6 +39,39 @@ function afficherProduitParCateg($categorie)
     return $result;
 }
 
+function afficherToutProduitCategSousCateg($cat,$sousCat1,$sousCat2,$sousCat3)
+{
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query = "SELECT DISTINCT(article.reference), nom_article, categorie.nom_categorie, prix_article, photo_article
+                FROM article,  categoriser, categorie 
+                WHERE article.reference=categoriser.reference AND categorie.id_categorie=categoriser.id_categorie AND
+                categorie.nom_categorie = :cat
+                UNION
+                SELECT DISTINCT(article.reference), nom_article, categorie.nom_categorie, prix_article, photo_article
+                FROM article,  categoriser, categorie 
+                WHERE article.reference=categoriser.reference AND categorie.id_categorie=categoriser.id_categorie AND
+                categorie.nom_categorie =:sousCat
+                UNION 
+                SELECT DISTINCT(article.reference), nom_article, categorie.nom_categorie, prix_article, photo_article
+                FROM article,  categoriser, categorie 
+                WHERE article.reference=categoriser.reference AND categorie.id_categorie=categoriser.id_categorie AND
+                categorie.nom_categorie = :sousCat2
+                UNION
+                SELECT DISTINCT(article.reference), nom_article, categorie.nom_categorie, prix_article, photo_article
+                FROM article,  categoriser, categorie 
+                WHERE article.reference=categoriser.reference AND categorie.id_categorie=categoriser.id_categorie AND
+                categorie.nom_categorie = :sousCat3";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':cat', $cat);
+    $req->bindParam(':sousCat', $sousCat1);
+    $req->bindParam(':sousCat2', $sousCat2);
+    $req->bindParam(':sousCat3', $sousCat3);
+    $req->execute();
+    $result= $req->fetchAll();
+    return $result;
+}
+
 function afficherProduit($id){
     global $bdd;
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

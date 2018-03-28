@@ -12,8 +12,11 @@ switch($action)
         if(isset($_GET['marque'])){
             $marque = $_GET['marque'];
             $toutProduit = afficherToutProduitMarque($marque);
+        }else if(isset($_GET['sousCateg'])){
+            $sousCateg = $_GET['sousCateg'];
+            $toutProduit = afficherProduitParCateg($sousCateg);
         }else{
-            $toutProduit = afficherProduitParCateg($categorie['nom_categorie']);
+            $toutProduit = afficherToutProduitCategSousCateg('Bateau','rigide','pneumatique','barque');
         }
         include('Vue/v_bateau.php');
         break;

@@ -48,7 +48,7 @@
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="Util/img/<?php echo $unProduit['photo_article'] ?>">
+                            <img class="responsive-img tailleImage" src="Util/img/<?php echo $unProduit['photo_article'] ?>">
                         </div>
                         <div class="card-content">
                             <p class="center-align"><?php echo $unProduit['nom_article']?></p>

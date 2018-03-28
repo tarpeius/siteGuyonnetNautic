@@ -42,6 +42,56 @@
         </form>
     </div>
     <div class="container">
+        <div class="row ">
+            <div class="col s12 m4">
+                <a href="index.php?c=armement&a=afficher&sousCateg=gps">
+                    <div class="card-panel grey lighten-5 z-depth-1">
+                        <div class="row valign-wrapper">
+                            <div class="col s2">
+                                <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Licorice _  Mango_3-4 front.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                            </div>
+                            <div class="col s10">
+                      <span class="black-text">
+                        GPS
+                      </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col s12 m4">
+                <a href="index.php?c=armement&a=afficher&sousCateg=sondeur">
+                    <div class="card-panel grey lighten-5 z-depth-1">
+                        <div class="row valign-wrapper">
+                            <div class="col s2">
+                                <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Licorice _  Mango_3-4 front.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                            </div>
+                            <div class="col s10">
+                  <span class="black-text">
+                    Sondeur
+                  </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col s12 m4">
+                <a href="index.php?c=armement&a=afficher&sousCateg=accastillage">
+                    <div class="card-panel grey lighten-5 z-depth-1">
+                        <div class="row valign-wrapper">
+                            <div class="col s2">
+                                <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Licorice _  Mango_3-4 front.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                            </div>
+                            <div class="col s10">
+                  <span class="black-text">
+                    Accastillage
+                  </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
         <div class="row">
             <?php
             foreach ($toutProduit as $unProduit){
@@ -49,7 +99,7 @@
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="Util/img/<?php echo $unProduit['photo_article'] ?>">
+                            <img class="responsive-img tailleImage" src="Util/img/<?php echo $unProduit['photo_article'] ?>">
                         </div>
                         <div class="card-content">
                             <p class="center-align"><?php echo $unProduit['nom_article']?></p>
