@@ -19,18 +19,9 @@
 <div class="container">
     <div class="row">
         <div class="col m6">
-            <div class="carousel carousel-slider center">
+            <div class="carousel carousel-slider">
                 <div class="carousel-item carouselItem" href="#one!">
                     <img class="imgCarouProd" src="Util/img/<?php  echo $produit['photo_article']?>">
-                </div>
-                <div class="carousel-item" href="#two!">
-                    <img class="imgCarouProd" src="Util/img/bloggif_5aa0202c16ec5.jpeg">
-                </div>
-                <div class="carousel-item" href="#three!">
-                    <img class="imgCarouProd" src="Util/img/Homer_Simpson_Wallpapers.jpg">
-                </div>
-                <div class="carousel-item" href="#four!">
-                    <img class="imgCarouProd" src="Util/img/bloggif_5aa0202c16ec5.jpeg">
                 </div>
             </div>
         </div>

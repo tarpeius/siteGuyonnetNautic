@@ -39,6 +39,7 @@
         foreach ($pageProduit as $unProduit){
             ?>
             <div class="col s12 m4">
+                <a href="index.php?c=bateau&a=ficheProduit&id=<?php echo $unProduit['reference']?>">
                 <div class="card">
                     <div class="card-image">
                         <img class="responsive-img tailleImage" src="Util/img/<?php echo $unProduit['photo_article'] ?>">
@@ -51,6 +52,7 @@
                         <a href="index.php?c=motomarine&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>
                     </div>
                 </div>
+                </a>
             </div>
             <?php
         }

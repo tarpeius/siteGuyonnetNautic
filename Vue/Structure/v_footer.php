@@ -25,7 +25,7 @@
                 <h5 class="white-text">Contact</h5>
                 <ul>
                     <li><a class="grey-text text-lighten-3" >Telephone : 05.59.30.71.98</a></li>
-                    <li><a class="grey-text text-lighten-3" >Adresse : Avenue du Corps Franc Pommies, 64320 BIZANOS</a></li>
+                    <li><a class="grey-text text-lighten-3" >Adresse : Avenue du Corps Franc Pommies 64320 BIZANOS</a></li>
                     <li><a class="grey-text text-lighten-3" >Mail : contact@guyonnetnautic.com</a></li>
                 </ul>
             </div>

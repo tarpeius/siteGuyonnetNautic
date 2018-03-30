@@ -97,18 +97,20 @@
             foreach ($pageProduit as $unProduit){
                 ?>
                 <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="responsive-img tailleImage" src="Util/img/<?php echo $unProduit['photo_article'] ?>">
+                    <a href="index.php?c=bateau&a=ficheProduit&id=<?php echo $unProduit['reference']?>">
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="responsive-img tailleImage" src="Util/img/<?php echo $unProduit['photo_article'] ?>">
+                            </div>
+                            <div class="card-content">
+                                <p class="center-align"><?php echo $unProduit['nom_article']?></p>
+                                <p class="center-align"><?php echo $unProduit['prix_article']?>€</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="index.php?c=motomarine&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <p class="center-align"><?php echo $unProduit['nom_article']?></p>
-                            <p class="center-align"><?php echo $unProduit['prix_article']?>€</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="index.php?c=motomarine&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>
-                        </div>
-                    </div>
+                    </a>
                 </div>
                 <?php
             }

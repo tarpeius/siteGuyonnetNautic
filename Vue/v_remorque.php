@@ -13,23 +13,25 @@
     <div class="divider"></div>
     <div id="sidebar">
         <form class="col m2">
-            <div class="input-field col m12">
-                <select>
-                    <option value="" disabled selected>Trier par Prix</option>
-                    <option value="1">Croissant</option>
-                    <option value="2">Decroissant</option>
-                    <option value="3">Promotions</option>
-                </select>
-                <label>Prix</label>
-            </div>
-            <div class="input-field col m12">
-                <select>
-                    <option value="" disabled selected>Trier par Nom</option>
-                    <option value="1">Croissant</option>
-                    <option value="2">Decroissant</option>
-                </select>
-                <label>Nom</label>
-            </div>
+
+                <div class="input-field col m12">
+                    <select>
+                        <option value="" disabled selected>Trier par Prix</option>
+                        <option value="1">Croissant</option>
+                        <option value="2">Decroissant</option>
+                        <option value="3">Promotions</option>
+                    </select>
+                    <label>Prix</label>
+                </div>
+                <div class="input-field col m12">
+                    <select>
+                        <option value="" disabled selected>Trier par Nom</option>
+                        <option value="1">Croissant</option>
+                        <option value="2">Decroissant</option>
+                    </select>
+                    <label>Nom</label>
+                </div>
+
         </form>
     </div>
 </div>
@@ -39,18 +41,20 @@
             foreach ($pageProduit as $unProduit){
                 ?>
                 <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="responsive-img tailleImage" src="Util/img/<?php echo $unProduit['photo_article'] ?>">
+                    <a href="index.php?c=bateau&a=ficheProduit&id=<?php echo $unProduit['reference']?>">
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="responsive-img tailleImage" src="Util/img/<?php echo $unProduit['photo_article'] ?>">
+                            </div>
+                            <div class="card-content">
+                                <p class="center-align"><?php echo $unProduit['nom_article']?></p>
+                                <p class="center-align"><?php echo $unProduit['prix_article']?></p>
+                            </div>
+                            <div class="card-action">
+                                <a href="index.php?c=motomarine&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <p class="center-align"><?php echo $unProduit['nom_article']?></p>
-                            <p class="center-align"><?php echo $unProduit['prix_article']?></p>
-                        </div>
-                        <div class="card-action">
-                            <a href="index.php?c=motomarine&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>
-                        </div>
-                    </div>
+                    </a>
                 </div>
                 <?php
             }
