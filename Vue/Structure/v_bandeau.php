@@ -37,46 +37,46 @@
     <ul id="dropdown1" class="dropdown-content">
         <li class="SousCategNav light-blue darken-4"><a href="index.php?c=bateau&a=afficher"><span class="white-text">BATEAU</span></a></li>
         <li class="divider"></li>
-        <li class="SousCategNav"><a href="#!">Pacific Craft</a></li>
+        <li class="SousCategNav"><a href="index.php?c=bateau&a=afficher&marque=pacificcraft">Pacific Craft</a></li>
         <li class="divider"></li>
-        <li class="SousCategNav"><a href="#!">Zodiac</a></li>
+        <li class="SousCategNav"><a href="index.php?c=bateau&a=afficher&marque=zodiac">Zodiac</a></li>
         <li class="divider"></li>
-        <li class="SousCategNav"><a href="#!">Capelli Tempest</a></li>
+        <li class="SousCategNav"><a href="index.php?c=bateau&a=afficher&marque=capelli">Capelli Tempest</a></li>
         <li class="divider"></li>
-        <li class="SousCategNav"><a href="#!">Rigiflex</a></li>
+        <li class="SousCategNav"><a href="index.php?c=bateau&a=afficher&marque=rigiflex">Rigiflex</a></li>
         <li class="divider"></li>
-        <li class="SousCategNav"><a href="#!">Fun-Yak</a></li>
+        <li class="SousCategNav"><a href="index.php?c=bateau&a=afficher&marque=funyak">Fun-Yak</a></li>
     </ul>
     <ul id="dropdown2" class="dropdown-content">
         <li class="SousCategNav light-blue darken-4"><a href="index.php?c=motomarine&a=afficher"><span class="white-text">JET</span></a></li>
         <li class="divider"></li>
-        <li class="SousCategNav"><a href="#!">Seadoo</a></li>
+        <li class="SousCategNav"><a href="index.php?c=motomarine&a=afficher&marque=seedoo">Seadoo</a></li>
     </ul>
     <ul id="dropdown3" class="dropdown-content">
         <li class="SousCategNav light-blue darken-4"><a href="index.php?c=moteur&a=afficher"><span class="white-text">MOTEUR</span></a></li>
         <li class="divider"></li>
-        <li class="SousCategNav"><a href="#!">Yamaha</a></li>
+        <li class="SousCategNav"><a href="index.php?c=moteur&a=afficher&marque=yamaha">Yamaha</a></li>
     </ul>
     <ul id="dropdown4" class="dropdown-content">
         <li class="SousCategNav light-blue darken-4"><a href="index.php?c=remorque&a=afficher"><span class="white-text">REMORQUE</span></a></li>
         <li class="divider"></li>
-        <li class="SousCategNav"><a href="#!">Rocca</a></li>
+        <li class="SousCategNav"><a href="index.php?c=remorque&a=afficher&marque=rocca">Rocca</a></li>
     </ul>
     <ul id="dropdown5" class="dropdown-content">
         <li class="SousCategNav light-blue darken-4"><a href="index.php?c=armement&a=afficher"><span class="white-text">ARMEMENT</span></a></li>
         <li class="divider"></li>
-        <li class="SousCategNav"><a href="#!">Plastimo</a></li>
+        <li class="SousCategNav"><a href="index.php?c=armement&a=afficher&marque=plastimo">Plastimo</a></li>
         <li class="divider"></li>
-        <li class="SousCategNav"><a href="#!">Navicom</a></li>
+        <li class="SousCategNav"><a href="index.php?c=armement&a=afficher&marque=navicom">Navicom</a></li>
     </ul>
     <ul id="dropdown6" class="dropdown-content">
         <li class="SousCategNav light-blue darken-4"><a href="index.php?c=permis&a=afficher"><span class="white-text">PERMIS</span></a></li>
         <li class="divider"></li>
-        <li class="SousCategNav"><a href="#!">Cotier</a></li>
+        <li class="SousCategNav"><a href="index.php?c=permis&a=afficher#cotier">Cotier</a></li>
         <li class="divider"></li>
-        <li class="SousCategNav"><a href="#!">Fluvial</a></li>
+        <li class="SousCategNav"><a href="index.php?c=permis&a=afficher#fluvial">Fluvial</a></li>
         <li class="divider"></li>
-        <li class="SousCategNav"><a href="#!">Hauturier</a></li>
+        <li class="SousCategNav"><a href="index.php?c=permis&a=afficher#hauturier">Hauturier</a></li>
     </ul>
 </header>
 <script>

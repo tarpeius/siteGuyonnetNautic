@@ -1,19 +1,5 @@
 <?php
-    /*$data = "JEan-m**arce";
-var_dump($data);
-$data = trim($data);
-var_dump($data);
-$data = stripslashes($data);
-var_dump($data);
-$data = htmlentities($data);
-var_dump($data);
-if(preg_match("[^a-zA-Z0-9-]",$data)){
-    echo "ca marche pas";
-}else{
-    echo "cest bravo";
-}
-var_dump($data);
-*/
+
 ?>
 <div>
     <H1 class="header center light-blue-text text-darken-4">Identification</H1>
