@@ -36,6 +36,7 @@ switch($action)
         break;
     case "ficheProduit": // a changer selon besoin
         $categorie = afficherCategorie($_GET['c']);
+        $nomCateg = $_GET['c'];
         $idProduit = $_GET['id'];
         $logoMarque = afficherLogoMarqueDeProduit($idProduit);
         $produit = afficherProduit($idProduit);

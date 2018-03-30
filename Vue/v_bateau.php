@@ -1,5 +1,15 @@
 <div>
-    <H1 class="header center light-blue-text text-darken-4">Bateaux</H1>
+    <H1 class="header center light-blue-text text-darken-4">
+        <?php
+            if(isset($_GET['sousCateg'])){
+                echo ucfirst($_GET['sousCateg']);
+            }elseif (isset($_GET['marque'])){
+                echo ucfirst($_GET['marque']);
+            }else{
+                echo ucfirst($categorie['nom_categorie']);
+            }
+
+        ?></H1>
     <div class="container">
         <p> <?php echo $categorie['desc_categorie'];?></p>
     </div>
@@ -9,7 +19,6 @@
            <div class="container">
                <div class="col s12">
                    <a href="index.php?c=bateau&a=afficher" class="breadcrumb"><?php echo $categorie['nom_categorie']?></a>
-
                </div>
            </div>
         </div>

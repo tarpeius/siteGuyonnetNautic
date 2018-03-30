@@ -73,7 +73,7 @@ function afficherProduit($id){
 function afficherLogoMarqueDeProduit($id){
     global $bdd;
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = "SELECT logo_marque FROM article
+    $query = "SELECT logo_marque, nom_marque FROM article
               INNER JOIN marque ON  article.id_marque=marque.id_marque
               WHERE reference=:reference";
     $req=$bdd->prepare($query);
