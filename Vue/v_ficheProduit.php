@@ -79,13 +79,7 @@
     <div class="row">
         <div class="col m6">
             <div class="col m4">
-                <img class="materialboxed " width="150" src="Util/img/Homer_Simpson_Wallpapers.jpg">
-            </div>
-            <div class="col m4">
                 <img class="materialboxed " width="150" src="Util/img/<?php  echo $produit['photo_article']?>">
-            </div>
-            <div class="col m4">
-                <img class="materialboxed " width="150" src="Util/img/bloggif_5aa0202c16ec5.jpeg">
             </div>
         </div>
     </div>

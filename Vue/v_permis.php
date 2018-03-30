@@ -23,20 +23,20 @@
                 <div class="col m4">
                     <div class="center-align">
                         <h4>PERMIS COTIER</h4>
-                        <a href="#cotier" class="btn-large blue darken-4 btnPermis">Acceder</a>
+                        <a href="#marge-cotier" class="btn-large blue darken-4 btnPermis">Acceder</a>
                     </div>
 
                 </div>
                 <div class="col m4">
                     <div class="center-align">
                         <h4>PERMIS FLUVIAL</h4>
-                        <a href="#fluvial" class="btn-large blue darken-4 btnPermis">Acceder</a>
+                        <a href="#marge-fluvial" class="btn-large blue darken-4 btnPermis">Acceder</a>
                     </div>
                 </div>
                 <div class="col m4 pouet">
                     <div class="center-align">
                         <h4>PERMIS HAUTURIER</h4>
-                        <a href="#hauturier" class="btn-large blue darken-4 btnPermis">Acceder</a>
+                        <a href="#marge-hauturier" class="btn-large blue darken-4 btnPermis">Acceder</a>
                     </div>
                 </div>
             </div>
@@ -44,6 +44,7 @@
         <div class="divider"></div>
     </div>
 </div>
+<div class="ancrePermis" id="marge-cotier"></br></br></div>
 <div class="cotier" id="cotier">
     <div class="infoCotier">
         <div class="container valign-wrapper">
@@ -110,6 +111,8 @@
     </div>
 </div>
 <div class="divider"></div>
+<div class="ancrePermis" id="marge-fluvial"></br></br></div>
+
 <div class="fluvial" id="fluvial">
     <div class="infoCotier">
         <div class="container valign-wrapper">
@@ -175,6 +178,8 @@
         </div>
     </div>
 </div>
+<div class="divider"></div>
+<div class="ancrePermis" id="marge-hauturier"></br></br></div>
 <div class="hauturier" id="hauturier">
     <div class="infoCotier">
         <div class="container valign-wrapper">

@@ -49,7 +49,7 @@
     <div class="container">
         <div class="row ">
             <div class="col s12 m4">
-                <a href="">
+                <a href="index.php?c=bateau&a=afficher&sousCateg=rigide">
                     <div class="card-panel grey lighten-5 z-depth-1">
                         <div class="row valign-wrapper">
                             <div class="col s2">
@@ -63,11 +63,9 @@
                         </div>
                     </div>
                 </a>
-
-
             </div>
             <div class="col s12 m4">
-                <a href="">
+                <a href="index.php?c=bateau&a=afficher&sousCateg=pneumatique">
                     <div class="card-panel grey lighten-5 z-depth-1">
                         <div class="row valign-wrapper">
                             <div class="col s2">
@@ -83,7 +81,7 @@
                 </a>
             </div>
             <div class="col s12 m4">
-                <a href="">
+                <a href="index.php?c=bateau&a=afficher&sousCateg=barque">
                     <div class="card-panel grey lighten-5 z-depth-1">
                         <div class="row valign-wrapper">
                             <div class="col s2">
@@ -101,16 +99,16 @@
         </div>
         <div class="row">
             <?php
-            foreach ($toutProduit as $unProduit){
+            foreach ($pageProduit as $unProduit){
                 ?>
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="Util/img/<?php echo $unProduit['photo_article'] ?>">
+                            <img class="responsive-img tailleImage" src="Util/img/<?php echo $unProduit['photo_article'] ?>">
                         </div>
                         <div class="card-content">
                             <p class="center-align"><?php echo $unProduit['nom_article']?></p>
-                            <p class="center-align"><?php echo $unProduit['prix_article']?></p>
+                            <p class="center-align"><strong><?php echo $unProduit['prix_article']?>€</strong></p>
                         </div>
                         <div class="card-action">
                             <a href="index.php?c=bateau&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>
@@ -121,99 +119,23 @@
             }
             ?>
         </div>
-<!--            <div class="col s12 m4">-->
-<!--                <div class="card">-->
-<!--                    <div class="card-image">-->
-<!--                        <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Pinneaple _  Candy blue_3-4 front.jpg">-->
-<!--                        <span class="card-title">Card Title</span>-->
-<!--                    </div>-->
-<!--                    <div class="card-content">-->
-<!--                        <p class="center-align">Yamaha R2</p>-->
-<!--                        <p class="center-align">15.000€</p>-->
-<!--                    </div>-->
-<!--                    <div class="card-action">-->
-<!--                        <a href="#">Fiche Produit</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--            <div class="col s12 m4">-->
-<!--                <div class="card">-->
-<!--                    <div class="card-image">-->
-<!--                        <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Vanilla _  Blueberry_3-4 front.jpg">-->
-<!--                        <span class="card-title">Card Title</span>-->
-<!--                    </div>-->
-<!--                    <div class="card-content">-->
-<!--                        <p class="center-align">Yamaha R3</p>-->
-<!--                        <p class="center-align">15.000€</p>-->
-<!--                    </div>-->
-<!--                    <div class="card-action">-->
-<!--                        <a href="#">Fiche Produit</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="row">-->
-<!--            <div class="col s12 m4">-->
-<!--                <div class="card">-->
-<!--                    <div class="card-image">-->
-<!--                        <img src="Util/img/yamaha-logo-wallpaper-4.png">-->
-<!--                        <span class="card-title">Card Title</span>-->
-<!--                    </div>-->
-<!--                    <div class="card-content">-->
-<!--                        <p class="center-align">Yamaha R1</p>-->
-<!--                        <p class="center-align">15.000€</p>-->
-<!--                    </div>-->
-<!--                    <div class="card-action">-->
-<!--                        <a href="#">Fiche Produit</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--            <div class="col s12 m4">-->
-<!--                <div class="card">-->
-<!--                    <div class="card-image">-->
-<!--                        <img src="Util/img/yamaha-logo-wallpaper-4.png">-->
-<!--                        <span class="card-title">Card Title</span>-->
-<!--                    </div>-->
-<!--                    <div class="card-content">-->
-<!--                        <p class="center-align">Yamaha R2</p>-->
-<!--                        <p class="center-align">15.000€</p>-->
-<!--                    </div>-->
-<!--                    <div class="card-action">-->
-<!--                        <a href="#">Fiche Produit</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--            <div class="col s12 m4">-->
-<!--                <div class="card">-->
-<!--                    <div class="card-image">-->
-<!--                        <img src="Util/img/yamaha-logo-wallpaper-4.png">-->
-<!--                        <span class="card-title">Card Title</span>-->
-<!--                    </div>-->
-<!--                    <div class="card-content">-->
-<!--                        <p class="center-align">Yamaha R3</p>-->
-<!--                        <p class="center-align">15.000€</p>-->
-<!--                    </div>-->
-<!--                    <div class="card-action">-->
-<!--                        <a href="#">Fiche Produit</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-
+        <!-- pagination -->
         <ul class="pagination">
-            <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-            <li class="active"><a href="#!">1</a></li>
-            <li class="waves-effect"><a href="#!">2</a></li>
-            <li class="waves-effect"><a href="#!">3</a></li>
-            <li class="waves-effect"><a href="#!">4</a></li>
-            <li class="waves-effect"><a href="#!">5</a></li>
-            <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            <li class=" <?php if($pageActuelle==1){echo "btn-flat disabled";}?>"><a href="index.php?c=bateau&a=afficher&page=<?php echo ($pageActuelle-1) ;?>"><i class="material-icons">chevron_left</i></a></li>
+            <?php
+            for($i=1;$i<=$nbpage;$i++){
+            $current="";
+            $disabled = "";
+            if($pageActuelle==($i)){
+                $current = "active";
+            }?>
+                <li class="<?php echo $current." ".$disabled;?>"><a href="index.php?c=bateau&a=afficher&page=<?php echo ($i) ;?>"><?php echo ($i) ;?></a></li>
+                <?php
+            }
+            ?>
+            <li class="waves-effect <?php if($pageActuelle>=($nbpage)){echo "btn-flat  disabled";}?>"><a href="index.php?c=bateau&a=afficher&page=<?php echo ($pageActuelle+1) ;?>"><i class="material-icons">chevron_right</i></a></li>
         </ul>
+        <!-- fin pagination -->
     </div><!-- container -->
 </div>
 <i class="material-icons orange" onclick="topFunction()" id="myBtn" title="Go to top">navigation</i>
