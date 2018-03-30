@@ -170,3 +170,6 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 .tailleImage{
     height: 270px!important;
 }
+.ancrePermis{
+    margin: 60px 10px 10px 10px;
+}
