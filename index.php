@@ -55,7 +55,9 @@
     case 'contact':
         include ("Controleur/c_contact.php");
         break;
-
+    case 'verifEmail':
+        include ("Controleur/c_verifEmail.php");
+        break;
 	default:
 	   include("Vue/Structure/v_nopage.php");
 	   break;
