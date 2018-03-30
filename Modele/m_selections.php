@@ -1,11 +1,11 @@
 <?php
 
-function isAdmin($pseudo, $mdp)
+function isAdmin($email, $mdp)
 {
     global $bdd;
-    $query = "SELECT COUNT(pseudo_admin) FROM administrateur WHERE pseudo_admin=:pseudo AND pass_admin=:mdp";
-    $req=$bdd->prepare($query);
-    $req->bindParam(':pseudo', $pseudo);
+    $sql = "SELECT COUNT(*) FROM `client` WHERE email_client=:email AND mdp_client=:mdp";
+    $req=$bdd->prepare($sql);
+    $req->bindParam(':email', $email);
     $req->bindParam(':mdp', $mdp);
     $req->execute();
     $result = $req->fetch();

@@ -1,5 +1,5 @@
 <div>
-    <H1 class="header center light-blue-text text-darken-4">Bateaux</H1>
+    <H1 class="header center light-blue-text text-darken-4">Bateau</H1>
     <div class="container">
         <p> <?php echo $categorie['desc_categorie'];?></p>
     </div>
@@ -21,9 +21,9 @@
             <div class="input-field col m12">
                 <select name="triMarque">
                     <option value="" disabled selected>Trier par Marque</option>
-                    <option value="1">See Doo</option>
-                    <option value="2">Yamaaha</option>
-                    <option value="3">Pacific craft</option>
+                    <option value="1">Sea-Doo</option>
+                    <option value="2">Yamaha</option>
+                    <option value="3">Pacific Craft</option>
                 </select>
                 <label>Marque</label>
             </div>
@@ -32,7 +32,6 @@
                     <option value="" disabled selected>Trier par Prix</option>
                     <option value="1">Croissant</option>
                     <option value="2">Decroissant</option>
-                    <option value="3">Promotions</option>
                 </select>
                 <label>Prix</label>
             </div>
