@@ -7,6 +7,7 @@ if(!empty($_REQUEST['a'])){
 switch($action)
 {
     case "afficher": // a changer selon besoin
+        $allMarque = afficherMarque();
         $categorie = afficherCategorie($_GET['c']);
         $nbCount = 0;
         $nbpage= 0;
@@ -27,18 +28,27 @@ switch($action)
             $min = ($pageActuelle - 1) * $max;
             $nbpage = ceil(($nbCount[0]) / $max);
         if(isset($_GET['marque'])){
-            $marque = $_GET['marque'];
-            $pageProduit = afficherToutProduitMarque($marque);
+            if ($_GET['marque'] == "Trier par marque"){
+                $sousCateg = $_GET['sousCateg'];
+                $pageProduit = afficherProduitParCateg($sousCateg);
+            } else {
+                $marque = $_GET['marque'];
+                $pageProduit = afficherToutProduitMarque($marque);
+            }
+
         }else if(isset($_GET['sousCateg'])){
             $sousCateg = $_GET['sousCateg'];
             $pageProduit = afficherProduitParCateg($sousCateg);
         }else{
             $pageProduit = afficheArticlePageSousCat('Bateau','rigide','pneumatique','barque',$min, $max);
         }
-
-
         include('Vue/v_bateau.php');
         break;
+
+    case "modifAfficher":
+        var_dump($_GET);
+        break;
+
     case "ficheProduit": // a changer selon besoin
         $nomCateg = $_GET['c'];
         $categorie = afficherCategorie($_GET['c']);
@@ -48,6 +58,7 @@ switch($action)
         $nbProduit = $produit['qte_article'];
         include('Vue/v_ficheProduit.php');
         break;
+
     default:
         include("Vue/v_accueil.php");
         break;
