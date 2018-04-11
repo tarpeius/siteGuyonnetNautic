@@ -40,6 +40,7 @@ switch($action)
         $idProduit = $_GET['id'];
         $logoMarque = afficherLogoMarqueDeProduit($idProduit);
         $produit = afficherProduit($idProduit);
+        $photoProduit = afficheToutPhotoArticle($idProduit);
         $nbProduit = $produit['qte_article'];
         include('Vue/v_ficheProduit.php');
         break;

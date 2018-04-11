@@ -12,7 +12,13 @@ switch($action)
         $nbpage= 0;
         // Pagination
         // Recuperation du nombre de pays par zone
-        $nbCount = selectCountTousArticleSousCateg('Bateau','rigide','pneumatique','barque');
+        if(isset($_GET['marque'])){
+            $nbCount = selectCountTousArticleUneMarque($_GET['marque']);
+        }elseif (isset($_GET['sousCateg'])){
+            $nbCount = selectCountTousArticleUneSousCateg($_GET['sousCateg']);
+        }else{
+            $nbCount = selectCountTousArticleSousCateg('Bateau','rigide','pneumatique','barque');
+        }
         // Verification si page existe
         if (isset($_GET['page'])){
             $pageActuelle=intval($_GET['page']);
@@ -32,11 +38,14 @@ switch($action)
         }else if(isset($_GET['sousCateg'])){
             $sousCateg = $_GET['sousCateg'];
             $pageProduit = afficherProduitParCateg($sousCateg);
-        }else{
+        }
+        if(isset($marque)){
+            $pageProduit = afficheArticlePageUneMarque($marque,$min, $max);
+        } elseif (isset($sousCateg)){
+            $pageProduit = afficheArticlePageUneSousCat($sousCateg,$min, $max);
+        } else{
             $pageProduit = afficheArticlePageSousCat('Bateau','rigide','pneumatique','barque',$min, $max);
         }
-
-
         include('Vue/v_bateau.php');
         break;
     case "ficheProduit": // a changer selon besoin
@@ -45,9 +54,13 @@ switch($action)
         $idProduit = $_GET['id'];
         $logoMarque = afficherLogoMarqueDeProduit($idProduit);
         $produit = afficherProduit($idProduit);
+        $photoProduit = afficheToutPhotoArticle($idProduit);
+        var_dump($idProduit);
+        var_dump($photoProduit);
         $nbProduit = $produit['qte_article'];
         include('Vue/v_ficheProduit.php');
         break;
+
     default:
         include("Vue/v_accueil.php");
         break;

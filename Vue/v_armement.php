@@ -126,7 +126,7 @@
                 if($pageActuelle==($i)){
                     $current = "active";
                 }?>
-                <li class="<?php echo $current." ".$disabled;?>"><a href="index.php?c=armement&a=afficher&page=<?php echo ($i) ;?>"><?php echo ($i) ;?></a></li>
+                <li class="<?php echo $current." ".$disabled;?>"><a href="index.php?c=armement&a=afficher&page=<?php echo ($i) ;if (isset($sousCateg)){echo '&sousCateg='.$sousCateg;}if(isset($marque)){echo '&marque='.$marque;}?>"><?php echo ($i) ;?></a></li>
                 <?php
             }
             ?>

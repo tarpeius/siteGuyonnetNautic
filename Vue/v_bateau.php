@@ -132,7 +132,7 @@
         </div>
         <!-- pagination -->
         <ul class="pagination">
-            <li class=" <?php if($pageActuelle==1){echo "btn-flat disabled";}?>"><a href="index.php?c=bateau&a=afficher&page=<?php echo ($pageActuelle-1) ;?>"><i class="material-icons">chevron_left</i></a></li>
+            <li class=" <?php if($pageActuelle==1){echo "btn-flat disabled";}?>"><a href="index.php?c=bateau&a=afficher&page=<?php echo ($pageActuelle-1) ; if (isset($sousCateg)){echo '&sousCateg='.$sousCateg;}if(isset($marque)){echo '&marque='.$marque;}?>"><i class="material-icons">chevron_left</i></a></li>
             <?php
             for($i=1;$i<=$nbpage;$i++){
             $current="";
@@ -140,11 +140,11 @@
             if($pageActuelle==($i)){
                 $current = "active";
             }?>
-                <li class="<?php echo $current." ".$disabled;?>"><a href="index.php?c=bateau&a=afficher&page=<?php echo ($i) ;?>"><?php echo ($i) ;?></a></li>
+                <li class="<?php echo $current." ".$disabled;?>"><a href="index.php?c=bateau&a=afficher&page=<?php echo ($i) ; if (isset($sousCateg)){echo '&sousCateg='.$sousCateg;}if(isset($marque)){echo '&marque='.$marque;}?>"><?php echo ($i) ;?></a></li>
                 <?php
             }
             ?>
-            <li class="waves-effect <?php if($pageActuelle>=($nbpage)){echo "btn-flat  disabled";}?>"><a href="index.php?c=bateau&a=afficher&page=<?php echo ($pageActuelle+1) ;?>"><i class="material-icons">chevron_right</i></a></li>
+            <li class="waves-effect <?php if($pageActuelle>=($nbpage)){echo "btn-flat  disabled";}?>"><a href="index.php?c=bateau&a=afficher&page=<?php echo ($pageActuelle+1) ; if (isset($sousCateg)){echo '&sousCateg='.$sousCateg;}if(isset($marque)){echo '&marque='.$marque;}?>"><i class="material-icons">chevron_right</i></a></li>
         </ul>
         <!-- fin pagination -->
     </div><!-- container -->
