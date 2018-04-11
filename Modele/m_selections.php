@@ -190,3 +190,96 @@ function selectCountTousArticle($cat)
     return $result;
 }
 
+function afficheToutPhotoArticle($id){
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query = "SELECT * FROM photo WHERE id_article=:id ";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':id', $id);
+    $req->execute();
+    $result= $req->fetchAll();
+    return $result;
+}
+
+// <summary>
+/// Fonction de selection du nombre de client
+/// </summary>
+/// <returns>Retourne le nombre de client.</returns>
+function selectCountTousArticleUneSousCateg($cat)
+{
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query="SELECT COUNT(article.reference)
+                FROM article, categoriser, categorie
+                WHERE article.reference=categoriser.reference
+                AND categorie.id_categorie=categoriser.id_categorie
+                AND categorie.nom_categorie=:cat
+                ";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':cat', $cat);
+    $req->execute();
+    $result= $req->fetch();
+    var_dump($result);
+    return $result;
+}
+
+// <summary>
+/// Fonction de selection du nombre de client
+/// </summary>
+/// <returns>Retourne le nombre de client.</returns>
+function selectCountTousArticleUneMarque($marque)
+{
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query="SELECT COUNT(article.reference)
+                FROM article, marque
+                WHERE article.id_marque=marque.id_marque
+                AND marque.nom_marque=:marque";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':marque', $marque);
+    $req->execute();
+    $result= $req->fetch();
+    return $result;
+}
+
+/// <summary>
+/// Fonction de selection des clients avec une limit pour la pagination
+/// </summary>
+/// <param name=min>Paramètre de limit minimum.</param>
+/// <param name=max>Paramètre de limit maximum.</param>
+/// <returns>Retourne le tableau de résultats.</returns>
+function afficheArticlePageUneSousCat($cat,$min, $max)
+{
+    global $bdd;
+    $query="SELECT DISTINCT(article.reference), nom_article, categorie.nom_categorie, prix_article, photo_article
+                FROM article,  categoriser, categorie 
+                WHERE article.reference=categoriser.reference AND categorie.id_categorie=categoriser.id_categorie 
+                AND categorie.nom_categorie = :cat
+                LIMIT $min , $max ";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':cat', $cat);
+    $req->execute();
+    $result= $req->fetchAll();
+    return $result;
+}
+
+/// <summary>
+/// Fonction de selection des clients avec une limit pour la pagination
+/// </summary>
+/// <param name=min>Paramètre de limit minimum.</param>
+/// <param name=max>Paramètre de limit maximum.</param>
+/// <returns>Retourne le tableau de résultats.</returns>
+function afficheArticlePageUneMarque($marque,$min, $max)
+{
+    global $bdd;
+    $query="SELECT DISTINCT(article.reference), nom_article, prix_article, photo_article
+                FROM article, marque 
+                WHERE article.id_marque=marque.id_marque
+                AND marque.nom_marque = :marque
+                LIMIT $min , $max ";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':marque', $marque);
+    $req->execute();
+    $result= $req->fetchAll();
+    return $result;
+}

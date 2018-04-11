@@ -19,19 +19,19 @@
 <div class="container">
     <div class="row">
         <div class="col m6">
-            <div class="carousel carousel-slider center">
+            <div class="carousel carousel-slider" id="carousel">
                 <div class="carousel-item carouselItem" href="#one!">
                     <img class="imgCarouProd" src="Util/img/<?php  echo $produit['photo_article']?>">
                 </div>
-                <div class="carousel-item" href="#two!">
-                    <img class="imgCarouProd" src="Util/img/bloggif_5aa0202c16ec5.jpeg">
-                </div>
-                <div class="carousel-item" href="#three!">
-                    <img class="imgCarouProd" src="Util/img/Homer_Simpson_Wallpapers.jpg">
-                </div>
-                <div class="carousel-item" href="#four!">
-                    <img class="imgCarouProd" src="Util/img/bloggif_5aa0202c16ec5.jpeg">
-                </div>
+                <?php
+                    foreach ($photoProduit as $unePhoto){
+                ?>
+                        <div class="carousel-item carouselItem" href="#one!">
+                            <img class="imgCarouProd" src="Util/img/<?php  echo $unePhoto['url_photo']?>">
+                        </div>
+                <?php
+                    }
+                ?>
             </div>
         </div>
         <div class="col m6">
@@ -79,9 +79,24 @@
         </div>
     </div>
     <div class="row">
-        <div class="col m6">
-            <div class="col m4">
-                <img class="materialboxed " width="150" src="Util/img/<?php  echo $produit['photo_article']?>">
+        <div class="col m6" id="prod">
+            <div class="swiper-container swiper-container-horizontal">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img class="imgSwiper" src="Util/img/<?php  echo $produit['photo_article']?>"/></div>
+                    <?php
+                        foreach ($photoProduit as $unePhoto){
+                    ?>
+                        <div class="swiper-slide"><img class="imgSwiper" src="Util/img/<?php  echo $unePhoto['url_photo']?>"/></div>
+                    <?php
+                        }
+                    ?>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
     </div>
@@ -134,10 +149,39 @@
     $(document).ready(function() {
         $('select').material_select();
     });
+
     $(document).ready(function(){
+        $img = $('.carouselItem img'), // on cible les images contenues dans le carrousel
+            indexImg = $img.length , // on définit l'index du dernier élément
+            console.log(indexImg);
+
         $('.carousel').carousel();
+
+        if (indexImg !=1){
+            autoplay();
+
+
+        }
+
+        function autoplay() {
+            setTimeout(autoplay, 6000);
+            $('.carousel').carousel('next');
+        }
     });
+
     $(document).ready(function(){
         $('.materialboxed').materialbox();
+    });
+
+     var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+            clickable: true,
+        },
+         navigation: {
+             nextEl: '.swiper-button-next',
+             prevEl: '.swiper-button-prev',
+         },
     });
 </script>
