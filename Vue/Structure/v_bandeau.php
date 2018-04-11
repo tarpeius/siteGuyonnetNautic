@@ -1,11 +1,8 @@
 <header>
 <!-- MENU -->
-    <div class="navbar-fixed">
+
     <nav>
         <div class="nav-wrapper light-blue darken-4">
-<!--            <div>-->
-<!--                <a href="#!" class="brand-logo"><img id="logoMenu" src="Util/img/Copie de GUYONNET-logo.png"></a>-->
-<!--            </div>-->
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="left hide-on-med-and-down">
                 <li id="homeNav"><a href="index.php?c=accueil&a=afficher"> <i class="material-icons">home</i> </a></li>
@@ -18,13 +15,14 @@
                 <li class="CategNav"><a class="dropdown-button" href="#!" data-activates="dropdown7">Nos Services</a></li>
             </ul>
             <ul id="mobile-demo" class="side-nav">
-                <li ><a class="dropdown-button" href="index.php?c=bateau&a=afficher">Bateau</a></li>
-                <li ><a class="dropdown-button" href="index.php?c=motomarine&a=afficher">Jet</a></li>
-                <li ><a class="dropdown-button" href="index.php?c=moteur&a=afficher">Moteur</a></li>
-                <li ><a class="dropdown-button" href="index.php?c=remorque&a=afficher">Remorque</a></li>
-                <li ><a class="dropdown-button" href="index.php?c=armement&a=afficher">Armement</a></li>
-                <li ><a class="dropdown-button" href="index.php?c=permis&a=afficher">Permis</a></li>
-                <li ><a class="dropdown-button" href="#!">Services</a></li>
+                <li><a href="index.php?c=accueil&a=afficher">Accueil</a></li>
+                <li><a href="index.php?c=bateau&a=afficher">Bateau</a></li>
+                <li><a href="index.php?c=motomarine&a=afficher">Jet</a></li>
+                <li><a href="index.php?c=moteur&a=afficher">Moteur</a></li>
+                <li><a href="index.php?c=remorque&a=afficher">Remorque</a></li>
+                <li><a href="index.php?c=armement&a=afficher">Armement</a></li>
+                <li><a href="index.php?c=permis&a=afficher">Permis</a></li>
+                <li><a href="#!">Services</a></li>
             </ul>
             <ul class="right hide-on-med-and-down">
                 <li class=""><a class="dropdown-button" href="index.php?c=contact&a=afficher" data-activates="dropdown8">Contact</a>
@@ -32,7 +30,7 @@
             </ul>
         </div>
     </nav>
-    </div>
+
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
         <li class="SousCategNav light-blue darken-4"><a href="index.php?c=bateau&a=afficher"><span class="white-text">BATEAU</span></a></li>
@@ -80,6 +78,8 @@
     </ul>
 </header>
 <script>
+
+    $(".button-collapse").sideNav();
 
     $('.dropdown-button').dropdown({
             inDuration: 300,

@@ -14,6 +14,7 @@
                     </div>
                 </div>
                 <div class="row">
+                    <a href="index.php?c=compteClient&a=afficher">bonjour</a>
                     <input type="submit" class="waves-effect waves-light btn-large" value="Envoyer"/>
                 </div>
             </div>

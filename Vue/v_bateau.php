@@ -24,37 +24,27 @@
            </div>
         </div>
     </nav>
-    <div class="divider"></div>
-    <div id="sidebar">
-        <form class="col m2">
-            <div class="input-field col m12">
-                <select name="triMarque">
-                    <option value="" disabled selected>Trier par Marque</option>
-                    <option value="1">Sea-Doo</option>
-                    <option value="2">Yamaha</option>
-                    <option value="3">Pacific Craft</option>
-                </select>
-                <label>Marque</label>
-            </div>
-            <div class="input-field col m12">
-                <select name="triPrix">
-                    <option value="" disabled selected>Trier par Prix</option>
-                    <option value="1">Croissant</option>
-                    <option value="2">Decroissant</option>
-                </select>
-                <label>Prix</label>
-            </div>
-            <div class="input-field col m12">
-                <select name="triNom">
-                    <option value="" disabled selected>Trier par Nom</option>
-                    <option value="1">Croissant</option>
-                    <option value="2">Decroissant</option>
-                </select>
-                <label>Nom</label>
-            </div>
-        </form>
-    </div>
-    </div>
+        <div id="sidebar">
+            <form class="col m2">
+                <div class="input-field col m12">
+                    <select id="triMarque">
+                            <option value="" disabled selected>Trier par Marque</option>
+                        <?php foreach ($allMarque as $all){
+                           echo "<option>".$all['nom_marque']."</option> "?>;
+                        <?php }?>
+                    </select>
+                    <label>Marque</label>
+                </div>
+                <div class="input-field col m12">
+                    <select id="triPrix">
+                        <option value="" disabled selected>Trier par Prix</option>
+                        <option value="1">Croissant</option>
+                        <option value="2">Decroissant</option>
+                    </select>
+                    <label>Prix</label>
+                </div>
+            </form>
+        </div>
     <div class="container">
         <div class="row ">
             <div class="col s12 m4">
@@ -152,4 +142,34 @@
     $(document).ready(function() {
         $('select').material_select();
     });
+
+    (function ($) {
+
+
+        $( "#triMarque" ).change(function () {
+            var str = "";
+            $( "#triMarque option:selected" ).each(function() {
+                str += $( this ).text();
+            });
+
+            $.ajax({
+                url:`index.php?c=bateau&a=modifAfficher&marque=${str}`,
+                type: 'GET'
+            })
+
+        })
+            .change();
+
+
+    })(jQuery);
+
 </script>
+<!--$( "#triPrix" ).change(function () {-->
+<!--var str2 = "";-->
+<!--$( "#triPrix option:selected" ).each(function() {-->
+<!--str2 += $( this ).text();-->
+<!--});-->
+<!---->
+<!---->
+<!--})-->
+<!--.change();-->
