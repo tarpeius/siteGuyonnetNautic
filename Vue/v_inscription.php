@@ -9,7 +9,7 @@
                 echo"
             <div class=\"row\" id=\"alert_box\">
                 <div class=\"col s12 m12\">
-                    <div class=\"card red darken-1\">
+                    <div id='messageErreur' class=\"card red darken-1\">
                         <div class=\"row\">
                             <div class=\"col s12 m10\">
                                 <div class=\"card-content white-text\">

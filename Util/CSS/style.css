@@ -232,3 +232,13 @@ body {
     right: -30px!important;
 
 }
+#compteClient {
+    padding-top: 40px;
+}
+
+#compteClient li {
+    border-bottom: 1px solid #42424221;
+}
+#messageErreur {
+    height: 50px;
+}
