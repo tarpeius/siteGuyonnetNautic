@@ -9,7 +9,7 @@
                 echo"
             <div class=\"row\" id=\"alert_box\">
                 <div class=\"col s12 m12\">
-                    <div id='messageErreur' class=\"card red darken-1\">
+                    <div id='messageErreur' class=\" red darken-1\">
                         <div class=\"row\">
                             <div class=\"col s12 m10\">
                                 <div class=\"card-content white-text\">
@@ -57,7 +57,7 @@
             </div>
             <div class="input-field col s1">
                 <select name="NaissanceJour"><option value="" disabled selected></option>
-                    <?php $j= 0 ;
+                    <?php $j= 1 ;
                     while ($j<=31)
                     {
                         ?>
@@ -89,12 +89,12 @@
             </div>
             <div class="input-field col s2">
                 <select name="NaissanceAnnee"><option value="" disabled selected></option>
-                    <?php $j= 1900 ;
-                    while ($j<=2010)
+                    <?php $j= 2018 ;
+                    while ($j>1900)
                     {
                         ?>
                         <option value='<?php echo $j;?>' ><?php echo $j;?></option>
-                        <?php $j++;
+                        <?php $j--;
                     }
                     ?>
                 </select>
