@@ -57,7 +57,12 @@ switch($action)
         break;
 
     case "modifAfficher":
-        var_dump($_GET);
+        include ('../Modele/m_connexion.php');
+        include ('../Modele/m_selections.php');
+        include ('../Modele/m_modifications.php');
+        $marque = $_POST['marque'];
+        $pageProduit = afficherToutProduitMarque($marque);
+        echo json_encode($pageProduit);
         break;
 
     case "ficheProduit": // a changer selon besoin

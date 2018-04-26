@@ -20,20 +20,20 @@
         <div class="divider"></div>
         <div class="row">
             <div class="barreBouton">
-                <div class="col m4">
+                <div class="col m4 s12">
                     <div class="center-align">
                         <h4>PERMIS COTIER</h4>
                         <a href="#marge-cotier" class="btn-large blue darken-4 btnPermis">Acceder</a>
                     </div>
 
                 </div>
-                <div class="col m4">
+                <div class="col m4 s12">
                     <div class="center-align">
                         <h4>PERMIS FLUVIAL</h4>
                         <a href="#marge-fluvial" class="btn-large blue darken-4 btnPermis">Acceder</a>
                     </div>
                 </div>
-                <div class="col m4 pouet">
+                <div class="col m4 s12">
                     <div class="center-align">
                         <h4>PERMIS HAUTURIER</h4>
                         <a href="#marge-hauturier" class="btn-large blue darken-4 btnPermis">Acceder</a>

@@ -94,7 +94,8 @@
 </div>
 <script>
     $('.carousel').carousel({
-        padding: 200
+        padding: 10,
+        fullWidth : true
     });
     autoplay()
     function autoplay() {

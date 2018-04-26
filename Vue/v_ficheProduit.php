@@ -5,9 +5,6 @@
         <div class="nav-wrapper blue darken-4">
             <div class="container">
                 <div class="col s12">
-                    <?php
-
-                    ?>
                     <a href="index.php?c=<?php echo $nomCateg?>&a=afficher" class="breadcrumb"><?php echo $nomCateg?></a>
                     <a href="index.php?c=<?php echo $nomCateg?>&a=afficher&marque=<?php echo $logoMarque['nom_marque'];?>" class="breadcrumb"><?php echo $logoMarque['nom_marque'] ?></a>
                 </div>

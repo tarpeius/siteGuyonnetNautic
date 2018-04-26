@@ -154,6 +154,9 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 #carouselAccueil{
     position: relative;
     bottom: 33px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 #blocLogos{
     position: relative;
@@ -231,4 +234,10 @@ body {
 #idProd.swiper-button-next{
     right: -30px!important;
 
+}
+.msgError{
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
 }

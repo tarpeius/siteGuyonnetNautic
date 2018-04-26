@@ -9,16 +9,12 @@
                 echo"
             <div class=\"row\" id=\"alert_box\">
                 <div class=\"col s12 m12\">
-                    <div class=\"card red darken-1\">
+                    <div class=\"red darken-1 msgError\">
                         <div class=\"row\">
-                            <div class=\"col s12 m10\">
-                                <div class=\"card-content white-text\">
+                            
+                                <div class=\"white-text\">
                                     <p class=\"center-align\">Il y a 1 ou plusieurs erreur(s) dans le formulaire</p>
                                 </div>
-                            </div>
-                            <div class=\"col s12 m2\">
-                                <i class=\"fa fa-times icon_style\" id=\"alert_close\" aria-hidden=\"true\"></i>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -40,7 +36,7 @@
                 </div>
                 <div class="input-field col s6">
                     <input id="password" name="Confirm" type="password" class="validate" >
-                    <label for="password">Confirmer la mot de passe</label>
+                    <label for="password">Confirmer le mot de passe</label>
                 </div>
         </div>
         <div class="row">
@@ -89,7 +85,7 @@
             </div>
             <div class="input-field col s2">
                 <select name="NaissanceAnnee"><option value="" disabled selected></option>
-                    <?php $j= 1900 ;
+                    <?php $j= 1930 ;
                     while ($j<=2010)
                     {
                         ?>

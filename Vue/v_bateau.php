@@ -24,27 +24,30 @@
            </div>
         </div>
     </nav>
+    <!-- Fonction optionnelle
         <div id="sidebar">
-            <form class="col m2">
+            <form class="col m2" method="POST" action="index.php?c=bateau&a=afficher">
                 <div class="input-field col m12">
-                    <select id="triMarque">
+                    <select id="triMarque" name="triMarque">
                             <option value="" disabled selected>Trier par Marque</option>
                         <?php foreach ($allMarque as $all){
-                           echo "<option>".$all['nom_marque']."</option> "?>;
-                        <?php }?>
+                           echo "<option ".$all['id_marque'].">".$all['nom_marque']."</option>.";
+                        }?>
                     </select>
                     <label>Marque</label>
                 </div>
                 <div class="input-field col m12">
-                    <select id="triPrix">
+                    <select id="triPrix" name="triPrix">
                         <option value="" disabled selected>Trier par Prix</option>
-                        <option value="1">Croissant</option>
-                        <option value="2">Decroissant</option>
+                        <option value="croissant">Croissant</option>
+                        <option value="decroissant">Decroissant</option>
                     </select>
                     <label>Prix</label>
                 </div>
+                <input class="btn" type="submit" value="Trier">
             </form>
         </div>
+        -->
     <div class="container">
         <div class="row ">
             <div class="col s12 m4">
@@ -55,9 +58,9 @@
                                 <img src="Util/img/MY18_SPARK 2up 600 HO ACE_Licorice _  Mango_3-4 front.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
                             </div>
                             <div class="col s10">
-                          <span class="black-text">
-                            Rigide
-                          </span>
+                                <span class="black-text">
+                                    Rigide
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -100,7 +103,7 @@
             <?php
             foreach ($pageProduit as $unProduit){
                 ?>
-                <div class="col s12 m4">
+                <div class="col s12 m4" id="prod">
                     <a href="index.php?c=bateau&a=ficheProduit&id=<?php echo $unProduit['reference']?>">
                         <div class="card">
                             <div class="card-image">
@@ -144,34 +147,37 @@
     $(document).ready(function() {
         $('select').material_select();
     });
-
+/*
     (function ($) {
 
+        function changeUrl(href)
+        {
+            $('#prod').onchange(href);
+            href = (href == `index.php?c=bateau&a=afficher&marque${str}`) ? "/" : href;
+            uri = window.location.href.split("#/");
+            window.location.href = uri[0] + "#/" + href;
+        }
 
         $( "#triMarque" ).change(function () {
             var str = "";
             $( "#triMarque option:selected" ).each(function() {
                 str += $( this ).text();
-            });
 
-            $.ajax({
-                url:`index.php?c=bateau&a=modifAfficher&marque=${str}`,
-                type: 'GET'
-            })
+                if(str != "Trier par Marque"){
+                    console.log(str)
+                    $.ajax({
+                        $('#prod').load(href);
+                        href = (href == `index.php?c=bateau&a=afficher&marque${str}`) ? "/" : href;
+                        uri = window.location.href.split("#/");
+                        window.location.href = uri[0] + "#/" + href;
+                    });
+                }
+            });
 
         })
             .change();
 
 
     })(jQuery);
-
+*/
 </script>
-<!--$( "#triPrix" ).change(function () {-->
-<!--var str2 = "";-->
-<!--$( "#triPrix option:selected" ).each(function() {-->
-<!--str2 += $( this ).text();-->
-<!--});-->
-<!---->
-<!---->
-<!--})-->
-<!--.change();-->
