@@ -5,7 +5,7 @@
 	ini_set('display_errors', 1);
 	// k�c�c� ? 
 	//ob_start();
-	//session_start();
+	session_start();
 	date_default_timezone_set('Europe/Paris');
 
 	include("Modele/m_connexion.php");
@@ -54,9 +54,6 @@
         break;
     case 'contact':
         include ("Controleur/c_contact.php");
-        break;
-    case 'verifEmail':
-        include ("Controleur/c_verifEmail.php");
         break;
     case 'compteClient':
         include ("Controleur/c_compteClient.php");

@@ -6,19 +6,22 @@ if(!empty($_REQUEST['a'])){
 switch($action)
 {
     case "afficher": // a changer selon besoin
-        if (!empty($_POST['Email'])){
-            include('Vue/v_inscription.php');
-        }else{
+        if (empty($_POST['Email'])){
             $erreur = "Veuillez saisir une adresse email pour vous inscrire";
             include ('Vue/v_connexion.php');
+
+        }else{
+            $_SESSION['msg'] = "";
+            include('Vue/v_inscription.php');
         }
         break;
     case "ajout":
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $_SESSION['msg']="";
+            $_SESSION['msg'] = "";
             $_SESSION['NaissanceJour'] = "";
             $_SESSION['NaissanceMois'] = "";
             $_SESSION['NaissanceAnnee'] = "";
+
             if (!is_null($_POST['Password']) ){
                 $_SESSION['Password'] = $_POST['Password'];
             }else{
