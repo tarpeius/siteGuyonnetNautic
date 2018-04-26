@@ -10,6 +10,7 @@
             <div class=\"row\" id=\"alert_box\">
                 <div class=\"col s12 m12\">
                     <div class=\"red darken-1 msgError\">
+                    <div id='messageErreur' class=\" red darken-1\">
                         <div class=\"row\">
                             
                                 <div class=\"white-text\">
@@ -53,7 +54,7 @@
             </div>
             <div class="input-field col s1">
                 <select name="NaissanceJour"><option value="" disabled selected></option>
-                    <?php $j= 0 ;
+                    <?php $j= 1 ;
                     while ($j<=31)
                     {
                         ?>
@@ -85,12 +86,13 @@
             </div>
             <div class="input-field col s2">
                 <select name="NaissanceAnnee"><option value="" disabled selected></option>
-                    <?php $j= 1930 ;
-                    while ($j<=2010)
+                    
+                    <?php $j= 2018 ;
+                    while ($j>1900)
                     {
                         ?>
                         <option value='<?php echo $j;?>' ><?php echo $j;?></option>
-                        <?php $j++;
+                        <?php $j--;
                     }
                     ?>
                 </select>

@@ -12,6 +12,49 @@ function isAdmin($email, $mdp)
     return $result[0];
 }
 
+function emailExist($email)
+{
+    global $bdd;
+    $sql = "SELECT COUNT(*) FROM `client` WHERE email_client=:email";
+    $req=$bdd->prepare($sql);
+    $req->bindParam(':email', $email);
+    $req->execute();
+    $result = $req->fetch();
+    return $result[0];
+}
+
+function idClient($email, $mdp) {
+    global $bdd;
+    $sql = "SELECT id_client FROM `client` WHERE email_client=:email AND mdp_client=:mdp";
+    $req=$bdd->prepare($sql);
+    $req->bindParam(':email', $email);
+    $req->bindParam(':mdp', $mdp);
+    $req->execute();
+    $result = $req->fetch();
+    return $result;
+}
+
+function idClientSansMdp($email) {
+    global $bdd;
+    $sql = "SELECT id_client FROM `client` WHERE email_client=:email";
+    $req=$bdd->prepare($sql);
+    $req->bindParam(':email', $email);
+    $req->execute();
+    $result = $req->fetch();
+    return $result;
+}
+
+function lireClient($email, $mdp) {
+    global $bdd;
+    $sql = "SELECT id_client,nom_client,prenom_client,date_naissance,email_client,adresse_client,cp_client,date_inscription,ville_client,tel_client FROM `client` WHERE email_client=:email AND mdp_client=:mdp";
+    $req=$bdd->prepare($sql);
+    $req->bindParam(':email', $email);
+    $req->bindParam(':mdp', $mdp);
+    $req->execute();
+    $result = $req->fetch();
+    return $result;
+}
+
 function afficherCategorie($categorie)
 {
     global $bdd;

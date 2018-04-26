@@ -9,7 +9,8 @@
                 echo ucfirst($categorie['nom_categorie']);
             }
 
-        ?></H1>
+        ?>
+    </H1>
 
     <div class="container">
         <p> <?php echo $categorie['desc_categorie'];?></p>

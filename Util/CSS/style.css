@@ -9,16 +9,16 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     padding:0 !important;
 }
 #homeNav {
-    width: 50px;
+    /*width: 50px;*/
     text-align: center;
 }
 .CategNav {
-    width: 150px;
+    width: 130px;
     text-align: center;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 .SousCategNav {
-    width: 150px !important;
+    width: 130px !important;
 }
 #myBtn {
     display: none;
@@ -235,9 +235,26 @@ body {
     right: -30px!important;
 
 }
-.msgError{
+.msgError {
     border-radius: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-weight: bold;
+}
+#compteClient {
+    padding-top: 40px;
+}
+
+#compteClient li {
+    border-bottom: 1px solid #42424221;
+}
+#messageErreur {
+    height: 50px;
+}
+.dropdown-content li > a, .dropdown-content li > span  {
+    font-size: 15px !important;
+    text-align:center !important;
+    display: block !important;
+    line-height: 27px !important;
+    padding: 14px 16px !important;
 }

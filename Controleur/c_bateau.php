@@ -6,6 +6,10 @@ if(!empty($_REQUEST['a'])){
 
 switch($action)
 {
+    case "modifAfficher":
+        var_dump($_GET);
+        break;
+
     case "afficher": // a changer selon besoin
         $allMarque = afficherMarque();
         $categorie = afficherCategorie($_GET['c']);
