@@ -19,7 +19,7 @@
 	
 	if((!isset($_REQUEST['c']))||(!isset($_REQUEST['a']))) { // controleur -- action
         $uc = 'accueil';
-    }else {
+    } else {
         $uc = $_REQUEST['c'];
     }
 
@@ -57,6 +57,9 @@
         break;
     case 'compteClient':
         include ("Controleur/c_compteClient.php");
+        break;
+    case 'panier':
+        include ("Controleur/c_panier.php");
         break;
 	default:
 	   include("Vue/Structure/v_nopage.php");

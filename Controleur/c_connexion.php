@@ -23,7 +23,7 @@ switch($action)
                 include ('Vue/v_connexion.php');
                 echo "<script type='text/javascript'>
                     var delai=2; 
-                    var url='index.php?c=accueil&a=afficher'; 
+                    var url='index.php?c=compteClient&a=afficher'; 
                     setTimeout(\"document.location.replace(url)\", delai + '000');</script>";
             } else {
                 $erreur = "Email ou mot de passe non valide";

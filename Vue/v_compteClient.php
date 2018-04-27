@@ -13,6 +13,9 @@
             <li>
                 <a href="index.php?c=suiviCommande&a=afficher">Suivi de commandes</a>
             </li>
+            <li>
+                <a href="index.php?c=panier&a=afficher">Panier</a>
+            </li>
         </ul>
     </div>
     <div class="col s12 m8 l9">

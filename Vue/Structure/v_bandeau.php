@@ -81,6 +81,8 @@
     <ul id="dropdown8" class="dropdown-content">
         <li class="SousCategNav light-blue darken-4"><a class="center-align"><span class="white-text">Mon compte</span></a></li>
         <li class="divider"></li>
+        <li class="SousCategNav"><a href="index.php?c=panier&a=afficher">Panier</a></li>
+        <li class="divider"></li>
         <li class="SousCategNav"><a href="index.php?c=compteClient&a=afficher">Informations</a></li>
         <li class="divider"></li>
         <li class="SousCategNav"><a href="index.php?c=suiviCommande&a=afficher">Commandes</a></li>
