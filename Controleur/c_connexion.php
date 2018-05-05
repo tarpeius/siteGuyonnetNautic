@@ -17,7 +17,6 @@ switch($action)
             $mdp = $_POST['Password'];
             $valide = isAdmin($email, $mdp);
             if ($valide == 1) {
-                //header('Refresh:0; index.php?c=accueil');
                 $_SESSION['client'] = lireClient($email,$mdp);
                 $reussi = "Vous êtes connecté(e)";
                 include ('Vue/v_connexion.php');
@@ -32,6 +31,30 @@ switch($action)
         }else{
             $erreur = "Veuillez saisir votre email et mot de passe pour vous connecter";
             include ('Vue/v_connexion.php');
+        }
+        break;
+    case "connecteCommande":
+        $erreur = "";
+        $reussi = "";
+        if ((!empty($_POST['Email'])) && (!empty($_POST['Password']))) {
+            $email = $_POST['Email'];
+            $mdp = $_POST['Password'];
+            $valide = isAdmin($email, $mdp);
+            if ($valide == 1) {
+                $_SESSION['client'] = lireClient($email,$mdp);
+                $reussi = "Vous êtes connecté(e)";
+                include ('Vue/v_connexion.php');
+                echo "<script type='text/javascript'>
+                    var delai=2; 
+                    var url='index.php?c=commande&a=afficher'; 
+                    setTimeout(\"document.location.replace(url)\", delai + '000');</script>";
+            } else {
+                $erreur = "Email ou mot de passe non valide";
+                include('Vue/v_commandeIdentifier.php');
+            }
+        }else{
+            $erreur = "Veuillez saisir votre email et mot de passe pour vous connecter";
+            include ('Vue/v_commandeIdentifier.php');
         }
         break;
     case "deconnecte":

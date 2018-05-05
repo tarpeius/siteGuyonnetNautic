@@ -67,8 +67,6 @@ switch($action)
         $logoMarque = afficherLogoMarqueDeProduit($idProduit);
         $produit = afficherProduit($idProduit);
         $photoProduit = afficheToutPhotoArticle($idProduit);
-        var_dump($idProduit);
-        var_dump($photoProduit);
         $nbProduit = $produit['qte_article'];
         include('Vue/v_ficheProduit.php');
         break;

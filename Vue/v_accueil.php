@@ -1,105 +1,213 @@
-
 <!--<div class="container">-->
     <div id="blocLogos" class="col s12 m12">
-        <div class="row">
+        <div id="blocLogosMargin" class="row">
             <div class="center-align col s12 m3">
                 <img id="logoAccueil" src="Util/img/Copie de GUYONNET-logo.png">
             </div>
             <div id="listeLogo" class="center-align col s12 m9">
-                <img class="responsive-img" src="Util/img/listeLogo1.png">
-                <img class="responsive-img" src="Util/img/listeLogo2.png">
+                <img class="redimensionLogo responsive-img" src="Util/img/listeLogo1.png">
+                <img class="redimensionLogo responsive-img" src="Util/img/listeLogo2.png">
             </div>
         </div>
      </div>
+<div class="divider"></div>
+<!--<div id="testR" class="container">-->
+<!--    <div class="row">-->
+        <div class="carousel carousel-slider center">
+            <div class="carousel-item white-text" href="#one!">
+                <img  src="Util/img/DSC_0014.JPG">-->
+            </div>
+            <div class="carousel-item white-text" href="#two!">
+                <img src="Util/img/DSC_0025.JPG">
+            </div>
+            <div class="carousel-item white-text" href="#three!">
+                <img  src="Util/img/DSC_0022.JPG">
+            </div>
+        </div>
+<!--    </div>-->
 <!--</div>-->
-<div id="carouselAccueil" class="col s12 m12">
-    <div class="carousel carousel-slider center">
-        <div class="carousel-item carouselItem" href="#one!">
-            <img class="imgCarouProd" src="Util/img/DSC_0014.JPG">
-        </div>
-        <div class="carousel-item" href="#two!">
-            <img class="imgCarouProd" src="Util/img/DSC_0025.JPG">
-        </div>
-        <div class="carousel-item" href="#three!">
-            <img class="imgCarouProd" src="Util/img/DSC_0022.JPG">
-        </div>
-    </div>
-</div>
 
-<!-- PHOTO CATEGORIE BATEAU -->
-<div id="blocCategories" class="row">
-    <div class="col m2 s12 divPhoto">
-        <a href="index.php?c=bateau&a=afficher"> <img class="imgCateg" src="Util/img/Medline-850-1s.jpg">
-            <div class="blocTitle">
-                <div class="title">Bateau</div>
-                <div class="button">
-                    <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
-                </div>
-            </div>
-        </a>
-    </div>
+<!--</div>-->
+<!--<div id="carouselAccueil" class="col s12 m12">-->
+<!--    <div class="carousel carousel-slider center">-->
+<!--        <div class="carousel-item carouselItem" href="#one!">-->
+<!--            <img class="imgCarouProd" src="Util/img/DSC_0014.JPG">-->
+<!--        </div>-->
+<!--        <div class="carousel-item" href="#two!">-->
+<!--            <img class="imgCarouProd" src="Util/img/DSC_0025.JPG">-->
+<!--        </div>-->
+<!--        <div class="carousel-item" href="#three!">-->
+<!--            <img class="imgCarouProd" src="Util/img/DSC_0022.JPG">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<!--<div class="container">-->
     <!-- PHOTO CATEGORIE BATEAU -->
-    <!-- PHOTO CATEGORIE JET -->
-    <div class="col m2 divPhoto">
-        <a href="index.php?c=motomarine&a=afficher"> <img class="imgCateg" src="Util/img/RXT-X 300_332_MY18.jpg">
-            <div class="blocTitle">
-                <div class="title">Jet</div>
-                <div class="button">
-                    <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
+    <div id="blocCategories" class="row">
+        <div class="col m2 s12 divPhoto">
+            <a href="index.php?c=bateau&a=afficher"> <img class="imgCateg" src="Util/img/Medline-850-1s.jpg">
+                <div class="blocTitle">
+                    <div class="title">Bateau</div>
+                        <span class="button1">Voir</span>
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
+        <!-- PHOTO CATEGORIE BATEAU -->
+        <!-- PHOTO CATEGORIE JET -->
+        <div class="col m2 divPhoto">
+            <a href="index.php?c=motomarine&a=afficher"> <img class="imgCateg" src="Util/img/RXT-X 300_332_MY18.jpg">
+                <div class="blocTitle">
+                    <div class="title">Jet</div>
+                        <span class="button1">Voir</span>
+                </div>
+            </a>
+        </div>
+        <!-- PHOTO CATEGORIE JET -->
+        <div class="col m2 divPhoto">
+            <a href="index.php?c=moteur&a=afficher"> <img class="imgCateg" src="Util/img/Spark Trixx_2 riders 0309_MY17.jpg">
+                <div class="blocTitle">
+                    <div class="title">Moteur</div>
+                        <span class="button1">Voir</span>
+                </div>
+            </a>
+        </div>
+        <div class="col m2 divPhoto">
+            <a href="index.php?c=remorque&a=afficher"> <img class="imgCateg" src="Util/img/GTR 230_191_MY17.jpg">
+                <div class="blocTitle">
+                    <div class="title">Remorque</div>
+                        <span class="button1">Voir</span>
+                </div>
+            </a>
+        </div>
+        <div class="col m2 divPhoto">
+            <a href="index.php?c=armement&a=afficher"> <img class="imgCateg" src="Util/img/autre nom - GTR 230_1738_MY17.jpg">
+                <div class="blocTitle">
+                    <div class="title">Armement</div>
+                        <span class="button1">Voir</span>
+                </div>
+            </a>
+        </div>
+        <div class="col m2 divPhoto">
+            <a href="index.php?c=permis&a=afficher"> <img class="imgCateg" src="Util/img/GTX LTD - RXT-X large_2J8A6789_MY18.jpg">
+                <div class="blocTitle">
+                    <div class="title">Permis</div>
+                        <span class="button1">Voir</span>
+                </div>
+            </a>
+        </div>
     </div>
-    <!-- PHOTO CATEGORIE JET -->
-    <div class="col m2 divPhoto">
-        <a href="index.php?c=moteur&a=afficher"> <img class="imgCateg" src="Util/img/Spark Trixx_2 riders 0309_MY17.jpg">
-            <div class="blocTitle">
-                <div class="title">Moteur</div>
-                <div class="button">
-                    <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
-                </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="s12 m12 center">
+                <h2 id="titreAccueil"><strong>Bienvenue</strong> chez Guyonnet Nautic</h2>
+                <p class="textAccueil">
+                    Guyonnet Nautic, concessionnaire Yamaha, Seadoo, Pacific Craft, Zodiac, Capelli Tempest, Rigiflex, Fun-Yak et Rocca à Pau(64), est spécialisée en vente et réparation de bateau/motomarine sur la région.<br>
+                    Vous trouverez une large gamme de bateaux, motomarines (jets), moteurs, et remorques en neuf et occasion.<br>
+                    De plus, une boutique d'accessoires, d'armements et de pièces détachées vous attend au magasin.
+                    Elle vous accueille du mardi au samedi sur ses horaires d'ouvertures.
+                </p>
             </div>
-        </a>
+        </div>
     </div>
-    <div class="col m2 divPhoto">
-        <a href="index.php?c=remorque&a=afficher"> <img class="imgCateg" src="Util/img/GTR 230_191_MY17.jpg">
-            <div class="blocTitle">
-                <div class="title">Remorque</div>
-                <div class="button">
-                    <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
+
+
+    <div class="divider"></div>
+<div id="blocSkills">
+    <div class="container">
+        <div class="section">
+            <div id="blocCategories" class="row">
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center white-text">
+                            <i class="large material-icons">flash_on</i>
+                        </h2>
+                        <h4 class="white-text center">Efficacité</h4>
+                        <p class="white-text center textAccueil">My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.</p>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center white-text">
+                            <i class="large material-icons">group</i>
+                        </h2>
+                        <h4 class="white-text center">Disponibilité</h4>
+                        <p class="white-text center textAccueil">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder.
+                            After the avalanche, it took us a week to climb out.</p>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center white-text">
+                            <i class="large material-icons">hearing</i>
+                        </h2>
+                        <h4 class="white-text center">Ecoute</h4>
+                        <p class="white-text center textAccueil">Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine.
+                            You don't get sick, I do.</p>
+                    </div>
                 </div>
             </div>
-        </a>
-    </div>
-    <div class="col m2 divPhoto">
-        <a href="index.php?c=armement&a=afficher"> <img class="imgCateg" src="Util/img/autre nom - GTR 230_1738_MY17.jpg">
-            <div class="blocTitle">
-                <div class="title">Armement</div>
-                <div class="button">
-                    <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="col m2 divPhoto">
-        <a href="index.php?c=permis&a=afficher"> <img class="imgCateg" src="Util/img/GTX LTD - RXT-X large_2J8A6789_MY18.jpg">
-            <div class="blocTitle">
-                <div class="title">Permis</div>
-                <div class="button">
-                    <span class="btn waves-effect waves-light light-blue darken-4">Voir</span>
-                </div>
-            </div>
-        </a>
+        </div>
     </div>
 </div>
-<script>
-    $('.carousel').carousel({
-        padding: 200
-    });
-    autoplay()
-    function autoplay() {
-        $('.carousel').carousel('next');
-        setTimeout(autoplay, 4500);
+<div class="divider"></div>
+<!--BLOC SELECTION ARTICLE-->
+<?php
+    if (!empty($selection)) {
+?>
+    <div class="container">
+        <div class="section">
+            <h3 style="text-transform: uppercase" class="center">Notre sélection</h3>
+            <div class="row">
+                <?php
+                foreach ($selection as $selections) {
+                    echo "<div class=\"col s12 m4\">
+                        <div class=\"card\">
+                            <div class=\"card-image\">
+                                <img id=\"photoCard\" src=\"Util/img/".$selections['photo_article']."\">
+                                <span class=\"card-title\"><strong>".$selections['nom_article']."</strong></span>                   
+                                <a href=\"index.php?c=bateau&a=ficheProduit&id=".$selections['reference']."\" class=\"btn-floating halfway-fab waves-effect waves-light light-blue darken-3\"><i class=\"large material-icons\">remove_red_eye</i></a>
+                            </div>
+                            <div class=\"card-content\">
+                                <p class=\"textCard\"><strong>".$selections['prix_article']." €</strong></p><br>                         
+                                <p class=\"textCard\"><strong>Motorisation : </strong></p> <p>".$selections['motorisation_article']." cv</p>
+                                <p class=\"textCard\"><strong>Dimensions (L/l/h) : </strong></p> <p>".$selections['dimensions_article']."</p><br>
+                                <span class=\"card-title textCard activator grey-text text-darken-4\">Details<i class=\"material-icons right\">expand_more</i></span>
+                            </div>  
+                            <div class=\"card-reveal\">
+                              <span class=\"card-title grey-text text-darken-4\">Details<i class=\"material-icons right\">close</i></span>
+                              <p class=\"textCard\"><strong>Resume : </strong></p> <p>".$selections['resume_article']."</p>
+                              <p class=\"textCard\"><strong>Description : </strong></p> <p>".$selections['desc_article']."</p>
+                            </div>
+                        </div>
+                    </div>";
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+<?php
     }
+    //var_dump($selection);
+?>
+<script>
+//    $('.carousel').carousel({
+//        padding: 200
+//    });
+//    autoplay()
+//    function autoplay() {
+//        $('.carousel').carousel('next');
+//        setTimeout(autoplay, 4500);
+//    }
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true
+    });
+
 </script>
+<style>
+
+</style>
 

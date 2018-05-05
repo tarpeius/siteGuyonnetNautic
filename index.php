@@ -1,4 +1,5 @@
 <?php
+    //require_once 'Modele/Class/Panier.php';
 	// session / error / include
 	error_reporting(E_ALL);
 	// affiche les erreurs a enlever en prod!!!! 
@@ -60,6 +61,9 @@
         break;
     case 'panier':
         include ("Controleur/c_panier.php");
+        break;
+    case 'commande':
+        include ("Controleur/c_commande.php");
         break;
 	default:
 	   include("Vue/Structure/v_nopage.php");

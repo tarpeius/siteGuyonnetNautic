@@ -129,6 +129,33 @@ switch($action) {
 
         include("Vue/v_verifEmailMdp.php");
         break;
+    case "modifierInfosClient":
+        if (isset($_POST['modifier'])) {
+            $id = $_SESSION['client']['id_client'];
+            $email = $_POST['Email'];
+            $nom = $_POST['Nom'];
+            $prenom = $_POST['Prenom'];
+            $adresse = $_POST['Adresse'];
+            $cp = $_POST['Cp'];
+            $ville = $_POST['Ville'];
+            $telephone = $_POST['Telephone'];
+            modifierClient($nom,$prenom,$email,$adresse,$cp,$id);
+            // changement $SESSION
+            $_SESSION['client'] = lireClientId($id);
+            $reussi = "Modification réussie";
+        }
+        include ("Vue/v_compteClient.php");
+        break;
+    case "suiviCommande":
+        if (!empty($_SESSION['client'])) {
+            $id = $_SESSION['client']['id_client'];
+            $commande = CommandeClient($id);
+            $article = CommandeClientArticle($id);
+        } else {
+            $erreur = "Vous n'avez fait aucune commande";
+        }
+        include ("Vue/v_suiviCommande.php");
+        break;
     default:
         include ("Vue/v_accueil.php");
         break;

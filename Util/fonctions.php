@@ -20,7 +20,7 @@ function checkClientMail_if_exists($email)
 function dateToday(){
     global $bdd;
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $bdd->prepare("SELECT CURDATE()");
+    $stmt = $bdd->prepare("SELECT NOW()");
     $stmt->execute();
     $result = $stmt->fetchColumn();
     return $result;

@@ -15,6 +15,16 @@ switch($action)
             include('Vue/v_inscription.php');
         }
         break;
+    case "afficherInscriCommande": // a changer selon besoin
+        if (empty($_POST['Email'])){
+            $erreur = "Veuillez saisir une adresse email pour vous inscrire";
+            include ('Vue/v_commandeIdentifier.php');
+
+        }else{
+            $_SESSION['msg'] = "";
+            include('Vue/v_inscription.php');
+        }
+        break;
     case "ajout":
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['msg'] = "";

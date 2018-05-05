@@ -5,8 +5,6 @@
             Nous proposons des permis bateau<br /><br />
             Tout types de permis de bateau <br /><br />
             Cotier, fluvial ou hauturier nous avons ce que vous voulez ! </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque lacus vitae urna suscipit, tincidunt ullamcorper urna ultrices. Suspendisse ultricies,
-            velit at semper ultricies, ligula massa molestie mi, non laoreet enim felis vitae leo. </p>
     </div>
     <div class="col m5 offset-m1">
         <div class="photoPermis">

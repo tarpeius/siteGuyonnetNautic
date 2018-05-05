@@ -1,5 +1,5 @@
 <div>
-    <H1 class="header center light-blue-text text-darken-4">Remorques</H1>
+    <H1 class="header center light-blue-text text-darken-4">Remorque</H1>
     <!--    <div class="divider"></div>-->
     <nav>
         <div class="nav-wrapper blue darken-4">
