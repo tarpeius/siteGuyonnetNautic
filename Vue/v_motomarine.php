@@ -1,5 +1,5 @@
 <div>
-    <H1 class="header center light-blue-text text-darken-4">Jets</H1>
+    <H1 class="header center light-blue-text text-darken-4">Motomarine</H1>
     <!--    <div class="divider"></div>-->
     <nav>
         <div class="nav-wrapper blue darken-4">
@@ -15,8 +15,8 @@
                     <div class="input-field col m12">
                         <select>
                             <option value="" disabled selected>Trier par Marque</option>
-                            <option value="1">See Doo</option>
-                            <option value="2">Yamaaha</option>
+                            <option value="1">Seadoo</option>
+                            <option value="2">Yamaha</option>
                             <option value="3">Pacific craft</option>
                         </select>
                         <label>Marque</label>
@@ -53,7 +53,7 @@
                             </div>
                             <div class="card-content">
                                 <p class="center-align"><?php echo $unProduit['nom_article']?></p>
-                                <p class="center-align"><?php echo $unProduit['prix_article']?></p>
+                                <p class="center-align"><?php echo $unProduit['prix_article']?> €</p>
                             </div>
                             <div class="card-action">
                                 <a href="index.php?c=motomarine&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>

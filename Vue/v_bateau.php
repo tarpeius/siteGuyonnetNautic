@@ -109,7 +109,7 @@
                             </div>
                             <div class="card-content">
                                 <p class="center-align"><?php echo $unProduit['nom_article']?></p>
-                                <p class="center-align"><strong><?php echo $unProduit['prix_article']?>€</strong></p>
+                                <p class="center-align"><strong><?php echo $unProduit['prix_article']?> €</strong></p>
                             </div>
                             <div class="card-action">
                                 <a href="index.php?c=bateau&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>

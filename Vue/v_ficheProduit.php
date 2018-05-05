@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <form method="POST" action="">
+                    <form method="POST" action="index.php?c=panier&a=ajouterArticle">
                         <div class="col m2">
                             <select class="browser-default" name="nbProduit">
                                 <?php
@@ -71,7 +71,7 @@
                             </select>
                         </div>
                         <div class="col m8 offset-m2">
-                            <a class="btn" href="">Ajouter au panier</a>
+                            <a class="btn" href="index.php?c=panier&a=ajouterArticle&id=<?php echo $produit['reference'] ?>">Ajouter au panier</a>
                         </div>
                     </form>
                 </div>

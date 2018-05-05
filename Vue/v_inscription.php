@@ -45,7 +45,6 @@
         </div>";
             }
             ?>
-            ?>
             <h2>Identifiants</h2>
                 <div class="row">
                     <div class="input-field col s12">

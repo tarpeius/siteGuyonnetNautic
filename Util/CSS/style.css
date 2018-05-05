@@ -8,6 +8,9 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 .row .col.m2 {
     padding:0 !important;
 }
+#blocLogosMargin {
+    margin-bottom: 0;
+}
 #homeNav {
     /*width: 50px;*/
     text-align: center;
@@ -96,8 +99,8 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     border-radius: 11px;
 }
 #logoAccueil {
-    height: 130px;
-    width: 300px;
+    height: 121px;
+    width: 260px;
 }
 .divPhoto {
     position: relative;
@@ -116,10 +119,28 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     left: 0;
     padding: 20px;
 }
-.button {
+#testR {
+    background-color: grey;
+}
+.button1 {
     position: absolute;
     bottom: 7px;
     right: 0;
+    color: #01579b;
+    background-color: white;
+    padding: 0 2rem;
+    letter-spacing: .5px;
+    text-decoration: none;
+    font-size: 1rem;
+    border: 2px solid #01579b;
+    line-height: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.button1:hover {
+    color: white;
+    background-color: #01579b;
 }
 .title {
     font-weight: 600;
@@ -127,7 +148,7 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     color: #fff;
     padding: 0 0 12px;
     text-transform: uppercase;
-    font-size: 35px;
+    font-size: 30px;
     line-height: 39px;
     opacity: 0.7;
 }
@@ -149,19 +170,24 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 }
 #listeLogo {
     position: relative;
-    top: 35px;
+    top: 25px;
+    width: 1107px;
+}
+.redimensionLogo {
+    height:71px;
 }
 #carouselAccueil{
     position: relative;
     bottom: 33px;
 }
 #blocLogos{
-    position: relative;
-    bottom:10px;
+    /*position: relative;*/
+    /*bottom:10px;*/
 }
 #blocCategories{
-    position: relative;
-    bottom: 15px;
+    /*position: relative;*/
+    /*bottom: 15px;*/
+    margin-bottom: 0;
 }
 
 .icon_style {
@@ -188,8 +214,8 @@ html, body {
     height: 100%;
 }
 body {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    background: #ffffff;
+    font-family: Roboto,sans-serif;
     font-size: 14px;
     color:#000;
     margin: 0;
@@ -248,4 +274,62 @@ body {
     display: block !important;
     line-height: 27px !important;
     padding: 14px 16px !important;
+}
+#photoPanier {
+    width: 150px;
+    height: 90px;
+}
+.sectionPanier {
+    background-color: #0673ca;
+}
+.testLi {
+    display: inline;
+    padding-left: 2%;
+    font-size: 25px;
+    color: #737373;
+}
+.commandeEtape ol {
+    text-align: center;
+}
+.textAccueil {
+    font-size: 18px;
+}
+.test {
+    display: inline;
+    padding-left: 2%;
+    font-size: 30px;
+    color: #01579b;
+}
+.testCouleur {
+    background-color: #F2F6F7;
+}
+#sizeRecapTitle {
+    font-size: 21px;
+    color: #01579b;
+}
+.sizeRecap {
+    font-size: 17px;
+}
+#tabRecap {
+    width: 200px;
+}
+.titreAccueil {
+    text-shadow: 3px 0 0 #01579b, -2px 0 0 #01579b, 0 3px 0 #01579b, 0 -2px 0 #01579b, 1px 1px #01579b, -1px -1px 0 #01579b, 1px -1px 0 #01579b, -1px 1px 0 #01579b;
+    color: white;
+}
+#titreAccueil {
+    font-size: 50px;
+    line-height: 56px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+#blocSkills {
+    background-color: #01579b;
+}
+.textCard {
+    font-size: 19px;
+}
+#photoCard {
+    width: 100%;
+    height: 190px;
 }
