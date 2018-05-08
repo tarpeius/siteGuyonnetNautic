@@ -2,8 +2,8 @@
 ?>
     <div class="commandeEtape">
         <ol>
-            <li class="testLi">
-                <span>1. S'identifier</span>
+            <li class="light-blue-text text-darken-4 testLi">
+                <span><b>1. Identifiez-vous</b></span>
             </li>
             <li class="testLi">
                 <span>2. Adresse</span>
@@ -20,7 +20,7 @@
         </ol>
     </div>
     <div>
-        <H3 class="header center light-blue-text text-darken-4">S'identifier</H3>
+        <H3 class="titreCommande header center light-blue-text text-darken-4"><b>Identifiez-vous</b></H3>
     </div>
 <?php
 if(!empty($erreur)){

@@ -46,3 +46,14 @@ function nouvelleLigneCommande($quantite,$commande,$produit) {
     $stmt->bindParam(':produit', $produit);
     $stmt->execute();
 }
+
+function nouvelleAdresse($adresse,$ville,$cp,$client) {
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $stmt = $bdd->prepare("INSERT INTO adresse (ligne,ville,code_postal,id_client) VALUES(:adresse,:ville,:cp,:client)");
+    $stmt->bindParam(':adresse', $adresse);
+    $stmt->bindParam(':ville', $ville);
+    $stmt->bindParam(':cp', $cp);
+    $stmt->bindParam(':client', $client);
+    $stmt->execute();
+}

@@ -50,9 +50,6 @@
                 <div class="divider"></div>
                 <div class="row">
                     <div>
-                        <p> Description </p>
-                    </div>
-                    <div>
                         <p><?php echo $produit['resume_article'] ?>
                         </p>
                     </div>
@@ -125,11 +122,11 @@
                     </tr>
                     <tr>
                         <td>Motorisation</td>
-                        <td><?php echo $produit['motorisation_article'] ?></td>
+                        <td><?php echo $produit['motorisation_article'] ?> cv</td>
                     </tr>
                     <tr>
                         <td>Poids</td>
-                        <td><?php echo $produit['poids_article'] ?></td>
+                        <td><?php echo $produit['poids_article'] ?> kg</td>
 
                     </tr>
                     <tr>

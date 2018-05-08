@@ -5,9 +5,13 @@
 	// affiche les erreurs a enlever en prod!!!! 
 	ini_set('display_errors', 1);
 	// k�c�c� ? 
-	//ob_start();
+	ob_start();
 	session_start();
 	date_default_timezone_set('Europe/Paris');
+    if (isset($_SESSION['client'])) {
+        $email = $_SESSION['client'];
+        setcookie('client', $email, time() + 3600, null, null, false, true);
+    }
 
 	include("Modele/m_connexion.php");
 	include("Modele/m_selections.php");
@@ -69,5 +73,5 @@
 	   include("Vue/Structure/v_nopage.php");
 	   break;
     }
-	//ob_end_flush();
     include("Vue/Structure/v_footer.php") ;
+	ob_end_flush();

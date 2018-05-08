@@ -6,9 +6,9 @@
             Tout types de permis de bateau <br /><br />
             Cotier, fluvial ou hauturier nous avons ce que vous voulez ! </p>
     </div>
-    <div class="col m5 offset-m1">
+    <div class="col m5 ">
         <div class="photoPermis">
-            <img src="Util/img/salle.jpg"/>
+            <img id="imgPermis" class="responsive-img" src="Util/img/DSC_0183.JPG"/>
         </div>
     </div>
 </div>
@@ -230,7 +230,7 @@
     </div>
 </div>
 <div class="divider"></div>
-<i class="material-icons orange" onclick="topFunction()" id="myBtn" title="Go to top">navigation</i>
+<i class="material-icons" onclick="topFunction()" id="myBtn" title="Go to top">navigation</i>
 <script>
     $(document).ready(function() {
         $('select').material_select();

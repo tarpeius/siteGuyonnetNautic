@@ -26,7 +26,7 @@
             <ul class="right hide-on-med-and-down">
 <!--                <li id='homeNav'><a class="dropdown-button" href="index.php?c=contact&a=afficher">Contact</a></li>-->
                 <li id='homeNav'><a class="dropdown-button" href="index.php?c=panier&a=afficher"><i class="material-icons tiny">shopping_basket</i></a></li>
-                    <?php if (!empty($_SESSION['client'])) {
+                    <?php if (!empty($_COOKIE['client'])) {
                             echo "<li class=\"CategNav\"> <a class='dropdown-button' data-activates='dropdown8'> <span>Bienvenue !</span> </a> </li>";
                         }else{ echo "<li id='homeNav'> <a class='dropdown-button' href='index.php?c=connexion&a=authentification'> <span>Se connecter</span> </a> </li>";}
                     ?>
@@ -38,7 +38,7 @@
     <ul id="dropdown1" class="dropdown-content">
         <li class="SousCategNav light-blue darken-4"><a class="center-align" href="index.php?c=bateau&a=afficher"><span class="white-text">Bateau</span></a></li>
         <li class="divider"></li>
-        <li class="SousCategNav "><a href="index.php?c=bateau&a=afficher&marque=pacificcraft"><span class="blue-text text-darken-4">Pacific Craft</span></a></li>
+        <li class="SousCategNav "><a href="index.php?c=bateau&a=afficher&marque=pacific craft"><span class="blue-text text-darken-4">Pacific Craft</span></a></li>
         <li class="divider"></li>
         <li class="SousCategNav "><a href="index.php?c=bateau&a=afficher&marque=zodiac"><span class="blue-text text-darken-4">Zodiac</span></a></li>
         <li class="divider"></li>

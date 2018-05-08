@@ -1,5 +1,6 @@
 <?php
-
+//     var_dump($_SESSION['client']);
+//     echo $_COOKIE["client"];
 ?>
     <H1 class="header center light-blue-text text-darken-4">Panier</H1>
     <?php
@@ -7,7 +8,7 @@
         echo "<div class='container'>
                     <div class=\"row\" id=\"alert_box\">
                         <div class=\"col s12 m12\">
-                            <div id='messageErreur' class=\" orange darken-1\">
+                            <div id='messageErreur' class=\"grey\">
                                 <div class=\"row\">
                                     <div class=\"col s12 m12\">
                                         <div class=\"card-content white-text\">
@@ -23,25 +24,21 @@
     }
     ?>
     <div class="divider"></div>
-<div class="container">
+<div class="container conteneurCommande">
 <div id="compteClient" class="row">
-    <?php
-    if (!empty($_SESSION['panier'])) {
-        echo "<div class=\"col s12 m4 l3\">
-            <ul class=\"\">
-                <li class=\"active\">
-                    <a href=\"index.php?c=compteClient&a=afficher\">Compte client</a>
+    <div class="col s12 m4 l3">
+            <ul>
+                <li class="active">
+                    <a href="index.php?c=compteClient&a=afficher">Compte client</a>
                 </li>
                 <li>
-                    <a href=\"index.php?c=compteClient&a=suiviCommande\">Suivi commande</a>
+                    <a href="index.php?c=compteClient&a=suiviCommande">Suivi commande</a>
                 </li>
                 <li>
-                    <a href=\"index.php?c=panier&a=afficher\">Panier</a>
+                    <a href="index.php?c=panier&a=afficher">Panier</a>
                 </li>
             </ul>
-        </div>";
-    }
-        ?>
+        </div>
     <div class="col s12 m8 l6 center-align">
             <h3>Contenu de mon panier</h3>
     </div>
@@ -50,12 +47,14 @@
             <div class="card-panel">
                 <table>
                     <tbody>
-                        <tr class="sectionPanier">
+                        <tr class="light-blue darken-4">
                             <td></td>
-                            <td class="white-text">Designation produits</td>
-                            <td class="white-text">Quantite</td>
-                            <td class="white-text">Prix total</td>
-                            <td><a class="white-text" href="index.php?c=panier&a=supprimerToutArticle"><i class="material-icons">delete</i></a></td>
+                            <td class="white-text titreCommande">Designation produits</td>
+                            <td class="white-text titreCommande">Qté</td>
+                            <td class="white-text titreCommande">total</td>
+                            <td>
+<!--                                <a class="white-text titreCommande" href="index.php?c=panier&a=supprimerToutArticle"><i class="material-icons">delete</i></a>-->
+                            </td>
                         </tr>
                             <?php
                                 if (isset($_SESSION['panier'])) {
@@ -66,7 +65,7 @@
                                             <td>
                                                 <img id="photoPanier" src="Util/img/<?php echo $panier['photo'] ?>"
                                             </td>
-                                            <td>
+                                            <td class="sizeArticlePanier">
                                                 <h5><?php echo $panier['nom'] ?></h5>
                                                 <span><?php echo $panier['resume'] ?></span>
                                             </td>
@@ -79,7 +78,7 @@
                                                 <?php echo $panier['prix']*$panier['quantite'] ?> €
                                             </td>
                                             <td>
-                                                <a class="black-text" href="index.php?c=panier&a=supprimerArticle&key=<?php echo $key ?>"><i class="material-icons">delete</i></a>
+                                                <a class="grey-text" href="index.php?c=panier&a=supprimerArticle&key=<?php echo $key ?>"><i class="material-icons">delete</i></a>
                                             </td>
                                         </tr>
                                         <?php
@@ -96,7 +95,7 @@
             echo "<div class=\"col s9 offset-s9\">
                         <a class='white-text' href='index.php?c=commande&a=afficher'>
                             <button class=\"waves-effect waves-light btn-large\" name=\"action\">Passer ma commande
-                                <i class=\"material-icons right\">shopping_cart</i>
+                                <i class=\"material-icons right\">arrow_forward</i>
                             </button>
                         </a>
                 </div>";

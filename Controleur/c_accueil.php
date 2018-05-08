@@ -10,10 +10,6 @@ switch($action)
         $selection = afficheArticleSelection();
         include("Vue/v_accueil.php");
         break;
-    case "selection": // a changer selon besoin
-        $selection = afficheArticleSelection();
-        include('Vue/v_bienvenue.php');
-        break;
     default:
         include("Vue/v_accueil.php");
         break;

@@ -106,13 +106,14 @@
                         <div class="card">
                             <div class="card-image">
                                 <img class="responsive-img tailleImage" src="Util/img/<?php echo $unProduit['photo_article'] ?>">
+                                <span class="card-title"><?php echo $unProduit['nom_article']?></span>
                             </div>
                             <div class="card-content">
-                                <p class="center-align"><?php echo $unProduit['nom_article']?></p>
-                                <p class="center-align"><strong><?php echo $unProduit['prix_article']?> €</strong></p>
+                                <p class="textCard black-text text-darken-2 center-align"><?php echo $unProduit['nom_article']?></p>
+                                <p class="textCard black-text text-darken-4 center-align"><strong><?php echo $unProduit['prix_article']?> €</strong></p>
                             </div>
                             <div class="card-action">
-                                <a href="index.php?c=bateau&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>
+                                <a class="red-text text-darken-3" href="index.php?c=bateau&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>
                             </div>
                         </div>
                     </a>
@@ -140,7 +141,7 @@
         <!-- fin pagination -->
     </div><!-- container -->
 </div>
-<i class="material-icons orange" onclick="topFunction()" id="myBtn" title="Go to top">navigation</i>
+<i class="material-icons" onclick="topFunction()" id="myBtn" title="Go to top">navigation</i>
 <script>
     $(document).ready(function() {
         $('select').material_select();

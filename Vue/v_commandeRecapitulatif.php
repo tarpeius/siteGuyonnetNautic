@@ -1,3 +1,4 @@
+
 <form method="POST" action="index.php?c=commande&a=paiement">
     <div class="commandeEtape">
         <ol>
@@ -10,8 +11,8 @@
             <li class="testLi">
                 <span>3. Transport</span>
             </li >
-            <li class="testLi">
-                <span>4. Récapitulatif</span>
+            <li class="light-blue-text text-darken-4 testLi">
+                <span><b>4. Récapitulatif</b></span>
             </li >
             <li class="testLi">
                 <span>5. Paiement</span>
@@ -19,7 +20,7 @@
         </ol>
     </div>
     <div>
-        <H3 class="header center light-blue-text text-darken-4">Recapitulatif</H3>
+        <H3 class="titreCommande header center light-blue-text text-darken-4"><b>Recapitulatif</b></H3>
     </div>
     <?php
     if(!empty($erreur)) {
@@ -29,14 +30,11 @@
                         <div class=\"col s12 m12\">
                             <div id='messageErreur' class=\" red darken-1\">
                                 <div class=\"row\">
-                                    <div class=\"col s12 m10\">
+                                    <div class=\"col s12 m12\">
                                         <div class=\"card-content white-text\">
                                             <p class=\"center-align\">" . $erreur . "</p>
                                         </div>
-                                    </div>
-                                    <div class=\"col s12 m2\">
-                                        <i class=\"fa fa-times icon_style\" id=\"alert_close\" aria-hidden=\"true\"></i>
-                                    </div>
+                                    </div>                                 
                                 </div>
                             </div>
                         </div>
@@ -45,23 +43,23 @@
     }
     ?>
     <div class="divider margin"></div>
-<div class="container">
+<div class="container conteneurCommandeRecapitulatif">
     <div class="col s12 m8 l9">
         <div class="row">
             <div class="card-panel">
                 <table>
                     <tbody>
-                    <tr class="sectionPanier">
-                        <td class="white-text"></td>
-                        <td class="white-text">Designation produits</td>
-                        <td class="white-text">Quantite</td>
-                        <td class="white-text">Prix total</td>
-                    </tr>
                     <?php
                     if (isset($_SESSION['panier'])) {
                         $paniers = $_SESSION['panier'];
                         foreach ($paniers as $panier) {
                             ?>
+                    <tr class="light-blue darken-4">
+                        <td class="white-text"></td>
+                        <td class="white-text titreCommande">Designation produits</td>
+                        <td class="white-text titreCommande">Qté</td>
+                        <td class="white-text titreCommande">total</td>
+                    </tr>
                             <tr>
                                 <td>
                                     <img id="photoPanier" src="Util/img/<?php echo $panier['photo'] ?>"
@@ -89,23 +87,41 @@
     <div class="row">
         <div class="col s12 m4 l3">
             <?php
-                if (!empty($_SESSION['panier'])) {
-                    $nom = $_SESSION['client']['nom_client'];
-                    $prenom = $_SESSION['client']['prenom_client'];
-                    $adresse = $_SESSION['client']['adresse_client'];
-                    $cp = $_SESSION['client']['cp_client'];
-                    $ville = $_SESSION['client']['ville_client'];
+                if (!empty($_SESSION['panier']) && !empty($adresse) && !empty($client)) {
+                    $nom = strtoupper($client['nom_client']);
+                    $prenom = ucfirst($client['prenom_client']);
+                    $ligne = $adresse['ligne'];
+                    $cp = $adresse['code_postal'];
+                    $ville = $adresse['ville'];
                     echo "<p id=\"sizeRecapTitle\">Mon adresse de facturation</p>
-                            <p class=\"sizeRecap\">$nom ' '$prenom</p>
-                            <p class=\"sizeRecap\">$adresse</p>
-                            <p class=\"sizeRecap\">$cp' ' $ville</p>";
-                    }
+                            <p class=\"sizeRecap\">$nom $prenom</p>
+                            <p class=\"sizeRecap\">$ligne</p>
+                            <p class=\"sizeRecap\">$cp $ville</p>";
+                } elseif (!empty($_SESSION['panier']) && !empty($client) && empty($adresse)) {
+                    $nom = $client['nom_client'];
+                    $prenom = $client['prenom_client'];
+                    $ligne = $client['adresse_client'];
+                    $cp = $client['cp_client'];
+                    $ville = $client['ville_client'];
+                    echo "<p id=\"sizeRecapTitle\">Mon adresse de facturation</p>
+                            <p class=\"sizeRecap\">$nom $prenom</p>
+                            <p class=\"sizeRecap\">$ligne</p>
+                            <p class=\"sizeRecap\">$cp $ville</p>";
+                }
             ?>
 
         </div>
         <div class="col s12 m4 l3">
-            <p id="sizeRecapTitle">Mon adresse de livraison</p>
-            <p>Retrait au magasin</p>
+            <?php
+            if (!empty($_POST['Frais'])) {
+                echo "<p id=\"sizeRecapTitle\">Mon adresse de livraison</p>
+                            <p class=\"sizeRecap\">$ligne</p>
+                            <p class=\"sizeRecap\">$cp $ville</p>";
+            } else {
+                echo "<p id=\"sizeRecapTitle\">Mon adresse de livraison</p>
+                <p class=\"sizeRecap\">Retrait au magasin</p>";
+            }
+            ?>
         </div>
         <div class="col s12 m4 l6">
             <?php
@@ -117,20 +133,30 @@
                     $tva = $result *0.2;
                     echo "<p class=\"sizeRecap\">Montant total TTC de vos produits > $result €</p>
                         <p class=\"sizeRecap\">Montant	TTC des frais de livraison > 0.0 €</p>
-                        <p class=\"sizeRecap\">dont TVA > <?php echo $tva ?> €</p>
-                        <p id=\"sizeRecapTitle\">Montant total TTC de votre commande > <?php echo $result ?> €</p>";
+                        <p class=\"sizeRecap\">dont TVA > $tva €</p>
+                        <p id=\"sizeRecapTitle\">Montant total TTC de votre commande > $result €</p>";
                 }
             ?>
         </div>
     </div>
     <div class="divider margin"></div>
-    <div class="row">
-        <input type="checkbox" name="Accept" id="retrait" />
-        <label for="retrait">J'accepte les conditions générales de vente et conditions du droit de rétractation</label>
-        <div class="col s9 offset-s9">
-            <button type="submit" class="waves-effect waves-light btn-large" name="action">Choisir moyen de paiement
-                <i class="material-icons right">credit_card</i>
-            </button>
+    <div class="section">
+        <div class="row">
+            <input type="checkbox" name="Accept" id="retrait" />
+            <label for="retrait">J'accepte les conditions générales de vente et conditions du droit de rétractation</label>
+        </div>
+    </div>
+    <div class="section">
+        <div class="row">
+            <div class="col s6 left-align">
+                <button class="waves-effect waves-light btn-large" name="retour">
+                    <a class="white-text" href="">Retour</a>
+                </button>
+            </div>
+            <div class="col s6 right-align">
+                <button type="submit" class="waves-effect waves-light btn-large" name="action">Suivant
+                </button>
+            </div>
         </div>
     </div>
 </div>

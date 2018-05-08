@@ -1,10 +1,10 @@
 <!--<div class="container">-->
-    <div id="blocLogos" class="col s12 m12">
+    <div id="blocLogos">
         <div id="blocLogosMargin" class="row">
-            <div class="center-align col s12 m3">
+            <div class="center-align col s12 m12 l3">
                 <img id="logoAccueil" src="Util/img/Copie de GUYONNET-logo.png">
             </div>
-            <div id="listeLogo" class="center-align col s12 m9">
+            <div id="listeLogo" class="center-align">
                 <img class="redimensionLogo responsive-img" src="Util/img/listeLogo1.png">
                 <img class="redimensionLogo responsive-img" src="Util/img/listeLogo2.png">
             </div>
@@ -46,8 +46,8 @@
 <!--<div class="container">-->
     <!-- PHOTO CATEGORIE BATEAU -->
     <div id="blocCategories" class="row">
-        <div class="col m2 s12 divPhoto">
-            <a href="index.php?c=bateau&a=afficher"> <img class="imgCateg" src="Util/img/Medline-850-1s.jpg">
+        <div class="col m6 s12 l2 divPhoto">
+            <a href="index.php?c=bateau&a=afficher"> <img class="imgCateg" src="Util/img/2017-yamaha-f300-eu-na-action-001.jpg">
                 <div class="blocTitle">
                     <div class="title">Bateau</div>
                         <span class="button1">Voir</span>
@@ -56,8 +56,8 @@
         </div>
         <!-- PHOTO CATEGORIE BATEAU -->
         <!-- PHOTO CATEGORIE JET -->
-        <div class="col m2 divPhoto">
-            <a href="index.php?c=motomarine&a=afficher"> <img class="imgCateg" src="Util/img/RXT-X 300_332_MY18.jpg">
+        <div class="col m6 s12 l2 divPhoto">
+            <a href="index.php?c=motomarine&a=afficher"> <img class="imgCateg" src="Util/img/cq5dam.web_.1322.1.jpeg">
                 <div class="blocTitle">
                     <div class="title">Jet</div>
                         <span class="button1">Voir</span>
@@ -65,32 +65,32 @@
             </a>
         </div>
         <!-- PHOTO CATEGORIE JET -->
-        <div class="col m2 divPhoto">
-            <a href="index.php?c=moteur&a=afficher"> <img class="imgCateg" src="Util/img/Spark Trixx_2 riders 0309_MY17.jpg">
+        <div class="col m6 s12 l2 divPhoto">
+            <a href="index.php?c=moteur&a=afficher"> <img class="imgCateg" src="Util/img/2017-yamaha-f350-eu-na-action-002.jpg">
                 <div class="blocTitle">
                     <div class="title">Moteur</div>
                         <span class="button1">Voir</span>
                 </div>
             </a>
         </div>
-        <div class="col m2 divPhoto">
-            <a href="index.php?c=remorque&a=afficher"> <img class="imgCateg" src="Util/img/GTR 230_191_MY17.jpg">
+        <div class="col m6 s12 l2 divPhoto">
+            <a href="index.php?c=remorque&a=afficher"> <img class="imgCateg" src="Util/img/satellite_mx091s.jpg">
                 <div class="blocTitle">
                     <div class="title">Remorque</div>
                         <span class="button1">Voir</span>
                 </div>
             </a>
         </div>
-        <div class="col m2 divPhoto">
-            <a href="index.php?c=armement&a=afficher"> <img class="imgCateg" src="Util/img/autre nom - GTR 230_1738_MY17.jpg">
+        <div class="col m6 s12 l2 divPhoto">
+            <a href="index.php?c=armement&a=afficher"> <img class="imgCateg" src="Util/img/52109.jpg">
                 <div class="blocTitle">
                     <div class="title">Armement</div>
                         <span class="button1">Voir</span>
                 </div>
             </a>
         </div>
-        <div class="col m2 divPhoto">
-            <a href="index.php?c=permis&a=afficher"> <img class="imgCateg" src="Util/img/GTX LTD - RXT-X large_2J8A6789_MY18.jpg">
+        <div class="col m6 s12 l2 divPhoto">
+            <a href="index.php?c=permis&a=afficher"> <img class="imgCateg" src="Util/img/DSC_0193.JPG">
                 <div class="blocTitle">
                     <div class="title">Permis</div>
                         <span class="button1">Voir</span>
@@ -124,7 +124,7 @@
                         <h2 class="center white-text">
                             <i class="large material-icons">flash_on</i>
                         </h2>
-                        <h4 class="white-text center">Efficacité</h4>
+                        <h4 class="white-text center">Rapidité</h4>
                         <p class="white-text center textAccueil">My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.</p>
                     </div>
                 </div>
@@ -141,9 +141,9 @@
                 <div class="col s12 m4">
                     <div class="icon-block">
                         <h2 class="center white-text">
-                            <i class="large material-icons">hearing</i>
+                            <i class="large material-icons">build</i>
                         </h2>
-                        <h4 class="white-text center">Ecoute</h4>
+                        <h4 class="white-text center">Service</h4>
                         <p class="white-text center textAccueil">Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine.
                             You don't get sick, I do.</p>
                     </div>
