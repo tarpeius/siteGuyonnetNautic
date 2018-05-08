@@ -70,7 +70,7 @@ switch($action)
         break;
 
     case "ficheProduit": // a changer selon besoin
-        $nomCateg = $_GET['c'];
+        $nomCateg = ucfirst($_GET['c']);
         $categorie = afficherCategorie($_GET['c']);
         $idProduit = $_GET['id'];
         $logoMarque = afficherLogoMarqueDeProduit($idProduit);

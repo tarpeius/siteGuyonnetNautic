@@ -109,7 +109,6 @@
                         <div class="card">
                             <div class="card-image">
                                 <img class="responsive-img tailleImage" src="Util/img/<?php echo $unProduit['photo_article'] ?>">
-                                <span class="card-title"><?php echo $unProduit['nom_article']?></span>
                             </div>
                             <div class="card-content">
                                 <p class="textCard black-text text-darken-2 center-align"><?php echo $unProduit['nom_article']?></p>

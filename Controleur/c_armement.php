@@ -50,6 +50,7 @@ switch($action)
         include('Vue/v_armement.php');
         break;
     case "ficheProduit": // a changer selon besoin
+        $nomCateg = ucfirst($_GET['c']);
         $categorie = afficherCategorie($_GET['c']);
         $idProduit = $_GET['id'];
         $logoMarque = afficherLogoMarqueDeProduit($idProduit);

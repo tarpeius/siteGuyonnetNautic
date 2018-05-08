@@ -16,7 +16,7 @@
         <div class="nav-wrapper blue darken-4">
             <div class="container">
                 <div class="col s12">
-                    <a href="index.php?c=motomarine&a=afficher" class="breadcrumb"><?php echo $categorie['nom_categorie']?></a>
+                    <a href="index.php?c=moteur&a=afficher" class="breadcrumb"><?php echo ucfirst($categorie['nom_categorie']);?></a>
                 </div>
             </div>
         </div>
@@ -50,19 +50,18 @@
         foreach ($pageProduit as $unProduit){
             ?>
             <div class="col s12 m4">
-                <a href="index.php?c=bateau&a=ficheProduit&id=<?php echo $unProduit['reference']?>">
+                <a href="index.php?c=moteur&a=ficheProduit&id=<?php echo $unProduit['reference']?>">
                 <div class="card">
                     <div class="card">
                         <div class="card-image">
                             <img class="responsive-img tailleImage" src="Util/img/<?php echo $unProduit['photo_article'] ?>">
-                            <span class="card-title"><?php echo $unProduit['nom_article']?></span>
                         </div>
                         <div class="card-content">
                             <p class="textCard black-text text-darken-2 center-align"><?php echo $unProduit['nom_article']?></p>
                             <p class="textCard black-text text-darken-4 center-align"><strong><?php echo $unProduit['prix_article']?> €</strong></p>
                         </div>
                         <div class="card-action">
-                            <a class="red-text text-darken-3" href="index.php?c=bateau&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>
+                            <a class="red-text text-darken-3" href="index.php?c=moteur&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>
                         </div>
                     </div>
                 </div>

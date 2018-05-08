@@ -16,7 +16,7 @@
         <div class="nav-wrapper blue darken-4">
             <div class="container">
                 <div class="col s12">
-                    <a href="index.php?c=motomarine&a=afficher" class="breadcrumb"><?php echo $categorie['nom_categorie']?></a>
+                    <a href="index.php?c=remorque&a=afficher" class="breadcrumb"><?php echo ucfirst($categorie['nom_categorie']);?></a>
                 </div>
             </div>
         </div>
@@ -56,7 +56,6 @@
                         <div class="card">
                             <div class="card-image">
                                 <img class="responsive-img tailleImage" src="Util/img/<?php echo $unProduit['photo_article'] ?>">
-                                <span class="card-title"><?php echo $unProduit['nom_article']?></span>
                             </div>
                             <div class="card-content">
                                 <p class="textCard black-text text-darken-2 center-align"><?php echo $unProduit['nom_article']?></p>

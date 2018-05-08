@@ -5,8 +5,8 @@
         <div class="nav-wrapper blue darken-4">
             <div class="container">
                 <div class="col s12">
-                    <a href="index.php?c=<?php echo $nomCateg?>&a=afficher" class="breadcrumb"><?php echo $nomCateg?></a>
-                    <a href="index.php?c=<?php echo $nomCateg?>&a=afficher&marque=<?php echo $logoMarque['nom_marque'];?>" class="breadcrumb"><?php echo $logoMarque['nom_marque'] ?></a>
+                    <a href="index.php?c=<?php echo strtolower($nomCateg);?>&a=afficher" class="breadcrumb"><?php echo $nomCateg?></a>
+                    <a href="index.php?c=<?php echo strtolower($nomCateg);?>&a=afficher&marque=<?php echo $logoMarque['nom_marque'];?>" class="breadcrumb"><?php echo $logoMarque['nom_marque'] ?></a>
                 </div>
             </div>
         </div>
@@ -15,7 +15,7 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col m6">
+        <div class="col m6 s12">
             <div class="carousel carousel-slider" id="carousel">
                 <div class="carousel-item carouselItem" href="#one!">
                     <img class="imgCarouProd" src="Util/img/<?php  echo $produit['photo_article']?>">
@@ -31,7 +31,7 @@
                 ?>
             </div>
         </div>
-        <div class="col m6">
+        <div class="col m6 s12">
             <div class="container">
                 <div class="center-align">
                     <h4><?php echo $produit['nom_article'] ?></h4>
@@ -73,21 +73,20 @@
         </div>
     </div>
     <div class="row">
-        <div class="col m6" id="prod">
+        <div class="col m6 s12" id="prod">
             <div class="swiper-container swiper-container-horizontal">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide"><img class="imgSwiper" src="Util/img/<?php  echo $produit['photo_article']?>"/></div>
+                    <div class="swiper-slide materialboxed"><img class="imgSwiper" width="650" src="Util/img/<?php  echo $produit['photo_article']?>"/></div>
                     <?php
                         foreach ($photoProduit as $unePhoto){
                     ?>
-                        <div class="swiper-slide"><img class="imgSwiper" src="Util/img/<?php  echo $unePhoto['url_photo']?>"/></div>
+                        <div class="swiper-slide materialboxed"><img class="imgSwiper" width="650" src="Util/img/<?php  echo $unePhoto['url_photo']?>"/></div>
                     <?php
                         }
                     ?>
                 </div>
-
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
@@ -153,8 +152,6 @@
 
         if (indexImg !=1){
             autoplay();
-
-
         }
 
         function autoplay() {
@@ -177,5 +174,7 @@
              nextEl: '.swiper-button-next',
              prevEl: '.swiper-button-prev',
          },
+
     });
+
 </script>

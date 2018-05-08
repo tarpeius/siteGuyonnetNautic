@@ -16,7 +16,7 @@
         <div class="nav-wrapper blue darken-4">
             <div class="container">
                 <div class="col s12 ">
-                    <a href="index.php?c=motomarine&a=afficher" class="breadcrumb"><?php echo $categorie['nom_categorie']?></a>
+                    <a href="index.php?c=motomarine&a=afficher" class="breadcrumb"><?php echo ucfirst($categorie['nom_categorie']);?></a>
                 </div>
             </div>
         </div>
