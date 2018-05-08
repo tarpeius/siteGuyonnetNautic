@@ -86,7 +86,7 @@
             </div>
             <div class="input-field col s2">
                 <select name="NaissanceAnnee"><option value="" disabled selected></option>
-                    
+
                     <?php $j= 2018 ;
                     while ($j>1900)
                     {
