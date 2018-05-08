@@ -1,6 +1,17 @@
 <div>
-    <H1 class="header center light-blue-text text-darken-4">Jets</H1>
-    <!--    <div class="divider"></div>-->
+    <H1 class="header center light-blue-text text-darken-4">
+        <?php
+        if(isset($_GET['sousCateg'])){
+            echo ucfirst($_GET['sousCateg']);
+        }elseif (isset($_GET['marque'])){
+            echo ucfirst($_GET['marque']);
+        }else{
+            echo ucfirst($categorie['nom_categorie']);
+        }
+
+        ?>
+    </H1>
+        <div class="divider"></div>
     <nav>
         <div class="nav-wrapper blue darken-4">
             <div class="container">
@@ -10,53 +21,53 @@
             </div>
         </div>
     </nav>
-<!--            <div id="sidebar">-->
-<!--                <form class="col m2">-->
-<!--                    <div class="input-field col m12">-->
-<!--                        <select>-->
-<!--                            <option value="" disabled selected>Trier par Marque</option>-->
-<!--                            <option value="1">See Doo</option>-->
-<!--                            <option value="2">Yamaaha</option>-->
-<!--                            <option value="3">Pacific craft</option>-->
-<!--                        </select>-->
-<!--                        <label>Marque</label>-->
-<!--                    </div>-->
-<!--                    <div class="input-field col m12">-->
-<!--                        <select>-->
-<!--                            <option value="" disabled selected>Trier par Prix</option>-->
-<!--                            <option value="1">Croissant</option>-->
-<!--                            <option value="2">Decroissant</option>-->
-<!--                            <option value="3">Promotions</option>-->
-<!--                        </select>-->
-<!--                        <label>Prix</label>-->
-<!--                    </div>-->
-<!--                    <div class="input-field col m12">-->
-<!--                        <select>-->
-<!--                            <option value="" disabled selected>Trier par Nom</option>-->
-<!--                            <option value="1">Croissant</option>-->
-<!--                            <option value="2">Decroissant</option>-->
-<!--                        </select>-->
-<!--                        <label>Nom</label>-->
-<!--                    </div>-->
-<!--                </form>-->
-<!--            </div>-->
+            <div id="sidebar">
+                <form class="col m2">
+                    <div class="input-field col m12">
+                        <select>
+                            <option value="" disabled selected>Trier par Marque</option>
+                            <option value="1">Seadoo</option>
+                            <option value="2">Yamaha</option>
+                            <option value="3">Pacific craft</option>
+                        </select>
+                        <label>Marque</label>
+                    </div>
+                    <div class="input-field col m12">
+                        <select>
+                            <option value="" disabled selected>Trier par Prix</option>
+                            <option value="1">Croissant</option>
+                            <option value="2">Decroissant</option>
+                            <option value="3">Promotions</option>
+                        </select>
+                        <label>Prix</label>
+                    </div>
+                    <div class="input-field col m12">
+                        <select>
+                            <option value="" disabled selected>Trier par Nom</option>
+                            <option value="1">Croissant</option>
+                            <option value="2">Decroissant</option>
+                        </select>
+                        <label>Nom</label>
+                    </div>
+                </form>
+            </div>
     <div class="container">
         <div class="row">
             <?php
             foreach ($pageProduit as $unProduit){
                 ?>
                 <div class="col s12 m4">
-                    <a href="index.php?c=bateau&a=ficheProduit&id=<?php echo $unProduit['reference']?>">
+                    <a href="index.php?c=motomarine&a=ficheProduit&id=<?php echo $unProduit['reference']?>">
                         <div class="card">
                             <div class="card-image">
                                 <img class="responsive-img tailleImage" src="Util/img/<?php echo $unProduit['photo_article'] ?>">
                             </div>
                             <div class="card-content">
-                                <p class="center-align"><?php echo $unProduit['nom_article']?></p>
-                                <p class="center-align"><?php echo $unProduit['prix_article']?></p>
+                                <p class="textCard black-text text-darken-2 center-align"><?php echo $unProduit['nom_article']?></p>
+                                <p class="textCard black-text text-darken-4 center-align"><strong><?php echo $unProduit['prix_article']?> €</strong></p>
                             </div>
                             <div class="card-action">
-                                <a href="index.php?c=motomarine&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>
+                                <a class="red-text text-darken-3" href="index.php?c=bateau&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>
                             </div>
                         </div>
                     </a>
@@ -86,9 +97,10 @@
         </div>
 
 </div>
-<i class="material-icons orange" onclick="topFunction()" id="myBtn" title="Go to top">navigation</i>
-        <script>
-            $(document).ready(function() {
-                $('select').material_select();
-            });
-        </script>
+<i class="material-icons" onclick="topFunction()" id="myBtn" title="Go to top">navigation</i>
+
+<script>
+    $(document).ready(function() {
+        $('select').material_select();
+    });
+</script>

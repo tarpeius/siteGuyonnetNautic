@@ -15,6 +15,16 @@ switch($action)
             include('Vue/v_inscription.php');
         }
         break;
+    case "afficherInscriCommande": // a changer selon besoin
+        if (empty($_POST['Email'])){
+            $erreur = "Veuillez saisir une adresse email pour vous inscrire";
+            include ('Vue/v_commandeIdentifier.php');
+
+        }else{
+            $_SESSION['msg'] = "";
+            include('Vue/v_inscription.php');
+        }
+        break;
     case "ajout":
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['msg'] = "";
@@ -108,7 +118,13 @@ switch($action)
                         $ville = $_SESSION['Ville'];
                         $tel = $_SESSION['Telephone'];
                         nouveauClient($nom,$prenom,$naissance,$email,$adresse,$cp,$pwd,$ville,$tel);
-                        echo "<script type='text/javascript'>document.location.replace('index.php?c=accueil&a=afficher');</script>";
+                        $_SESSION['client'] = lireClient($email,$pwd);
+                        $reussi = "Bienvenue, votre compte a bien été créé. Vous allez être redirigé vers votre espace personnel.";
+                        echo "<script type='text/javascript'>
+                            var delai=3;
+                            var url='index.php?c=compteClient&a=afficher';
+                            setTimeout(\"document.location.replace(url)\", delai + '000');
+                        </script>";
                     }else{
                         $_SESSION['msg'] = "erreur";
                     }

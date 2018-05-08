@@ -12,6 +12,10 @@ if(!empty($_REQUEST['a'])){
 switch($action) {
 
     case "afficher": // a changer selon besoin
+        if (isset($_COOKIE['client'])) {
+            $email = $_COOKIE['client'];
+            $client = lireClientCookie($email);
+        }
         include("Vue/v_compteClient.php");
         break;
     case "afficherModifMdp":
@@ -25,11 +29,13 @@ switch($action) {
         include("Vue/v_modifMdp.php");
         break;
     case "modifierMdp":
-        if (!empty($_SESSION['client'])) {
+        if (!empty($_COOKIE['client'])) {
             if (!empty($_POST['Password']) && !empty($_POST['Confirm']) && $_POST['Password'] == $_POST['Confirm']) {
 
+                $email = $_COOKIE['client'];
+                $client = lireClientCookie($email);
                 $mdp = test_input($_POST['Password']);
-                $id = $_SESSION['client']['id_client'];
+                $id = $client['id_client'];
                 modifierMdpClient($id, $mdp);
 
                 $reussi = "Mot de passe modifié avec succès";
@@ -89,7 +95,7 @@ switch($action) {
                 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
                 $mail->SMTPAuth = true;                               // Enable SMTP authentication
                 $mail->Username = 'quentin.guyonnet@greta-sud-aquitaine.academy';                 // SMTP username
-                $mail->Password = 'quentingreta64';                           // SMTP password
+                $mail->Password = '';                           // SMTP password
                 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
                 $mail->Port = 587;                                    // TCP port to connect to
                 $mail->SMTPOptions = array(
@@ -128,6 +134,41 @@ switch($action) {
         }
 
         include("Vue/v_verifEmailMdp.php");
+        break;
+    case "modifierInfosClient":
+        if (isset($_POST['modifier'])) {
+            if (!empty($_COOKIE['client'])) {
+                $email = $_COOKIE['client'];
+                $client = lireClientCookie($email);
+
+                $id = $client['id_client'];
+                $email = $_POST['Email'];
+                $nom = $_POST['Nom'];
+                $prenom = $_POST['Prenom'];
+                $adresse = $_POST['Adresse'];
+                $cp = $_POST['Cp'];
+                $ville = $_POST['Ville'];
+                $telephone = $_POST['Telephone'];
+                modifierClient($nom,$prenom,$email,$adresse,$cp,$id);
+                // changement $SESSION
+                $_SESSION['client'] = lireClientEmail($id);
+                $reussi = "Modification réussie";
+            }
+        }
+        include ("Vue/v_compteClient.php");
+        break;
+    case "suiviCommande":
+        if (!empty($_COOKIE['client'])) {
+            $email = $_COOKIE['client'];
+            $client = lireClientCookie($email);
+
+            $id = $client['id_client'];
+            $commande = CommandeClient($id);
+            $article = CommandeClientArticle($id);
+        } else {
+            $erreur = "Vous n'avez fait aucune commande";
+        }
+        include ("Vue/v_suiviCommande.php");
         break;
     default:
         include ("Vue/v_accueil.php");

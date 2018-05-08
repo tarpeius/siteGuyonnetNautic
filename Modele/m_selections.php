@@ -23,6 +23,17 @@ function emailExist($email)
     return $result[0];
 }
 
+function adresseExist($idClient)
+{
+    global $bdd;
+    $sql = "SELECT COUNT(*) FROM adresse INNER JOIN client ON adresse.id_client = client.id_client WHERE client.id_client=:idClient";
+    $req=$bdd->prepare($sql);
+    $req->bindParam(':idClient', $idClient);
+    $req->execute();
+    $result = $req->fetch();
+    return $result[0];
+}
+
 function idClient($email, $mdp) {
     global $bdd;
     $sql = "SELECT id_client FROM `client` WHERE email_client=:email AND mdp_client=:mdp";
@@ -50,6 +61,34 @@ function lireClient($email, $mdp) {
     $req=$bdd->prepare($sql);
     $req->bindParam(':email', $email);
     $req->bindParam(':mdp', $mdp);
+    $req->execute();
+    $result = $req->fetch();
+    return $result;
+}
+function lireClientCookie($email) {
+    global $bdd;
+    $sql = "SELECT id_client,nom_client,prenom_client,date_naissance,email_client,adresse_client,cp_client,date_inscription,ville_client,tel_client FROM `client` WHERE email_client=:email";
+    $req=$bdd->prepare($sql);
+    $req->bindParam(':email', $email);
+    $req->execute();
+    $result = $req->fetch();
+    return $result;
+}
+
+function lireClientId($id) {
+    global $bdd;
+    $sql = "SELECT id_client,nom_client,prenom_client,date_naissance,email_client,adresse_client,cp_client,date_inscription,ville_client,tel_client FROM `client` WHERE id_client = :id";
+    $req=$bdd->prepare($sql);
+    $req->bindParam(':id', $id);
+    $req->execute();
+    $result = $req->fetch();
+    return $result;
+}
+function lireClientEmail($id) {
+    global $bdd;
+    $sql = "SELECT email_client FROM `client` WHERE id_client = :id";
+    $req=$bdd->prepare($sql);
+    $req->bindParam(':id', $id);
     $req->execute();
     $result = $req->fetch();
     return $result;
@@ -272,7 +311,6 @@ function selectCountTousArticleUneSousCateg($cat)
     $req->bindParam(':cat', $cat);
     $req->execute();
     $result= $req->fetch();
-    var_dump($result);
     return $result;
 }
 
@@ -334,5 +372,76 @@ function afficheArticlePageUneMarque($marque,$min, $max)
     $req->bindParam(':marque', $marque);
     $req->execute();
     $result= $req->fetchAll();
+    return $result;
+}
+
+function afficherIdPaiement($typePaiement){
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query = "SELECT id_mdpaiement FROM mode_paiement WHERE type_mdpaiement=:typePaiement";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':typePaiement', $typePaiement);
+    $req->execute();
+    $result= $req->fetch();
+    return $result;
+}
+function lastIdCommandeClient($client){
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query = "SELECT MAX(id_commande) FROM commande WHERE id_client = :client";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':client', $client);
+    $req->execute();
+    $result= $req->fetch();
+    return $result;
+}
+
+function CommandeClient($client){
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query = "SELECT DISTINCT(commande.id_commande),commande.date_commande,commande.valeur_commande,mode_paiement.type_mdpaiement
+              FROM commande 
+              INNER JOIN ligne_commande ON commande.id_commande = ligne_commande.id_commande
+              INNER JOIN mode_paiement ON commande.id_mdpaiement = mode_paiement.id_mdpaiement
+              WHERE id_client = :client";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':client', $client);
+    $req->execute();
+    $result= $req->fetchAll();
+    return $result;
+}
+
+function CommandeClientArticle($client){
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query = "SELECT commande.id_commande,article.nom_article,article.photo_article,ligne_commande.qte_lc,article.prix_article
+              FROM commande 
+              INNER JOIN ligne_commande ON commande.id_commande = ligne_commande.id_commande
+              INNER JOIN article ON ligne_commande.reference = article.reference
+              WHERE id_client = :client";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':client', $client);
+    $req->execute();
+    $result= $req->fetchAll();
+    return $result;
+}
+function afficheArticleSelection(){
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query = "SELECT * FROM article WHERE article.reference IN(589,2543,5682)";
+    $req=$bdd->prepare($query);
+    $req->execute();
+    $result= $req->fetchAll();
+    return $result;
+}
+
+function afficheAdresse($client){
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query = "SELECT * FROM adresse INNER JOIN client ON adresse.id_client = client.id_client";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':client', $client);
+    $req->execute();
+    $result= $req->fetch();
     return $result;
 }

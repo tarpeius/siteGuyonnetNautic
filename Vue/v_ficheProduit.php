@@ -47,15 +47,12 @@
                 <div class="divider"></div>
                 <div class="row">
                     <div>
-                        <p> Description </p>
-                    </div>
-                    <div>
                         <p><?php echo $produit['resume_article'] ?>
                         </p>
                     </div>
                 </div>
                 <div class="row">
-                    <form method="POST" action="">
+                    <form method="POST" action="index.php?c=panier&a=ajouterArticle">
                         <div class="col m2">
                             <select class="browser-default" name="nbProduit">
                                 <?php
@@ -68,7 +65,7 @@
                             </select>
                         </div>
                         <div class="col m8 offset-m2">
-                            <a class="btn" href="">Ajouter au panier</a>
+                            <a class="btn" href="index.php?c=panier&a=ajouterArticle&id=<?php echo $produit['reference'] ?>">Ajouter au panier</a>
                         </div>
                     </form>
                 </div>
@@ -122,11 +119,11 @@
                     </tr>
                     <tr>
                         <td>Motorisation</td>
-                        <td><?php echo $produit['motorisation_article'] ?></td>
+                        <td><?php echo $produit['motorisation_article'] ?> cv</td>
                     </tr>
                     <tr>
                         <td>Poids</td>
-                        <td><?php echo $produit['poids_article'] ?></td>
+                        <td><?php echo $produit['poids_article'] ?> kg</td>
 
                     </tr>
                     <tr>

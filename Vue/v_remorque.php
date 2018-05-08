@@ -1,5 +1,16 @@
 <div>
-    <H1 class="header center light-blue-text text-darken-4">Remorques</H1>
+    <H1 class="header center light-blue-text text-darken-4">
+        <?php
+        if(isset($_GET['sousCateg'])){
+            echo ucfirst($_GET['sousCateg']);
+        }elseif (isset($_GET['marque'])){
+            echo ucfirst($_GET['marque']);
+        }else{
+            echo ucfirst($categorie['nom_categorie']);
+        }
+
+        ?>
+    </H1>
     <!--    <div class="divider"></div>-->
     <nav>
         <div class="nav-wrapper blue darken-4">
@@ -41,17 +52,18 @@
             foreach ($pageProduit as $unProduit){
                 ?>
                 <div class="col s12 m4">
-                    <a href="index.php?c=bateau&a=ficheProduit&id=<?php echo $unProduit['reference']?>">
+                    <a href="index.php?c=remorque&a=ficheProduit&id=<?php echo $unProduit['reference']?>">
                         <div class="card">
                             <div class="card-image">
                                 <img class="responsive-img tailleImage" src="Util/img/<?php echo $unProduit['photo_article'] ?>">
+                                <span class="card-title"><?php echo $unProduit['nom_article']?></span>
                             </div>
                             <div class="card-content">
-                                <p class="center-align"><?php echo $unProduit['nom_article']?></p>
-                                <p class="center-align"><?php echo $unProduit['prix_article']?></p>
+                                <p class="textCard black-text text-darken-2 center-align"><?php echo $unProduit['nom_article']?></p>
+                                <p class="textCard black-text text-darken-4 center-align"><strong><?php echo $unProduit['prix_article']?> €</strong></p>
                             </div>
                             <div class="card-action">
-                                <a href="index.php?c=motomarine&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>
+                                <a class="red-text text-darken-3" href="index.php?c=bateau&a=ficheProduit&id=<?php echo $unProduit['reference']?>">Fiche Produit</a>
                             </div>
                         </div>
                     </a>
@@ -80,7 +92,7 @@
            <!-- fin pagination -->
 </div><!-- container -->
 </div>
-<i class="material-icons orange" onclick="topFunction()" id="myBtn" title="Go to top">navigation</i>
+<i class="material-icons" onclick="topFunction()" id="myBtn" title="Go to top">navigation</i>
 <script>
     $(document).ready(function() {
         $('select').material_select();

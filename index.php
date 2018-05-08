@@ -1,12 +1,17 @@
 <?php
+    //require_once 'Modele/Class/Panier.php';
 	// session / error / include
 	error_reporting(E_ALL);
 	// affiche les erreurs a enlever en prod!!!! 
 	ini_set('display_errors', 1);
 	// k�c�c� ? 
-	//ob_start();
+	ob_start();
 	session_start();
 	date_default_timezone_set('Europe/Paris');
+    if (isset($_SESSION['client'])) {
+        $email = $_SESSION['client'];
+        setcookie('client', $email, time() + 3600, null, null, false, true);
+    }
 
 	include("Modele/m_connexion.php");
 	include("Modele/m_selections.php");
@@ -19,7 +24,7 @@
 	
 	if((!isset($_REQUEST['c']))||(!isset($_REQUEST['a']))) { // controleur -- action
         $uc = 'accueil';
-    }else {
+    } else {
         $uc = $_REQUEST['c'];
     }
 
@@ -58,9 +63,15 @@
     case 'compteClient':
         include ("Controleur/c_compteClient.php");
         break;
+    case 'panier':
+        include ("Controleur/c_panier.php");
+        break;
+    case 'commande':
+        include ("Controleur/c_commande.php");
+        break;
 	default:
 	   include("Vue/Structure/v_nopage.php");
 	   break;
     }
-	//ob_end_flush();
     include("Vue/Structure/v_footer.php") ;
+	ob_end_flush();

@@ -49,7 +49,7 @@
     <div class="divider margin"></div>
     <div class="container">
         <div class="row padding">
-            <div class="col m6 center">
+            <div class="col m6 s6 center">
                 <div class="row">
                     <div class="input-field col m6 boxInscri">
                         <input id="email" type="email" name="Email" class="validate">
@@ -58,6 +58,18 @@
                 </div>
                 <div class="row">
                     <input type="submit" class="waves-effect waves-light btn-large" value="Envoyer"/>
+                </div>
+            </div>
+
+            <div class="col m6 s6 center">
+                <div class="card-panel section">
+                    <div class="card-title "><h5>Informations complémentaires</h5></div>
+                    <div class="divider"></div>
+                    <p>Vous allez pouvoir recréer un mot de passe qui vous permettra d'accéder à votre compte client.<br><br>
+
+                        Il vous suffit simplement de saisir l'adresse e-mail que vous avez utilisée pour créer votre compte et de cliquer sur le bouton «Envoyer».<br><br>
+
+                        Vous recevrez très rapidement un e-mail qui vous permettra de créer un nouveau mot de passe afin d'accéder à votre espace client en toute sécurité.</p>
                 </div>
             </div>
         </div>

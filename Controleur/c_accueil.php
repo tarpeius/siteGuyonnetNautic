@@ -4,14 +4,15 @@
 		$action = $_REQUEST['a'];
 	}
 	
-	switch($action)
-		{
-			case "bienvenue": // a changer selon besoin
-			include('Vue/v_bienvenue.php');
-			break;
-			default:
-			include("Vue/v_accueil.php");
-			break;
-		}
+switch($action)
+    {
+    case "afficher":
+        $selection = afficheArticleSelection();
+        include("Vue/v_accueil.php");
+        break;
+    default:
+        include("Vue/v_accueil.php");
+        break;
+    }
 	
 ?>
