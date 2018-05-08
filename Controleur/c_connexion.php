@@ -44,7 +44,7 @@ switch($action)
             include ('Vue/v_connexion.php');
         }
         break;
-    case "connecteCommande":
+    case "connecteCommande": // CETTE CONDITION NE S'APPLIQUE QUE POUR LES COMMANDES !!!!!!! -> lorsqu'un utilisateur souhaite passer commande mais qu'il n'est pas connecté/inscri
         $erreur = "";
         $reussi = "";
         if ((!empty($_POST['Email'])) && (!empty($_POST['Password']))) {

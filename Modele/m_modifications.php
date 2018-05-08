@@ -16,7 +16,7 @@ function modifierClient($nom, $prenom, $mail, $adresse, $cp, $id){
 function modifierClientCoordonnees($ville, $adresse, $cp, $id){
     global $bdd;
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $bdd->prepare("UPDATE client SET adresse_client=:adresse, cp_client=:cp, ville_client=:cp WHERE id_client=:id");
+    $stmt = $bdd->prepare("UPDATE client SET adresse_client=:adresse, cp_client=:cp, ville_client=:ville WHERE id_client=:id");
     $stmt->bindParam(':adresse', $adresse);
     $stmt->bindParam(':cp', $cp);
     $stmt->bindParam(':ville', $ville);

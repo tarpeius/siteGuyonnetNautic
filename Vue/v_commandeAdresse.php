@@ -45,21 +45,21 @@
     ?>
     <div class="divider margin"></div>
 <div class="container conteneurCommandeRecapitulatif">
-    <form method="POST" action="index.php?c=commande&a=transporteur">
+    <form method="POST" action="index.php?c=commande&a=adresse">
         <div class="row">
             <h4 class="light-blue-text text-darken-4">Adresse de facturation</h4>
             <div class="input-field col s12 m12">
-                <input id="adresse_compte" name="Adresse" type="text" class="validate" value="<?php if (isset($client)){echo $client['adresse_client'];} ?>">
+                <input id="adresse_compte" name="Adresse" type="text" class="validate" value="<?php if (isset($client)){echo $client['adresse_client'];} else { echo $_POST['Adresse'];} ?>">
                 <span class="red-text"></span>
                 <label for="adresse_compte">Adresse</label>
             </div>
             <div class="input-field col s4 m4">
-                <input id="cp_compte" name="Cp" type="text" class="validate" value="<?php if (isset($client)){echo $client['cp_client'];} ?>">
+                <input id="cp_compte" name="Cp" type="text" class="validate" value="<?php if (isset($client)){echo $client['cp_client'];} else { echo $_POST['Cp'];}?>">
                 <span class="red-text"></span>
                 <label for="cp_compte">Code Postal</label>
             </div>
             <div class="input-field col s8 m8">
-                <input id="ville_compte" name="Ville" type="text" class="validate" value="<?php if (isset($client)){echo $client['ville_client'];} ?>">
+                <input id="ville_compte" name="Ville" type="text" class="validate" value="<?php if (isset($client)){echo $client['ville_client'];} else { echo $_POST['Ville'];}?>">
                 <span class="red-text"></span>
                 <label for="ville_compte">Ville</label>
             </div>
@@ -67,17 +67,17 @@
         <h4 class="light-blue-text text-darken-4">Adresse de livraison</h4>
         <div class="row">
             <div class="input-field col s12 m12">
-                <input id="adresse_compte" name="AdresseLivraison" type="text" class="validate" value="<?php if (isset($adresse)){echo $adresse['ligne'];} elseif(!empty($client)){ echo $client['adresse_client'];} ?>">
+                <input id="adresse_compte" name="AdresseLivraison" type="text" class="validate" value="<?php if (isset($adresse)){echo $adresse['ligne'];} elseif(!empty($client)){ echo $client['adresse_client'];} else { echo $_POST['AdresseLivraison'];}?>">
                 <span class="red-text"></span>
                 <label for="adresse_compte">Adresse</label>
             </div>
             <div class="input-field col s4 m4">
-                <input id="cp_compte" name="CpLivraison" type="text" class="validate" value="<?php if (isset($adresse)){echo $adresse['code_postal'];} elseif(!empty($client)){ echo $client['cp_client'];} ?>">
+                <input id="cp_compte" name="CpLivraison" type="text" class="validate" value="<?php if (isset($adresse)){echo $adresse['code_postal'];} elseif(!empty($client)){ echo $client['cp_client'];} else { echo $_POST['CpLivraison'];}?>">
                 <span class="red-text"></span>
                 <label for="cp_compte">Code Postal</label>
             </div>
             <div class="input-field col s8 m8">
-                <input id="ville_compte" name="VilleLivraison" type="text" class="validate" value="<?php if (isset($adresse)){echo $adresse['ville'];} elseif(!empty($client)){ echo $client['ville_client'];} ?>">
+                <input id="ville_compte" name="VilleLivraison" type="text" class="validate" value="<?php if (isset($adresse)){echo $adresse['ville'];} elseif(!empty($client)){ echo $client['ville_client'];} else { echo $_POST['VilleLivraison'];}?>">
                 <span class="red-text"></span>
                 <label for="ville_compte">Ville</label>
             </div>
@@ -86,7 +86,7 @@
                 <div class="row">
                     <div class="col s6 left-align">
                         <button class="waves-effect waves-light btn-large" name="retour">
-                            <a class="white-text" href="">Retour</a>
+                            <a class="white-text" href="index.php?c=panier&a=afficher">Retour</a>
                         </button>
                     </div>
                     <div class="col s6 right-align">

@@ -6,29 +6,41 @@ if(!empty($_REQUEST['a'])){
 }
 
 switch($action) {
-    case "afficher": // a changer selon besoin
-        if (!isset($_COOKIE['client']) && isset($_SESSION['panier'])) {
+    case "afficher":
+        // CONCERNE LES VUES : //
+        //commandeIDENTIFIER et commandeADRESSE //
+
+        if (!isset($_COOKIE['client']) && isset($_SESSION['panier'])) { // SI l'utilisateur n'est pas connecté
+            // CommandeIDENTIFIER //
             include ('Vue/v_commandeIdentifier.php');
-        } elseif (isset($_COOKIE['client']) && isset($_SESSION['panier'])) {
+        } elseif (isset($_COOKIE['client']) && isset($_SESSION['panier'])) { // SI l'utilisateur est connecté et que le panier contient 1 article ou +
+            // CommandeADRESSE //
             $email = $_COOKIE['client'];
-            $clientTest = lireClientCookie($email);
+            $clientTest = lireClientCookie($email); // selectionne le client connecté avec son email (toutes les données sauf mdp)
             $idClient = $clientTest['id_client'];
-            $adresseExist1 = adresseExist($idClient);
+            $adresseExist1 = adresseExist($idClient); // verifie si le client possede une adresse de livraison (table adresse bdd)
             if ($adresseExist1 == 1) {
-                $adresse = afficheAdresse($idClient);
+                $adresse = afficheAdresse($idClient); // permettra d'afficher l'adresse livraison dans le champs livraison + l'adresse client dans le champ facturation
                 $client = lireClientCookie($email);
             } else {
-                $client = lireClientCookie($email);
+                $client = lireClientCookie($email); // ou d'utiliser l'adresse du client pour la facturation ET la livraison
             }
             include ('Vue/v_commandeAdresse.php');
         } else {
             include ('Vue/v_panier.php');
         }
         break;
-    case "transporteur":
+    case "adresse":
         if (isset($_COOKIE['client'])) {
-            if (isset($_POST['retour'])){
-                include ("Vue/v_panier.php");
+            $email = $_COOKIE['client'];
+            $clientTest = lireClientCookie($email); // selectionne le client connecté avec son email (toutes les données sauf mdp)
+            $idClient = $clientTest['id_client'];
+            $adresseExist1 = adresseExist($idClient); // verifie si le client possede une adresse de livraison (table adresse bdd)
+            if ($adresseExist1 == 1) {
+                $adresse = afficheAdresse($idClient); // permettra d'afficher l'adresse livraison dans le champs livraison + l'adresse client dans le champ facturation
+                $client = lireClientCookie($email);
+            } else {
+                $client = lireClientCookie($email); // ou d'utiliser l'adresse du client pour la facturation ET la livraison
             }
             if (!empty($_POST['Adresse']) && !empty($_POST['Cp']) && !empty($_POST['Ville']) && !empty($_POST['AdresseLivraison']) && !empty($_POST['CpLivraison']) && !empty($_POST['VilleLivraison'])) {
                 if ((preg_match( "/^[0-9]{5,5}$/" , $_POST["Cp"] )) && (preg_match( "/^[0-9]{5,5}$/" , $_POST["CpLivraison"] ))) {
@@ -36,10 +48,10 @@ switch($action) {
                     $client = lireClientCookie($email);
                     $idClient = $client['id_client'];
                     // ADRESSE FACTURATION (table client)
-                    $adresse = test_input($_POST['Adresse']);
-                    $cp = $_POST['Cp'];
-                    $ville = test_input($_POST['Ville']);
-                    modifierClientCoordonnees($ville,$adresse,$cp,$idClient);
+                    $adresseClient = test_input($_POST['Adresse']);
+                    $cpClient = $_POST['Cp'];
+                    $villeClient = test_input($_POST['Ville']);
+                    modifierClientCoordonnees($villeClient,$adresseClient,$cpClient,$idClient);
                     // ADRESSE LIVRAISON (table adresse)
                     $adresseLivraison = test_input($_POST['AdresseLivraison']);
                     $cpLivraison = $_POST['CpLivraison'];
@@ -54,32 +66,37 @@ switch($action) {
                     include ('Vue/v_commandeTransport.php');
                 } else {
                     $erreur = "Champ(s) code postal non-valide (ex : 75000)";
-                    $email = $_COOKIE['client'];
-                    $clientTest = lireClientCookie($email);
-                    $idClient = $clientTest['id_client'];
-                    $adresseExist1 = adresseExist($idClient);
-                    if ($adresseExist1 == 1) {
-                        $adresse = afficheAdresse($idClient);
-                        $client = lireClientCookie($email);
-                    } else {
-                        $client = lireClientCookie($email);
-                    }
                     include ('Vue/v_commandeAdresse.php');
                 }
 
             } else {
                 $erreur = "Veuillez remplir tout les champs afin de continuer votre commande";
-                $email = $_COOKIE['client'];
-                $clientTest = lireClientCookie($email);
-                $idClient = $clientTest['id_client'];
-                $adresseExist1 = adresseExist($idClient);
-                if ($adresseExist1 == 1) {
-                    $adresse = afficheAdresse($idClient);
-                    $client = lireClientCookie($email);
-                } else {
-                    $client = lireClientCookie($email);
-                }
                 include ('Vue/v_commandeAdresse.php');
+            }
+        } else {
+            $erreur = "Vous avez été déconnecté(e), veuillez vous reconnecter pour continuer votre commande";
+            include ('Vue/v_commandeIdentifier.php');
+        }
+        break;
+    case "transport":
+        if (isset($_COOKIE['client'])) {
+            $email = $_COOKIE['client'];
+            $client = lireClientCookie($email);
+            $idClient = $client['id_client'];
+            $adresseExist1 = adresseExist($idClient);
+            if ($adresseExist1 == 1) {
+                $adresse = afficheAdresse($idClient);
+                $client = lireClientCookie($email);
+            } else {
+                $client = lireClientCookie($email);
+            }
+
+            if (isset($_POST['Frais'])) {
+                //$_POST['Frais'] = "colissimo";
+                include ('Vue/v_commandeRecapitulatif.php');
+            } else {
+                include ('Vue/v_commandeTransport.php');
+                $erreur = "Veuillez saisir un moyen de transport";
             }
         } else {
             $erreur = "Vous avez été déconnecté(e), veuillez vous reconnecter pour continuer votre commande";
@@ -88,63 +105,22 @@ switch($action) {
         break;
     case "recapitulatif":
         if (isset($_COOKIE['client'])) {
-            if (isset($_POST['retour'])){
-                $email = $_COOKIE['client'];
-                $clientTest = lireClientCookie($email);
-                $idClient = $clientTest['id_client'];
-                $adresseExist1 = adresseExist($idClient);
-                if ($adresseExist1 == 1) {
-                    $adresse = afficheAdresse($idClient);
-                    $client = lireClientCookie($email);
-                } else {
-                    $client = lireClientCookie($email);
-                }
-                include ("Vue/v_commandeAdresse.php");
-            }
             $email = $_COOKIE['client'];
-            $clientTest = lireClientCookie($email);
-            $idClient = $clientTest['id_client'];
-            $adresseExist = adresseExist($idClient);
-            if ($adresseExist == 1) {
+            $client = lireClientCookie($email);
+            $idClient = $client['id_client'];
+            $adresseExist1 = adresseExist($idClient);
+            if ($adresseExist1 == 1) {
                 $adresse = afficheAdresse($idClient);
                 $client = lireClientCookie($email);
             } else {
                 $client = lireClientCookie($email);
             }
-            if (isset($_POST['Frais'])) {
-                //$_POST['Frais'] = "colissimo";
-                include ('Vue/v_commandeRecapitulatif.php');
-            } else {
-                $erreur = "Veuillez saisir un moyen de transport";
-                $email = $_COOKIE['client'];
-                $clientTest = lireClientCookie($email);
-                $idClient = $clientTest['id_client'];
-                $adresseExist1 = adresseExist($idClient);
-                if ($adresseExist1 == 1) {
-                    $adresse = afficheAdresse($idClient);
-                    $client = lireClientCookie($email);
-                } else {
-                    $client = lireClientCookie($email);
-                }
-                include ('Vue/v_commandeTransport.php');
-            }
-        } else {
-            $erreur = "Vous avez été déconnecté(e), veuillez vous reconnecter pour continuer votre commande";
-            include ('Vue/v_commandeIdentifier.php');
-        }
-        break;
-    case "paiement":
-        if (isset($_COOKIE['client'])) {
-            if (isset($_POST['retour']) && empty($_POST['Accept'])) {
-                include ("Vue/v_commandeTransport.php");
-            }
-            if (isset($_POST['Accept'])) {
+            if (isset($_POST['Accept']) && isset($_POST['action'])) {
                 include ('Vue/v_commandePaiement.php');
             } else {
                 $erreur = "Veuillez accepter les conditions générales de ventes pour continuer";
                 include ('Vue/v_commandeRecapitulatif.php');
             }
-
         } else {
             $erreur = "Vous avez été déconnecté(e), veuillez vous reconnecter pour continuer votre commande";
             include ('Vue/v_commandeIdentifier.php');
