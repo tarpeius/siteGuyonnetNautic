@@ -1,5 +1,5 @@
 
-<form method="POST" action="index.php?c=commande&a=recapitulatif">
+<form method="POST" action="index.php?c=commande&a=transport">
     <div class="commandeEtape">
         <ol>
             <li class="testLi">
@@ -130,7 +130,7 @@
             <div class="row">
                 <div class="col s6 left-align">
                     <button class="waves-effect waves-light btn-large" name="retour">
-                        <a class="white-text" href="">Retour</a>
+                        <a class="white-text" href="javascript:history.go(-1)">Retour</a>
                     </button>
                 </div>
                 <div class="col s6 right-align">
