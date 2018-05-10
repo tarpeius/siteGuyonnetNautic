@@ -108,6 +108,7 @@ switch($action)
                 $_SESSION['Naissance'] = $_SESSION['NaissanceAnnee']."-".$_SESSION['NaissanceMois']."-".$_SESSION['NaissanceJour'];
                 if (!empty($_SESSION['Password']) && !empty($_SESSION['Confirm']) && $_SESSION['Password'] == $_SESSION['Confirm']){
                     $pwd = test_input($_SESSION['Password']);
+                    $pwd = md5($pwd);
                     if (empty($_SESSION['msg']) && !empty($_SESSION['Nom']) && !empty($_SESSION['Prenom']) && !empty($_SESSION['Naissance']) && !empty($_SESSION['Adresse']) && !empty($_SESSION['Cp']) && !empty($_SESSION['Ville']) && !empty($_SESSION['Telephone'])){
                         $nom = $_SESSION['Nom'];
                         $prenom = $_SESSION['Prenom'];

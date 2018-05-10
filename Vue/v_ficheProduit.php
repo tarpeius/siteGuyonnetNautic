@@ -47,8 +47,7 @@
                 <div class="divider"></div>
                 <div class="row">
                     <div>
-                        <p><?php echo $produit['resume_article'] ?>
-                        </p>
+                        <p><?php echo $produit['resume_article'] ?></p>
                     </div>
                 </div>
                 <div class="row">
