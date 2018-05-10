@@ -15,6 +15,8 @@ switch($action)
         if ((!empty($_POST['Email'])) && (!empty($_POST['Password']))) {
             $email = $_POST['Email'];
             $mdp = $_POST['Password'];
+            $mdp = md5($mdp);
+            var_dump($mdp);
             $valide = isAdmin($email, $mdp);
             if ($valide == 1) {
                 $_SESSION['client'] = $email;
@@ -50,6 +52,7 @@ switch($action)
         if ((!empty($_POST['Email'])) && (!empty($_POST['Password']))) {
             $email = $_POST['Email'];
             $mdp = $_POST['Password'];
+            $mdp = md5($mdp);
             $valide = isAdmin($email, $mdp);
             if ($valide == 1) {
                 $_SESSION['client'] = $email;
