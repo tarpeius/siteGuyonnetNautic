@@ -1,9 +1,11 @@
+<?php
 
+?>
     <H1 class="header center light-blue-text text-darken-4">
         Suivi commande
     </H1>
     <?php
-    if (empty($commande)) {
+    if (empty($article)) {
         echo "<div class='container'>
                     <div class=\"row\" id=\"alert_box\">
                         <div class=\"col s12 m12\">
@@ -63,84 +65,57 @@
         </div>
     </div>
     <div class="col s12 m8 l9">
+        <?php
+        if (!empty($article)) {
+
+            foreach ($article as $articles) {
+        ?>
         <div class="row">
-            <h4>Commande</h4>
-            <div class="card-panel">
-                <table>
-                    <tbody>
-                    <?php
-                    if (!empty($commande)) {
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">list</i><span>Commande n° <?php echo $articles['id_commande']; ?></span>
+                    </div>
+                    <div class="collapsible-body">
+<!--                        <div class="card-panel">-->
+                            <table>
+                                <tbody>
+                                    <tr class="light-blue darken-4">
+                                        <td class="white-text"></td>
+                                        <td class="white-text">Designation produits</td>
+                                        <td class="white-text">Quantite</td>
+                                        <td class="white-text">Prix total</td>
+                                        <td class="white-text">Date</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img id="photoPanier" src="Util/img/<?php echo $articles['photo_article'] ?>">
+                                        </td>
+                                        <td>
+                                            <?php echo $articles['nom_article']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $articles['qte_lc']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $articles['prix_article'] * $articles['qte_lc']; ?>€
+                                        </td>
+                                        <td>
+                                            <?php echo $articles['date_commande']; ?>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+<!--                        </div>-->
+                    </div>
+                </li>
+            </ul>
+        </div>
+            <?php
+            }
+        }
+        ?>
 
-                        foreach ($commande as $commandes) {
-                            ?>
-                        <tr class="sectionPanier">
-                            <td class="white-text">N° commande</td>
-                            <td class="white-text">Date commande</td>
-                            <td class="white-text">Mode de paiement</td>
-                            <td class="white-text">Valeur total</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span><?php echo $commandes['id_commande']; ?></span>
-                            </td>
-                            <td>
-                                <span><?php echo $commandes['date_commande']; ?></span>
-                            </td>
-                            <td>
-                                <span><?php echo $commandes['type_mdpaiement']; ?></span>
-                            </td>
-                            <td>
-                                <span><?php echo $commandes['valeur_commande'] ?> €</span>
-                            </td>
-                        </tr>
-                        <?php
-                        }
-                    }
-                ?>
-                    </tbody>
-                </table>
-            </div>
-            <h4>Details</h4>
-            <div class="card-panel">
-                <table>
-                    <tbody>
-                    <?php
-                        if (!empty($article)) {
-
-                            foreach ($article as $articles) {
-                                ?>
-                                <tr class="sectionPanier">
-                                    <td class="white-text">N° commande</td>
-                                    <td class="white-text"></td>
-                                    <td class="white-text">Designation produits</td>
-                                    <td class="white-text">Quantite</td>
-                                    <td class="white-text">Prix total</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span><?php echo $articles['id_commande']; ?></span>
-                                    </td>
-                                    <td>
-                                        <img id="photoPanier" src="Util/img/<?php echo $articles['photo_article'] ?>"
-                                    </td>
-                                    <td>
-                                        <span><?php echo $articles['nom_article']; ?></span>
-                                    </td>
-                                    <td>
-                                        <span><?php echo $articles['qte_lc']; ?></span>
-                                    </td>
-                                    <td>
-                                        <span><?php echo $articles['prix_article'] * $articles['qte_lc'] ?> €</span>
-                                    </td>
-                                </tr>
-                                <?php
-                            }
-                        }
-                    ?>
-                    </tbody>
-                </table>
-                </div>
-            </div>
             </div>
         </div>
     </div>

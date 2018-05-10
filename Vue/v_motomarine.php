@@ -21,36 +21,36 @@
             </div>
         </div>
     </nav>
-            <div id="sidebar">
-                <form class="col m2">
-                    <div class="input-field col m12">
-                        <select>
-                            <option value="" disabled selected>Trier par Marque</option>
-                            <option value="1">Seadoo</option>
-                            <option value="2">Yamaha</option>
-                            <option value="3">Pacific craft</option>
-                        </select>
-                        <label>Marque</label>
-                    </div>
-                    <div class="input-field col m12">
-                        <select>
-                            <option value="" disabled selected>Trier par Prix</option>
-                            <option value="1">Croissant</option>
-                            <option value="2">Decroissant</option>
-                            <option value="3">Promotions</option>
-                        </select>
-                        <label>Prix</label>
-                    </div>
-                    <div class="input-field col m12">
-                        <select>
-                            <option value="" disabled selected>Trier par Nom</option>
-                            <option value="1">Croissant</option>
-                            <option value="2">Decroissant</option>
-                        </select>
-                        <label>Nom</label>
-                    </div>
-                </form>
-            </div>
+<!--            <div id="sidebar">-->
+<!--                <form class="col m2">-->
+<!--                    <div class="input-field col m12">-->
+<!--                        <select>-->
+<!--                            <option value="" disabled selected>Trier par Marque</option>-->
+<!--                            <option value="1">Seadoo</option>-->
+<!--                            <option value="2">Yamaha</option>-->
+<!--                            <option value="3">Pacific craft</option>-->
+<!--                        </select>-->
+<!--                        <label>Marque</label>-->
+<!--                    </div>-->
+<!--                    <div class="input-field col m12">-->
+<!--                        <select>-->
+<!--                            <option value="" disabled selected>Trier par Prix</option>-->
+<!--                            <option value="1">Croissant</option>-->
+<!--                            <option value="2">Decroissant</option>-->
+<!--                            <option value="3">Promotions</option>-->
+<!--                        </select>-->
+<!--                        <label>Prix</label>-->
+<!--                    </div>-->
+<!--                    <div class="input-field col m12">-->
+<!--                        <select>-->
+<!--                            <option value="" disabled selected>Trier par Nom</option>-->
+<!--                            <option value="1">Croissant</option>-->
+<!--                            <option value="2">Decroissant</option>-->
+<!--                        </select>-->
+<!--                        <label>Nom</label>-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
     <div class="container">
         <div class="row">
             <?php

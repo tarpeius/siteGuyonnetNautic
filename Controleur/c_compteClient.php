@@ -163,7 +163,7 @@ switch($action) {
             $client = lireClientCookie($email);
 
             $id = $client['id_client'];
-            $commande = CommandeClient($id);
+            //$commande = CommandeClient($id);
             $article = CommandeClientArticle($id);
         } else {
             $erreur = "Vous n'avez fait aucune commande";

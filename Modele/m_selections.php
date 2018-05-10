@@ -407,22 +407,23 @@ function CommandeClient($client){
     $req=$bdd->prepare($query);
     $req->bindParam(':client', $client);
     $req->execute();
-    $result= $req->fetchAll();
+    $result= $req->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
 
 function CommandeClientArticle($client){
     global $bdd;
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = "SELECT commande.id_commande,article.nom_article,article.photo_article,ligne_commande.qte_lc,article.prix_article
+    $query = "SELECT commande.id_commande,article.nom_article,article.photo_article,ligne_commande.qte_lc,article.prix_article,commande.date_commande,commande.valeur_commande,mode_paiement.type_mdpaiement
               FROM commande 
               INNER JOIN ligne_commande ON commande.id_commande = ligne_commande.id_commande
               INNER JOIN article ON ligne_commande.reference = article.reference
+              INNER JOIN mode_paiement ON commande.id_mdpaiement = mode_paiement.id_mdpaiement
               WHERE id_client = :client";
     $req=$bdd->prepare($query);
     $req->bindParam(':client', $client);
     $req->execute();
-    $result= $req->fetchAll();
+    $result= $req->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
 function afficheArticleSelection(){

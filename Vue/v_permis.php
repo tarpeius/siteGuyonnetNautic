@@ -71,7 +71,7 @@
                 <h4>EXAMEN</h4>
                 <p>  Mercredi 18 Avril à Bayonne</p>
 
-                <p>TARIFS</p>
+                <h4>TARIFS</h4>
 
                 <p>Formation : 390.00€</p>
 
@@ -139,7 +139,7 @@
                 <h4>EXAMEN</h4>
                 <p>  Mercredi 18 Avril à Bayonne</p>
 
-                <p>TARIFS</p>
+                <h4>TARIFS</h4>
 
                 <p>Formation : 390.00€</p>
 
@@ -204,7 +204,7 @@
                 <h4>Reservation</h4>
                 <p>  Nombre de places limité</p>
 
-                <p>TARIFS</p>
+                <h4>TARIFS</h4>
 
                 <p>Formation : 600.€</p>
 

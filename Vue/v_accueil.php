@@ -27,7 +27,7 @@
 <!--    </div>-->
 <!--</div>-->
 
-<!--<!--</div>-->-->
+<!--<!--</div>-->
 <!--<div id="carouselAccueil" class="col s12 m12">-->
 <!--    <div class="carousel carousel-slider center">-->
 <!--        <div class="carousel-item carouselItem" href="#one!">-->
