@@ -24,24 +24,6 @@
                 <img  src="Util/img/DSC_0022.JPG">
             </div>
         </div>
-<!--    </div>-->
-<!--</div>-->
-
-<!--<!--</div>-->
-<!--<div id="carouselAccueil" class="col s12 m12">-->
-<!--    <div class="carousel carousel-slider center">-->
-<!--        <div class="carousel-item carouselItem" href="#one!">-->
-<!--            <img class="imgCarouProd" src="Util/img/DSC_0014.JPG">-->
-<!--        </div>-->
-<!--        <div class="carousel-item" href="#two!">-->
-<!--            <img class="imgCarouProd" src="Util/img/DSC_0025.JPG">-->
-<!--        </div>-->
-<!--        <div class="carousel-item" href="#three!">-->
-<!--            <img class="imgCarouProd" src="Util/img/DSC_0022.JPG">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
 
 <!--<div class="container">-->
     <!-- PHOTO CATEGORIE BATEAU -->
@@ -193,19 +175,9 @@
     //var_dump($selection);
 ?>
 <script>
-
-    //    $('.carousel').carousel({
-    //        padding: 200
-    //    });
-    //    autoplay()
-    //    function autoplay() {
-    //        $('.carousel').carousel('next');
-    //        setTimeout(autoplay, 4500);
-    //    }
     $('.carousel.carousel-slider').carousel({
         fullWidth: true,
         indicators: true
     });
-
 </script>
 

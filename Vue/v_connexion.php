@@ -1,4 +1,3 @@
-
 <div>
     <H1 class="header center light-blue-text text-darken-4">Identification</H1>
 </div>
