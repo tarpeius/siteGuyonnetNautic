@@ -59,7 +59,7 @@
                         </div>
                     </div>
                 </div>
-            <h5>Choisissez une option de livraison</h5>
+            <h5 class="light-blue-text text-darken-4">Choisissez une option de livraison</h5>
             <div class="card-panel">
                 <table>
                     <tbody>

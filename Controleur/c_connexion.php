@@ -16,10 +16,10 @@ switch($action)
             $email = $_POST['Email'];
             $mdp = $_POST['Password'];
             $mdp = md5($mdp);
-            var_dump($mdp);
             $valide = isAdmin($email, $mdp);
             if ($valide == 1) {
                 $_SESSION['client'] = $email;
+                //var_dump($_SESSION['client']);
                 $reussi = "Vous êtes connecté(e)";
                 include ('Vue/v_connexion.php');
                 echo "<script type='text/javascript'>   

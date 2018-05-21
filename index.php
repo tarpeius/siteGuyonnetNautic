@@ -9,7 +9,9 @@
 	session_start();
 	date_default_timezone_set('Europe/Paris');
     if (isset($_SESSION['client'])) {
+//        var_dump($_SESSION['client']);
         $email = $_SESSION['client'];
+//        var_dump($email);
         setcookie('client', $email, time() + 3600, null, null, false, true);
     }
 

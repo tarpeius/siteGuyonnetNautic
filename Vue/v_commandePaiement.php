@@ -13,8 +13,8 @@
                 <li class="testLi">
                     <span>4. Récapitulatif</span>
                 </li >
-                <li class="testLi">
-                    <span>5. Paiement</span>
+                <li class="light-blue-text text-darken-4 testLi">
+                    <span><b>5. Paiement</b></span>
                 </li>
             </ol>
         </div>

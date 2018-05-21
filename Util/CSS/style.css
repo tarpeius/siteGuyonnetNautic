@@ -352,6 +352,10 @@ body {
     min-height: 650px;
     padding-top: 40px;
 }
+.conteneurSuiviCommande {
+    padding-top: 25px;
+    min-height: 400px;
+}
 .conteneurCommandeTransport {
     padding-top: 25px;
     min-height: 900px;

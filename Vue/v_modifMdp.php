@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <input type="submit" class="waves-effect waves-light btn-large blue" value="Modifier"/>
+                    <input type="submit" class="waves-effect waves-light btn-large teal" value="Modifier"/>
                 </div>
             </div>
         </div>

@@ -119,7 +119,7 @@ switch($action)
                         $ville = $_SESSION['Ville'];
                         $tel = $_SESSION['Telephone'];
                         nouveauClient($nom,$prenom,$naissance,$email,$adresse,$cp,$pwd,$ville,$tel);
-                        $_SESSION['client'] = lireClient($email,$pwd);
+                        $_SESSION['client'] = $email;
                         $reussi = "Bienvenue, votre compte a bien été créé. Vous allez être redirigé vers votre espace personnel.";
                         echo "<script type='text/javascript'>
                             var delai=3;

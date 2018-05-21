@@ -161,12 +161,13 @@ switch($action) {
         if (!empty($_COOKIE['client'])) {
             $email = $_COOKIE['client'];
             $client = lireClientCookie($email);
-
             $id = $client['id_client'];
-            //$commande = CommandeClient($id);
             $article = CommandeClientArticle($id);
+            if (empty($article)) {
+                $erreur = "Vous n'avez fait aucune commande";
+            }
         } else {
-            $erreur = "Vous n'avez fait aucune commande";
+            $erreur = "Vous devez être connecté";
         }
         include ("Vue/v_suiviCommande.php");
         break;

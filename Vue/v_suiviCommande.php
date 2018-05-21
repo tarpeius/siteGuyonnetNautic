@@ -5,19 +5,16 @@
         Suivi commande
     </H1>
     <?php
-    if (empty($article)) {
+    if (!empty($erreur)) {
         echo "<div class='container'>
                     <div class=\"row\" id=\"alert_box\">
                         <div class=\"col s12 m12\">
                             <div id='messageErreur' class=\" orange darken-1\">
                                 <div class=\"row\">
-                                    <div class=\"col s12 m10\">
+                                    <div class=\"col s12 m12\">
                                         <div class=\"card-content white-text\">
                                             <p class=\"center-align\">$erreur</p>
                                         </div>
-                                    </div>
-                                    <div class=\"col s12 m2\">
-                                        <i class=\"fa fa-times icon_style\" id=\"alert_close\" aria-hidden=\"true\"></i>
                                     </div>
                                 </div>
                             </div>
@@ -45,20 +42,18 @@
     }
     ?>
     <div class="divider"></div>
-<div class="container">
+<div class="container conteneurSuiviCommande">
     <div id="compteClient" class="row">
         <div class="col s12 m4 l3">
-            <ul class="">
-                <li class="active">
-                    <a href="index.php?c=compteClient&a=afficher">Compte client</a>
-                </li>
-                <li>
-                    <a href="index.php?c=compteClient&a=suiviCommande">Suivi commande</a>
-                </li>
-                <li>
-                    <a href="index.php?c=panier&a=afficher">Panier</a>
-                </li>
-            </ul>
+            <div class="collection">
+                <?php
+                if (!empty($_COOKIE['client'])) {
+                    echo "<a class=\"collection-item blue-text\" href=\"index.php?c=compteClient&a=afficher\">Compte client</a>";
+                }
+                ?>
+                <a class="collection-item blue active" href="index.php?c=compteClient&a=suiviCommande">Suivi commande</a>
+                <a class="collection-item blue-text" href="index.php?c=panier&a=afficher">Panier</a>
+            </div>
         </div>
         <div class="col s12 m4 l6">
             <h3 class="center-align">Historique</h3>

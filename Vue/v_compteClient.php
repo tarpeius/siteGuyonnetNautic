@@ -51,20 +51,18 @@
 <div class="container">
     <div id="compteClient" class="row">
         <div class="col s12 m4 l3">
-            <ul class="">
-                <li class="active">
-                    <a href="index.php?c=compteClient&a=afficher">Compte client</a>
-                </li>
-                <li>
-                    <a href="index.php?c=compteClient&a=suiviCommande">Suivi commande</a>
-                </li>
-                <li>
-                    <a href="index.php?c=panier&a=afficher">Panier</a>
-                </li>
-            </ul>
+            <div class="collection">
+                <?php
+                if (!empty($_COOKIE['client'])) {
+                    echo "<a class=\"collection-item blue active\" href=\"index.php?c=compteClient&a=afficher\">Compte client</a>";
+                }
+                ?>
+                <a class="collection-item blue-text" href="index.php?c=compteClient&a=suiviCommande">Suivi commande</a>
+                <a class="collection-item blue-text" href="index.php?c=panier&a=afficher">Panier</a>
+            </div>
         </div>
         <div class="col s12 m8 l6 center-align">
-            <h3>Identifiants</h3>
+            <h3 >Identifiants</h3>
         </div>
     </div>
     <div class="col s12 m8 l12">
