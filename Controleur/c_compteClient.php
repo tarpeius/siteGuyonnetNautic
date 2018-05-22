@@ -41,6 +41,17 @@ switch($action) {
                 $reussi = "Mot de passe modifié avec succès";
                 include ('Vue/v_modifMdp.php');
                 echo "<script type='text/javascript'>
+                            $(document).ready(function(){    
+                                //Check if the current URL contains '#'
+                                if(document.URL.indexOf(\"#\")==-1){
+                                    // Set the URL to whatever it was plus \"#\".
+                                    url = document.URL+\"#\";
+                                    location = \"#\";
+                            
+                                    //Reload the page
+                                    location.reload(true);
+                                }
+                            });
                         var delai=2; 
                         var url='index.php?c=compteClient&a=afficher'; 
                         setTimeout(\"document.location.replace(url)\", delai + '000');
@@ -59,6 +70,17 @@ switch($action) {
                 $reussi = "Mot de passe modifié avec succès";
                 include ('Vue/v_modifMdp.php');
                 echo "<script type='text/javascript'>
+                            $(document).ready(function(){    
+                                //Check if the current URL contains '#'
+                                if(document.URL.indexOf(\"#\")==-1){
+                                    // Set the URL to whatever it was plus \"#\".
+                                    url = document.URL+\"#\";
+                                    location = \"#\";
+                            
+                                    //Reload the page
+                                    location.reload(true);
+                                }
+                            });
                         var delai=2; 
                         var url='index.php?c=connexion&a=authentification'; 
                         setTimeout(\"document.location.replace(url)\", delai + '000');
@@ -142,17 +164,33 @@ switch($action) {
                 $client = lireClientCookie($email);
 
                 $id = $client['id_client'];
-                $email = $_POST['Email'];
                 $nom = $_POST['Nom'];
                 $prenom = $_POST['Prenom'];
                 $adresse = $_POST['Adresse'];
                 $cp = $_POST['Cp'];
                 $ville = $_POST['Ville'];
                 $telephone = $_POST['Telephone'];
-                modifierClient($nom,$prenom,$email,$adresse,$cp,$id);
+
+                modifierClient($nom,$prenom,$adresse,$cp,$id,$ville,$telephone);
                 // changement $SESSION
-                $_SESSION['client'] = lireClientEmail($id);
+                $email = lireClientEmail($id);
+                $_SESSION['client'] = $email;
+                echo "<script type='text/javascript'>
+                            $(document).ready(function(){    
+                                //Check if the current URL contains '#'
+                                if(document.URL.indexOf(\"#\")==-1){
+                                    // Set the URL to whatever it was plus \"#\".
+                                    url = document.URL+\"#\";
+                                    location = \"#\";
+                            
+                                    //Reload the page
+                                    location.reload(true);
+                                }
+                            });
+                    </script>";
                 $reussi = "Modification réussie";
+            } else {
+                $erreur = "Veuillez vous connecter";
             }
         }
         include ("Vue/v_compteClient.php");

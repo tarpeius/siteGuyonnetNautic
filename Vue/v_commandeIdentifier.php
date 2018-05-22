@@ -30,13 +30,10 @@ if(!empty($erreur)){
                 <div class=\"col s12 m12\">
                     <div id='messageErreur' class=\" red darken-1\">
                         <div class=\"row\">
-                            <div class=\"col s12 m10\">
+                            <div class=\"col s12 m12\">
                                 <div class=\"card-content white-text\">
                                     <p class=\"center-align\">".$erreur."</p>
                                 </div>
-                            </div>
-                            <div class=\"col s12 m2\">
-                                <i class=\"fa fa-times icon_style\" id=\"alert_close\" aria-hidden=\"true\"></i>
                             </div>
                         </div>
                     </div>
@@ -50,13 +47,10 @@ if(!empty($erreur)){
                 <div class=\"col s12 m12\">
                     <div id='messageErreur' class=\" green darken-1\">
                         <div class=\"row\">
-                            <div class=\"col s12 m10\">
+                            <div class=\"col s12 m12\">
                                 <div class=\"card-content white-text\">
                                     <p class=\"center-align\">".$reussi."</p>
                                 </div>
-                            </div>
-                            <div class=\"col s12 m2\">
-                                <i class=\"fa fa-times icon_style\" id=\"alert_close\" aria-hidden=\"true\"></i>
                             </div>
                         </div>
                     </div>

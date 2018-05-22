@@ -1,15 +1,16 @@
 <?php
 
-function modifierClient($nom, $prenom, $mail, $adresse, $cp, $id){
+function modifierClient($nom, $prenom, $adresse, $cp, $id, $ville, $tel){
     global $bdd;
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $bdd->prepare("UPDATE client SET nom_client=:nom, prenom_client=:prenom, email_client=:mail, adresse_client=:adresse, cp_client=:cp WHERE id_client=:id");
+    $stmt = $bdd->prepare("UPDATE client SET nom_client=:nom, prenom_client=:prenom, adresse_client=:adresse, cp_client=:cp, ville_client=:ville, tel_client=:tel WHERE id_client=:id");
     $stmt->bindParam(':nom', $nom);
     $stmt->bindParam(':prenom', $prenom);
-    $stmt->bindParam(':mail', $mail);
     $stmt->bindParam(':adresse', $adresse);
     $stmt->bindParam(':cp', $cp);
     $stmt->bindParam(':id', $id);
+    $stmt->bindParam(':ville', $ville);
+    $stmt->bindParam(':tel', $tel);
     $stmt->execute();
 }
 

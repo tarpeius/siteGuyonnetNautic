@@ -12,13 +12,10 @@
                 <div class=\"col s12 m12\">
                     <div id='messageErreur' class=\" red darken-1\">
                         <div class=\"row\">
-                            <div class=\"col s12 m10\">
+                            <div class=\"col s12 m12\">
                                 <div class=\"card-content white-text\">
                                     <p class=\"center-align\">".$erreur."</p>
                                 </div>
-                            </div>
-                            <div class=\"col s12 m2\">
-                                <i class=\"fa fa-times icon_style\" id=\"alert_close\" aria-hidden=\"true\"></i>
                             </div>
                         </div>
                     </div>
@@ -32,14 +29,12 @@
                 <div class=\"col s12 m12\">
                     <div id='messageErreur' class=\" green darken-1\">
                         <div class=\"row\">
-                            <div class=\"col s12 m10\">
+                            <div class=\"col s12 m12\">
                                 <div class=\"card-content white-text\">
                                     <p class=\"center-align\">".$reussi."</p>
                                 </div>
                             </div>
-                            <div class=\"col s12 m2\">
-                                <i class=\"fa fa-times icon_style\" id=\"alert_close\" aria-hidden=\"true\"></i>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -69,9 +64,9 @@
         <form method="post" action="index.php?c=compteClient&a=modifierInfosClient">
           <div class="row">
                 <div class="input-field col s12 m8">
-              <input id="email_compte" name="Email" type="email" class="validate" value="<?php if (!empty($client)){echo $client['email_client'];} ?>">
-              <label for="email_compte">Email</label>
-            </div>
+                  <input disabled id="email_compte" name="Email" type="email" class="validate" value="<?php if (!empty($client)){echo $client['email_client'];} ?>">
+                  <label for="email_compte">Email</label>
+                </div>
               <div class="input-field col s12 m4">
                   <a href="index?c=compteClient&a=afficherModifMdp" class="waves-effect waves-light btn blue">changer mot de passe</a>
               </div>
