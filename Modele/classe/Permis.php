@@ -28,14 +28,6 @@ class Permis
      * @param $examenDate
      * @param $examenLieu
      */
-//    public function __construct($mois, $annee, $examenDate, $examenLieu, $type)
-//    {
-//        $this->mois = $mois;
-//        $this->annee = $annee;
-//        $this->examenDate = $examenDate;
-//        $this->examenLieu = $examenLieu;
-//        $this->type = $type;
-//    }
 
     public function __construct($param) {
         if (is_array($param)) {

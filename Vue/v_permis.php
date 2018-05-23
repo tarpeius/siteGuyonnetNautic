@@ -1,10 +1,6 @@
 <div class="row">
     <div class="col m5 offset-m1">
         <h1 class="thin-text">Permis Bateau </h1>
-<!--        <p class="thin-text subheader">-->
-<!--            Nous proposons des permis bateau<br /><br />-->
-<!--            Tout types de permis de bateau <br /><br />-->
-<!--            Cotier, fluvial ou hauturier nous avons ce que vous voulez ! </p>-->
     </div>
     <div class="col m5 ">
         <div class="photoPermis">

@@ -106,8 +106,8 @@
                         <h2 class="center white-text">
                             <i class="large material-icons">flash_on</i>
                         </h2>
-                        <h4 class="white-text center">Rapidité</h4>
-                        <p class="white-text center textAccueil">My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.</p>
+                        <h4 class="white-text center">Qualité</h4>
+                        <p class="white-text center textAccueil">Notre philosophie est de satisfaire au mieux nos clients</p>
                     </div>
                 </div>
                 <div class="col s12 m4">
@@ -116,8 +116,7 @@
                             <i class="large material-icons">group</i>
                         </h2>
                         <h4 class="white-text center">Disponibilité</h4>
-                        <p class="white-text center textAccueil">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder.
-                            After the avalanche, it took us a week to climb out.</p>
+                        <p class="white-text center textAccueil">La disponibilité est un élément essentiel pour répondre aux besoins de chacuns</p>
                     </div>
                 </div>
                 <div class="col s12 m4">
@@ -125,9 +124,8 @@
                         <h2 class="center white-text">
                             <i class="large material-icons">build</i>
                         </h2>
-                        <h4 class="white-text center">Service</h4>
-                        <p class="white-text center textAccueil">Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine.
-                            You don't get sick, I do.</p>
+                        <h4 class="white-text center">Services</h4>
+                        <p class="white-text center textAccueil">Réparations bateaux/jet-ski, accompagnement personnalisé dans vos besoins, cours permis bateau</p>
                     </div>
                 </div>
             </div>
